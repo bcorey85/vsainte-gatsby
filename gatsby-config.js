@@ -1,34 +1,42 @@
 module.exports = {
-  siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-  },
-  plugins: [
-    `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
-    },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
-  ],
-}
+	siteMetadata: {
+		title: `Vladimir Sainte, LCSW| Author of the Just Like a Hero series`,
+		description: `Website of Vladimir Sainte, LCSW.  Author and illustrator of children's books about discovering their own superhero.`,
+		author: `Vladimir Sainte`
+	},
+	plugins: [
+		`gatsby-plugin-react-helmet`,
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `images`,
+				path: `${__dirname}/src/images`
+			}
+		},
+		`gatsby-transformer-sharp`,
+		`gatsby-plugin-sharp`,
+		{
+			resolve: `gatsby-plugin-manifest`,
+			options: {
+				name: `Vladimir Sainte, LCSW| Author of the Just Like a Hero series`,
+				short_name: `Vladimir Sainte`,
+				start_url: `/`,
+				background_color: '#b3e6e1',
+				theme_color: '#b3e6e1',
+				icon: `src/images/icon.png` // This path is relative to the root of the site.
+			}
+		},
+		{
+			resolve: `gatsby-plugin-google-fonts`,
+			options: {
+				fonts: [
+					`poppins\:400,400i,500,600,600i` // you can also specify font weights and styles
+				],
+				display: 'swap'
+			}
+		}
+		// this (optional) plugin enables Progressive Web App + Offline functionality
+		// To learn more, visit: https://gatsby.dev/offline
+		// `gatsby-plugin-offline`,
+	]
+};

@@ -1,0 +1,26 @@
+.social-icon {
+	width: 4rem;
+	height: 4rem;
+	border: .1rem solid var(--gray-light);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 1.6rem;
+	cursor: pointer;
+}
+
+.social-icon-container {
+	display: flex;
+	flex-direction: row;
+	padding-bottom: .8rem;
+}
+
+.social-icon-container a {
+	color: inherit;
+}
+
+.social-icon:hover {
+	color: var(--primary-dark);
+	border: .1rem solid var(--primary-dark);
+}

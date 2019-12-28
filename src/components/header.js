@@ -1,42 +1,50 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React, { useState } from 'react';
+// import { Link } from 'react-router-dom';
+import { Link } from 'gatsby';
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+import MainNav from './MainNav';
+import Divider from './shared/Divider';
+import MobileMenu from './MobileMenu';
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+import './Header.css';
+import logo from '../images/logo-svg.svg';
+import hero from '../images/header-hero.png';
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
+const Header = () => {
+	const [ menuOpen, setMenuOpen ] = useState(false);
 
-export default Header
+	const toggleMobileNav = () => {
+		setMenuOpen(!menuOpen);
+	};
+
+	return (
+		<header className='header'>
+			<div className='header__container'>
+				<Link to='/'>
+					<img
+						src={logo}
+						alt='Vladimir Sainte logo'
+						className='header__logo'
+					/>
+				</Link>
+				<div className='header__nav-container'>
+					<MainNav color='var(--black)' location='header' />
+				</div>
+				<img
+					src={hero}
+					alt='Just Like A Hero logo'
+					className='header__hero'
+				/>
+				<div className='mobile-nav'>
+					<MobileMenu
+						toggleMobileNav={toggleMobileNav}
+						menuOpen={menuOpen}
+					/>
+				</div>
+			</div>
+			<Divider />
+		</header>
+	);
+};
+
+export default Header;

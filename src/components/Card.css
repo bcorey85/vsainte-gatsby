@@ -1,0 +1,14 @@
+.card {
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+	max-width: 28.8rem;
+	border-radius: .4rem;
+
+	overflow: hidden;
+}
+
+.card__btn {
+	width: 100%;
+}

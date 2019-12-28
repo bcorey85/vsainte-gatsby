@@ -1,0 +1,113 @@
+.carousel {
+	width: 100%;
+}
+
+.carousel__banner {
+	background-color: var(--yellow);
+	height: 4rem;
+	display: flex;
+	padding: 0 1.6rem;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 4.8rem;
+	position: relative;
+}
+
+.carousel__banner h3 {
+	margin: 0;
+}
+
+.carousel__banner-icon {
+	font-size: 3.2rem;
+	position: absolute;
+	right: 1.6rem;
+}
+
+.carousel__content {
+	display: flex;
+	justify-content: space-between;
+}
+
+.carousel__larrow,
+.carousel__rarrow {
+	display: flex;
+	height: 18rem;
+	width: 3.2rem;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+.carousel__larrow {
+	margin-right: 1.6rem;
+}
+
+.carousel__rarrow {
+	margin-left: 1.6rem;
+}
+.carousel__icon {
+	height: 3.2rem;
+	width: 3.2rem;
+	background-color: transparent;
+	border: none;
+	font-size: 2.4rem;
+	outline: none;
+	cursor: pointer;
+}
+
+.carousel__icon:hover {
+	color: var(--primary-dark);
+}
+
+.carousel__larrow .carousel__icon {
+	text-align: left;
+}
+
+.carousel__rarrow .carousel__icon {
+	text-align: right;
+}
+
+.carousel__body-text {
+	width: 100%;
+	max-width: 60rem;
+	display: flex;
+}
+
+.carousel__body-photos {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.carousel__body-text::selection,
+.carousel__body-photos::selection {
+	background-color: transparent;
+}
+
+.carousel__photo {
+	width: 100%;
+	max-width: 48rem;
+	height: 32rem;
+}
+
+.carousel__photo img {
+	object-fit: cover;
+	max-height: 32rem;
+}
+
+/* 600px */
+@media only screen and (max-width: 37.5em) {
+	.carousel__larrow,
+	.carousel__rarrow {
+		height: 24rem;
+	}
+}
+
+/* 400px */
+@media only screen and (max-width: 25em) {
+	.carousel__larrow,
+	.carousel__rarrow {
+		height: 28.8rem;
+	}
+}
