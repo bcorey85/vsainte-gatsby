@@ -1,7 +1,6 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
 import { Link } from 'gatsby';
-import { useStaticQuery, graphql } from 'gatsby';
 import useScrollToTop from '../hooks/useScrollToTop';
 
 import Section from '../components/shared/Section';
@@ -13,23 +12,6 @@ import './Speaking.css';
 import eventPhotos from '../json/event-photos.json';
 
 const Speaking = () => {
-	// const data = useStaticQuery(graphql`
-	// 	{
-	// 		allEventPhoto {
-	// 			edges {
-	// 				node {
-	// 					src
-	// 					alt
-	// 				}
-	// 			}
-	// 		}
-	// 	}
-	// `);
-
-	// const eventPhotos2 = data.allEventPhoto.edges.map(photo => {
-	// 	return <img src={photo.node.src} />;
-	// });
-
 	useScrollToTop();
 	return (
 		<Layout>

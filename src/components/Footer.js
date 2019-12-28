@@ -4,8 +4,8 @@ import { Link } from 'gatsby';
 
 import MainNav from './MainNav';
 import SocialIcons from './SocialIcons';
-import Button from './shared/Button';
-import Input from './shared/Input';
+// import Button from './shared/Button';
+// import Input from './shared/Input';
 import Divider from './shared/Divider';
 
 import './Footer.css';
