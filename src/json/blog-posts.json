@@ -106,13 +106,15 @@
 			}
 		]
 	},
-	"template": {
-		"date": "",
-		"title": "",
-		"body": "",
-		"mediaType": "",
-		"mediaSrc": "",
-		"link": "",
-		"linkTxt": ""
-	}
+	"template": [
+		{
+			"date": "",
+			"title": "",
+			"body": "",
+			"mediaType": "",
+			"mediaSrc": "",
+			"link": "",
+			"linkTxt": ""
+		}
+	]
 }

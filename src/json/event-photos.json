@@ -1,27 +1,23 @@
 {
 	"photos": [
 		{
-			"src": "https://www.vladimirsainte.com/imgs/iowapres.jpg",
-			"alt": "pres1"
+			"src": "/event-photos/vladimir-sainte-iowa-presentation-1.jpg",
+			"alt": "pres6"
 		},
 		{
-			"src": "https://www.vladimirsainte.com/imgs/fox4-10-18-19.JPG",
-			"alt": "pres2"
+			"src": "/event-photos/vladimir-sainte-iowa-presentation-2.jpg",
+			"alt": "pres6"
 		},
 		{
-			"src": "https://www.vladimirsainte.com/imgs/kckpl_presentation.jpg",
-			"alt": "pres3"
+			"src": "/event-photos/vladimir-sainte-iowa-presentation-3.jpg",
+			"alt": "pres6"
 		},
 		{
-			"src": "https://www.vladimirsainte.com/imgs/southpatrolpres.jpg",
-			"alt": "pres4"
+			"src": "/event-photos/vladimir-sainte-presentation1.jpg",
+			"alt": "pres6"
 		},
 		{
-			"src": "https://www.vladimirsainte.com/imgs/kcptscreencap.jpg",
-			"alt": "pres5"
-		},
-		{
-			"src": "https://www.vladimirsainte.com/imgs/oakgrovepres.jpg",
+			"src": "/event-photos/vladimir-sainte-presentation2.jpg",
 			"alt": "pres6"
 		}
 	],
