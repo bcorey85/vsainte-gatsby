@@ -234,6 +234,7 @@ const Home = () => {
 							frameBorder='0'
 							allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
 							allowFullScreen
+							defer
 						/>
 					</div>
 				</section>
@@ -256,7 +257,7 @@ const Home = () => {
 						</div>
 						<div className='about-section__link'>
 							<Link to='/about' className='link-caps'>
-								Learn More
+								View About
 							</Link>
 						</div>
 					</div>
