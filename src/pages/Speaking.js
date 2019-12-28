@@ -36,7 +36,7 @@ const Speaking = () => {
 								frameBorder='0'
 								allowFullScreen
 								src='//cdn2.trb.tv/iframe.html?ec=NqZGhuaTE6Gv__BcR4eua29LJCvZxAbP&pbid=41a7fde962484147af148038b175431a&pcode=o3ZXA6AW_ODSH73PHaEhBxcqUpwq'
-								defer
+								className='lazyload'
 							/>
 						</div>
 						<div>

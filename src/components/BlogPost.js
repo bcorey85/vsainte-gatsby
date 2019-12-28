@@ -1,4 +1,5 @@
 import React from 'react';
+import 'lazysizes';
 
 import Image from '../components/shared/Image';
 
@@ -30,6 +31,7 @@ const BlogPost = props => {
 							frameBorder='0'
 							allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
 							allowFullScreen
+							className='lazyload'
 						/>
 					</div>
 					<p>{body}</p>

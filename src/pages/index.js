@@ -229,12 +229,11 @@ const Home = () => {
 					<div className='speaking-section__right'>
 						<iframe
 							title='Vladimir Sainte KCPT Kids'
-							className='speaking-section__video'
+							className='speaking-section__video lazyload'
 							src='https://www.youtube-nocookie.com/embed/FW5XFBPEh9Q'
 							frameBorder='0'
 							allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
 							allowFullScreen
-							defer
 						/>
 					</div>
 				</section>
