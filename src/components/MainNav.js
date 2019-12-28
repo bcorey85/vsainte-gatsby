@@ -23,7 +23,7 @@ const MainNav = props => {
 				</li>
 				<li>
 					<Link
-						to='/Books'
+						to='/books'
 						className='main-nav__link'
 						activeClassName={`${location}Active`}>
 						Books
@@ -31,7 +31,7 @@ const MainNav = props => {
 				</li>
 				<li>
 					<Link
-						to='/Speaking'
+						to='/speaking'
 						className='main-nav__link'
 						activeClassName={`${location}Active`}>
 						Speaking
@@ -39,7 +39,7 @@ const MainNav = props => {
 				</li>
 				<li>
 					<Link
-						to='/About'
+						to='/about'
 						className='main-nav__link'
 						activeClassName={`${location}Active`}>
 						About
@@ -47,7 +47,7 @@ const MainNav = props => {
 				</li>
 				<li>
 					<Link
-						to='/Blog'
+						to='/blog'
 						className='main-nav__link'
 						activeClassName={`${location}Active`}>
 						Blog
@@ -55,7 +55,7 @@ const MainNav = props => {
 				</li>
 				<li>
 					<Link
-						to='/Contact'
+						to='/contact'
 						className='main-nav__link'
 						activeClassName={`${location}Active`}>
 						Contact

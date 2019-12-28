@@ -10,6 +10,7 @@ import PropTypes from 'prop-types';
 
 import Header from './Header';
 import Footer from './Footer';
+import PageContainer from './PageContainer';
 
 import './Header.css';
 import './Footer.css';
@@ -17,11 +18,11 @@ import './Layout.css';
 
 const Layout = ({ children }) => {
 	return (
-		<React.Fragment>
+		<div className='site'>
 			<Header />
-			{children}
+			<PageContainer>{children}</PageContainer>
 			<Footer />
-		</React.Fragment>
+		</div>
 	);
 };
 

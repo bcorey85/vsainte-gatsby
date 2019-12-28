@@ -16,7 +16,7 @@ const Footer = () => {
 			<div className='footer'>
 				<Divider />
 				<div className='footer-container'>
-					<div className='sign-up'>
+					{/* <div className='sign-up'>
 						<div className='sign-up__container'>
 							<div className='sign-up__text-group'>
 								<div>
@@ -38,7 +38,7 @@ const Footer = () => {
 								</Button>
 							</div>
 						</div>
-					</div>
+					</div> */}
 					<div className='footer-links'>
 						<div className='footer__nav'>
 							<MainNav location='footer' />

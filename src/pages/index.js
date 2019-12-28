@@ -37,14 +37,7 @@ const Home = () => {
 			.slice(0, 4)
 			.map((post, i) => (
 				<li key={post.title}>
-					<Link
-						to='/Blog'
-						state={{ index: i }}
-						// to={{
-						// 	pathname: '/blog',
-						// 	data: [ i ]
-						// }}
-						className='link'>
+					<Link to='/blog' state={{ index: i }} className='link'>
 						{ReactHtmlParser(post.title)}
 					</Link>
 				</li>
