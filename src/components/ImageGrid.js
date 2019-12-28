@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import 'lazysizes';
 
 import './ImageGrid.css';
 
@@ -37,7 +38,7 @@ const ImageGrid = props => {
 					onMouseLeave={() => swapImgHover(mainImg)}
 					onClick={() => swapImgClick(subImg1)}
 					onKeyDown={() => swapImgClick(subImg1)}
-					className='image-grid__img'
+					className='image-grid__img lazyload'
 				/>
 				<input
 					type='image'
@@ -47,7 +48,7 @@ const ImageGrid = props => {
 					onMouseLeave={() => swapImgHover(mainImg)}
 					onClick={() => swapImgClick(subImg2)}
 					onKeyDown={() => swapImgClick(subImg2)}
-					className='image-grid__img'
+					className='image-grid__img lazyload'
 				/>
 				<input
 					type='image'
@@ -57,11 +58,15 @@ const ImageGrid = props => {
 					onMouseLeave={() => swapImgHover(mainImg)}
 					onClick={() => swapImgClick(subImg3)}
 					onKeyDown={() => swapImgClick(subImg3)}
-					className='image-grid__img'
+					className='image-grid__img lazyload'
 				/>
 			</div>
 			<div className='image-grid__main-image'>
-				<img src={focusedImg} alt='' className='image-grid__img' />
+				<img
+					src={focusedImg}
+					alt=''
+					className='image-grid__img lazyload'
+				/>
 			</div>
 		</div>
 	);

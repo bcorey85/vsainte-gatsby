@@ -1,4 +1,5 @@
 import React from 'react';
+import 'lazysizes';
 
 import './Image.css';
 
@@ -15,7 +16,7 @@ const Image = props => {
 		<img
 			src={src}
 			alt={alt}
-			className={`img ${className ? className : ''}`}
+			className={`img lazyload ${className ? className : ''}`}
 			style={{
 				boxShadow: shadows[boxShadow],
 				borderRadius: borderRadius

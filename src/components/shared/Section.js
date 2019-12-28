@@ -38,7 +38,9 @@ const Section = props => {
 		};
 	}
 	return (
-		<section className={`section-outer ${className}`} style={styles}>
+		<section
+			className={`section-outer ${className ? className : ''}`}
+			style={styles}>
 			<div className='section-inner'>{props.children}</div>
 		</section>
 	);
