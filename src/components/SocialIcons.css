@@ -1,7 +1,7 @@
 .social-icon {
 	width: 4rem;
 	height: 4rem;
-	border: .1rem solid var(--gray-light);
+	border: .2rem solid var(--gray-light);
 	border-radius: 50%;
 	display: flex;
 	justify-content: center;
@@ -10,10 +10,14 @@
 	cursor: pointer;
 }
 
+.social-icon svg {
+	font-size: 2rem;
+}
+
 .social-icon-container {
 	display: flex;
 	flex-direction: row;
-	padding-bottom: .8rem;
+	justify-content: space-evenly;
 }
 
 .social-icon-container a {

@@ -7,6 +7,7 @@ import SocialIcons from './SocialIcons';
 // import Button from './shared/Button';
 // import Input from './shared/Input';
 import Divider from './shared/Divider';
+import logo from '../images/logo-gray-svg.svg';
 
 import './Footer.css';
 
@@ -39,14 +40,23 @@ const Footer = () => {
 							</div>
 						</div>
 					</div> */}
-					<div className='footer-links'>
-						<div className='footer__nav'>
-							<MainNav location='footer' />
-						</div>
-						<SocialIcons />
-						<Link to='/' className='footer__link'>
-							© {new Date().getFullYear()} www.vladimirsainte.com
+					<div className='footer__logo-container'>
+						<Link to='/'>
+							<img
+								src={logo}
+								alt='Vladimir Sainte logo'
+								className='footer__logo'
+							/>
 						</Link>
+						<div className='footer__copyright'>
+							© Copyright {new Date().getFullYear()}
+						</div>
+						<div className='footer__social-icons'>
+							<SocialIcons />
+						</div>
+					</div>
+					<div className='footer__nav'>
+						<MainNav location='footer' />
 
 						<a
 							href='mailto:bcorey85@gmail.com'

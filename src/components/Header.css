@@ -12,7 +12,7 @@
 	justify-content: space-between;
 	align-items: center;
 	position: relative;
-	padding: 2.4rem 0;
+	padding: 2.4rem 1.6rem;
 }
 
 .header__logo {
@@ -25,7 +25,7 @@
 	width: 16rem;
 	position: absolute;
 	top: 2.3rem;
-	right: 0;
+	right: 1.6rem;
 }
 
 .header__hero--mobile {
