@@ -15,7 +15,12 @@ module.exports = {
 		},
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
-		`gatsby-plugin-layout`,
+		{
+			resolve: `gatsby-plugin-layout`,
+			options: {
+				component: require.resolve(`./src/components/layout.js`)
+			}
+		},
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
