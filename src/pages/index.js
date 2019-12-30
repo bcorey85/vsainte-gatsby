@@ -59,8 +59,8 @@ const Home = () => {
 						<p className='hero-section__cta-text'>
 							Join the story of{' '}
 							<span className='cta-emphasis'>Alma</span>, as she
-							learns to overcome her fears and bullying with the
-							help of the mighty{' '}
+							learns to overcome her fears with the help of the
+							mighty{' '}
 							<span className='cta-emphasis'>Hope Shield</span>.
 						</p>
 						<Button

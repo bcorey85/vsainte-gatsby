@@ -6,7 +6,6 @@
 
 .hero-section__left {
 	flex: 0 1 51.2rem;
-	margin-right: 3.2rem;
 	margin-top: -3.8rem;
 }
 
@@ -22,11 +21,15 @@
 	height: auto;
 }
 
+.hero-section h1 {
+	font-size: 5.7rem;
+}
+
 .hero-section__cta-text {
 	font-size: 1.8rem;
 	line-height: 2;
 	margin-top: 2.4rem;
-	margin-bottom: 10rem;
+	margin-bottom: 6rem;
 	max-width: 44.8rem;
 }
 
