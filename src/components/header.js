@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 // import { Link } from 'react-router-dom';
 import { Link } from 'gatsby';
 
-import MainNav from './MainNav';
 import Divider from './shared/Divider';
+import MainNav from './MainNav';
 import MobileMenu from './MobileMenu';
 
 import './Header.css';

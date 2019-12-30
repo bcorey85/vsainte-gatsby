@@ -31,7 +31,7 @@
 }
 
 .details-section {
-	padding: 12rem 0;
+	padding: 14.4rem 0;
 }
 
 .details-section__heading {
@@ -42,7 +42,7 @@
 .features {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 12rem;
+	margin-bottom: 14.4rem;
 }
 
 .features__item {
@@ -60,7 +60,7 @@
 .benefits {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 12rem;
+	margin-bottom: 14.4rem;
 }
 
 .benefits__left {
@@ -87,7 +87,7 @@
 .books-section {
 	display: flex;
 	justify-content: space-around;
-	padding: 12rem 0;
+	padding: calc(12rem + 3vw) 0;
 }
 
 .books-teal {
@@ -100,7 +100,7 @@
 .speaking-section {
 	display: flex;
 	justify-content: space-between;
-	padding: 12rem 0;
+	padding: 14.4rem 0;
 }
 
 .speaking-section h2 {
@@ -125,6 +125,7 @@
 
 .speaking-section__video {
 	height: 100%;
+	min-height: 32rem;
 	width: 100%;
 	max-width: 52rem;
 	border-radius: .4rem;
@@ -132,7 +133,7 @@
 }
 
 .about-section {
-	padding: 12rem 0;
+	padding: 14.4rem 0;
 	display: flex;
 	justify-content: space-between;
 }
@@ -211,6 +212,7 @@
 
 	.hero-section__img {
 		margin-left: 8rem;
+		margin-top: 2.4rem;
 	}
 
 	.hero-section__cta-text {
@@ -226,18 +228,12 @@
 	}
 
 	.benefits {
-		flex-direction: column;
-		align-items: center;
 		margin-bottom: 9.6rem;
 	}
 
-	.benefits__left {
-		margin-right: 0;
-	}
-
 	.benefits__right {
-		max-width: 34.6rem;
-		margin-top: 3.2rem;
+		max-width: 49.6rem;
+		min-width: 34rem;
 		flex: 1 1 auto;
 	}
 
@@ -255,10 +251,6 @@
 
 	.books-section .card:not(:last-of-type) {
 		margin-right: 3.2rem;
-	}
-
-	.books-teal {
-		background-image: none;
 	}
 
 	.speaking-section {
@@ -286,6 +278,7 @@
 
 	.speaking-section__video {
 		height: auto;
+		min-height: 0;
 		max-width: 49.6rem;
 	}
 
@@ -335,6 +328,22 @@
 		margin-bottom: 9.6rem;
 	}
 
+	.benefits {
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 9.6rem;
+	}
+
+	.benefits__left {
+		margin-right: 0rem;
+		margin-bottom: 1.6rem;
+		flex: 0 0 auto;
+	}
+
+	.benefits__right {
+		min-width: 0;
+	}
+
 	.books-section {
 		flex-direction: column;
 		align-items: center;
@@ -343,6 +352,10 @@
 	.books-section .card:not(:last-of-type) {
 		margin-right: 0;
 		margin-bottom: 9.6rem;
+	}
+
+	.books-teal {
+		background-image: url('../images/willandalmabg-vertical.jpg');
 	}
 }
 

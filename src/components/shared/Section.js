@@ -9,7 +9,7 @@ import darkGrayPaper from '../../images/dark-gray-paper-bg.jpg';
 import tealPaper from '../../images/teal-paper-bg.jpg';
 
 const Section = props => {
-	const { color, paper, className } = props;
+	const { color, paper, className, angle, padding, margin } = props;
 	const colors = {
 		teal: 'var(--primary-light)',
 		lightGray: 'var(--gray-light)',
@@ -30,16 +30,22 @@ const Section = props => {
 	if (paper) {
 		styles = {
 			backgroundColor: colors[color],
-			backgroundImage: `url(${textures[color]})`
+			backgroundImage: `url(${textures[color]})`,
+			padding,
+			margin
 		};
 	} else {
 		styles = {
-			backgroundColor: colors[color]
+			backgroundColor: colors[color],
+			padding,
+			margin
 		};
 	}
 	return (
 		<section
-			className={`section-outer ${className ? className : ''}`}
+			className={`section-outer ${className ? className : ''} ${angle
+				? `section--angle-${angle}`
+				: ''}`}
 			style={styles}>
 			<div className='section-inner'>{props.children}</div>
 		</section>

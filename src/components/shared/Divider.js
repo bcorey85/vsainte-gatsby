@@ -2,8 +2,8 @@ import React from 'react';
 
 import './Divider.css';
 
-const Divider = () => {
-	return <div className='divider' />;
+const Divider = ({ angle }) => {
+	return <div className={`divider${angle ? '--angle' : ''}`} />;
 };
 
 export default Divider;

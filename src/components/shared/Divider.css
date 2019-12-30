@@ -1,7 +1,15 @@
-.divider {
+.divider,
+.divider--angle {
 	height: 1.2rem;
 	width: 100%;
 	border-top: 1px solid var(--gray-dark);
 	border-bottom: 1px solid var(--gray-dark);
 	background-color: var(--white);
+	position: relative;
+	z-index: 1;
+}
+
+.divider--angle {
+	transform: rotate(-1.7deg);
+	transform-origin: top left;
 }

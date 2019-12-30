@@ -7,15 +7,15 @@ import useScrollToTop from '../hooks/useScrollToTop';
 
 import Button from '../components/shared/Button';
 import Image from '../components/shared/Image';
-import Divider from '../components/shared/Divider';
 import Section from '../components/shared/Section';
 import Carousel from '../components/Carousel';
 import Card from '../components/Card';
 import Thumbnail from '../components/Thumbnail';
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
+import Divider from '../components/shared/Divider';
 
-import './Home.css';
+import './index.css';
 import iwbocover from '../images/iwbocover.jpg';
 import jlahcover from '../images/jlahcover.jpg';
 import iwboctasection from '../images/iwbo-cta-section.jpg';
@@ -48,7 +48,7 @@ const Home = () => {
 	return (
 		<Layout>
 			<SEO title='Home' />
-			<Section color='white'>
+			<Section color='white' margin='0 0 2vw 0'>
 				<section className='hero-section'>
 					<div className='hero-section__left'>
 						<div>
@@ -80,8 +80,8 @@ const Home = () => {
 					</div>
 				</section>
 			</Section>
-			<Divider />
-			<Section color='lightGray' paper>
+			<Divider angle />
+			<Section color='lightGray' paper angle='both' padding='1.5vw 0'>
 				<section className='details-section'>
 					<h2 className='details-section__heading'>Peak inside...</h2>
 					<div className='features'>
@@ -187,8 +187,8 @@ const Home = () => {
 					</div>
 				</section>
 			</Section>
-			<Divider />
-			<Section color='teal' className='books-teal'>
+			<Divider angle />
+			<Section color='teal' className='books-teal' angle='both'>
 				<section className='books-section'>
 					<Card
 						href='https://www.amazon.com/Will-Okay-Just-Like-Hero/dp/1942005520/ref=sr_1_1?crid=2SQ0E2D0Z20WN&keywords=it+will+be+okay+vladimir+sainte&qid=1570911125&sprefix=it+will+be+okay+vladimi%2Caps%2C153&sr=8-1'
@@ -208,8 +208,8 @@ const Home = () => {
 					/>
 				</section>
 			</Section>
-			<Divider />
-			<Section color='lightGray' paper>
+			<Divider angle />
+			<Section color='lightGray' paper angle='top' padding='1.5vw 0 0 0'>
 				<section className='speaking-section'>
 					<div className='speaking-section__left'>
 						<h2>Speaking</h2>
