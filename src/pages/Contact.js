@@ -55,7 +55,6 @@ const Contact = () => {
 									action='https://formspree.io/vladimirsainte@gmail.com'>
 									<div>
 										<div>
-											<label htmlFor='name'>Name</label>
 											<Input
 												type='text'
 												name='name'
@@ -64,7 +63,6 @@ const Contact = () => {
 											/>
 										</div>
 										<div>
-											<label htmlFor='email'>Email</label>
 											<Input
 												type='email'
 												name='replyto'
@@ -74,9 +72,6 @@ const Contact = () => {
 										</div>
 									</div>
 									<div>
-										<label htmlFor='comments'>
-											Comments
-										</label>
 										<Input
 											type='textarea'
 											name='comments'

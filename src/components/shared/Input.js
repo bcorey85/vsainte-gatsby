@@ -12,24 +12,30 @@ const Input = props => {
 
 	if (type === 'textarea') {
 		return (
-			<textarea
-				placeholder={placeholder}
-				className='textarea'
-				style={invert ? { ...invertStyles } : null}
-				name={name}
-				id={id}
-			/>
+			<div className='input-group'>
+				<textarea
+					className='textarea'
+					style={invert ? { ...invertStyles } : null}
+					name={name}
+					id={id}
+					placeholder=' '
+				/>
+				<label for={placeholder}>{placeholder}</label>
+			</div>
 		);
 	}
 	return (
-		<input
-			type={type}
-			placeholder={placeholder}
-			className='input'
-			style={invert ? { ...invertStyles } : null}
-			name={name}
-			id={id}
-		/>
+		<div className='input-group'>
+			<input
+				type={type}
+				className='input'
+				style={invert ? { ...invertStyles } : null}
+				name={name}
+				id={id}
+				placeholder=' '
+			/>
+			<label for={placeholder}>{placeholder}</label>
+		</div>
 	);
 };
 
