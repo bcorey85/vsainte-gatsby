@@ -4,15 +4,14 @@ import useScrollToTop from '../hooks/useScrollToTop';
 import Section from '../components/shared/Section';
 import Input from '../components/shared/Input';
 import Button from '../components/shared/Button';
-import Layout from '../components/Layout';
-import SEO from '../components/Seo';
+import SEO from '../components/seo';
 
 import './Contact.css';
 
-const Contact = () => {
+const Contact = ({ location }) => {
 	useScrollToTop();
 	return (
-		<Layout>
+		<React.Fragment>
 			<SEO title='Contact' />
 
 			<Section>
@@ -90,7 +89,7 @@ const Contact = () => {
 					</div>
 				</div>
 			</Section>
-		</Layout>
+		</React.Fragment>
 	);
 };
 

@@ -5,16 +5,15 @@ import useScrollToTop from '../hooks/useScrollToTop';
 
 import Section from '../components/shared/Section';
 import Carousel from '../components/Carousel';
-import Layout from '../components/Layout';
-import SEO from '../components/Seo';
+import SEO from '../components/seo';
 
 import './Speaking.css';
 import eventPhotos from '../json/event-photos.json';
 
-const Speaking = () => {
+const Speaking = ({ location }) => {
 	useScrollToTop();
 	return (
-		<Layout>
+		<React.Fragment>
 			<SEO title='Speaking' />
 			<Section>
 				<div className='speaking'>
@@ -88,7 +87,7 @@ const Speaking = () => {
 					</div>
 				</div>
 			</Section>
-		</Layout>
+		</React.Fragment>
 	);
 };
 

@@ -4,13 +4,12 @@ import ReactHtmlParser from 'react-html-parser';
 import useScrollToTop from '../hooks/useScrollToTop';
 import Section from '../components/shared/Section';
 import BlogPost from '../components/BlogPost';
-import Layout from '../components/Layout';
-import SEO from '../components/Seo';
+import SEO from '../components/seo';
 
 import blogJSON from '../json/blog-posts.json';
 import './Blog.css';
 
-const Blog = props => {
+const Blog = ({ location }) => {
 	const [ currentYear ] = useState(new Date().getFullYear());
 	const [ selectedYear, setSelectedYear ] = useState(currentYear);
 	const [ selectedPosts, setSelectedPosts ] = useState(
@@ -19,14 +18,14 @@ const Blog = props => {
 
 	useEffect(
 		() => {
-			if (props.location.state) {
-				if (props.location.state.index >= 0)
+			if (location.state) {
+				if (location.state.index >= 0)
 					setSelectedPosts(
-						blogJSON.posts[currentYear][props.location.state.index]
+						blogJSON.posts[currentYear][location.state.index]
 					);
 			}
 		},
-		[ currentYear, props.location.state ]
+		[ currentYear, location.state ]
 	);
 
 	useScrollToTop(selectedPosts);
@@ -121,7 +120,7 @@ const Blog = props => {
 		));
 
 	return (
-		<Layout>
+		<React.Fragment>
 			<SEO title='Blog' />
 
 			<Section>
@@ -146,7 +145,7 @@ const Blog = props => {
 					</div>
 				</div>
 			</Section>
-		</Layout>
+		</React.Fragment>
 	);
 };
 

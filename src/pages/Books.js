@@ -5,8 +5,7 @@ import { Link } from 'gatsby';
 import useScrollToTop from '../hooks/useScrollToTop';
 
 import BookDetails from '../components/BookDetails';
-import Layout from '../components/Layout';
-import SEO from '../components/Seo';
+import SEO from '../components/seo';
 import Section from '../components/shared/Section';
 
 import iwboblackphoto from '../images/iwboblackphoto.jpg';
@@ -20,10 +19,10 @@ import jlahcover from '../images/jlahcover.jpg';
 
 import './Books.css';
 
-const Books = () => {
+const Books = ({ location }) => {
 	useScrollToTop();
 	return (
-		<Layout>
+		<React.Fragment>
 			<SEO title='Books' />
 
 			<Section>
@@ -73,7 +72,7 @@ const Books = () => {
 					</div>
 				</div>
 			</Section>
-		</Layout>
+		</React.Fragment>
 	);
 };
 

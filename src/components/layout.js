@@ -11,16 +11,19 @@ import PropTypes from 'prop-types';
 import Header from './Header';
 import Footer from './Footer';
 import PageContainer from './PageContainer';
+import Transition from './Transition';
 
 import './Header.css';
 import './Footer.css';
-import './Layout.css';
+import './layout.css';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
 	return (
 		<div className='site'>
 			<Header />
-			<PageContainer>{children}</PageContainer>
+			<PageContainer>
+				<Transition location={location}>{children}</Transition>
+			</PageContainer>
 			<Footer />
 		</div>
 	);

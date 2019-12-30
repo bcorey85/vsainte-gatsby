@@ -20,7 +20,7 @@ const Input = props => {
 					id={id}
 					placeholder=' '
 				/>
-				<label for={placeholder}>{placeholder}</label>
+				<label htmlFor={placeholder}>{placeholder}</label>
 			</div>
 		);
 	}
@@ -34,7 +34,7 @@ const Input = props => {
 				id={id}
 				placeholder=' '
 			/>
-			<label for={placeholder}>{placeholder}</label>
+			<label htmlFor={placeholder}>{placeholder}</label>
 		</div>
 	);
 };

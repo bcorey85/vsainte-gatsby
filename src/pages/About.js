@@ -3,17 +3,16 @@ import useScrollToTop from '../hooks/useScrollToTop';
 
 import Image from '../components/shared/Image';
 import Section from '../components/shared/Section';
-import Layout from '../components/Layout';
-import SEO from '../components/Seo';
+import SEO from '../components/seo';
 
 import './About.css';
 import teamcvs from '../images/vsainte-teamcvs.jpg';
 import young from '../images/vsainte-young.jpg';
 
-const About = () => {
+const About = ({ location }) => {
 	useScrollToTop();
 	return (
-		<Layout>
+		<React.Fragment>
 			<SEO title='About' />
 			<Section>
 				<div className='about'>
@@ -92,7 +91,7 @@ const About = () => {
 					</div>
 				</div>
 			</Section>
-		</Layout>
+		</React.Fragment>
 	);
 };
 

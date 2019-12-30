@@ -11,8 +11,7 @@ import Section from '../components/shared/Section';
 import Carousel from '../components/Carousel';
 import Card from '../components/Card';
 import Thumbnail from '../components/Thumbnail';
-import Layout from '../components/Layout';
-import SEO from '../components/Seo';
+import SEO from '../components/seo';
 import Divider from '../components/shared/Divider';
 
 import './index.css';
@@ -28,7 +27,7 @@ import headshot from '../images/vsainte-headshot.jpg';
 import testimonialJSON from '../json/testimonials.json';
 import blogJSON from '../json/blog-posts.json';
 
-const Home = () => {
+const Home = ({ location }) => {
 	useScrollToTop();
 
 	const renderBlogTitles = () => {
@@ -44,9 +43,8 @@ const Home = () => {
 			));
 		return titles;
 	};
-
 	return (
-		<Layout>
+		<React.Fragment>
 			<SEO title='Home' />
 			<Section color='white' margin='0 0 2vw 0'>
 				<section className='hero-section'>
@@ -280,7 +278,7 @@ const Home = () => {
 					</div>
 				</section>
 			</Section>
-		</Layout>
+		</React.Fragment>
 	);
 };
 
