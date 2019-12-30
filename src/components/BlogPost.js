@@ -42,7 +42,7 @@ const BlogPost = props => {
 	}
 
 	return (
-		<div className='blog-post'>
+		<article className='blog-post'>
 			<div className='blog-post__content'>
 				<h5>{date}</h5>
 				<h3>{title}</h3>
@@ -52,7 +52,7 @@ const BlogPost = props => {
 				<p>{body}</p>
 				{link ? linkMarkup : ''}
 			</div>
-		</div>
+		</article>
 	);
 };
 

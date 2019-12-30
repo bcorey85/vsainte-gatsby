@@ -342,6 +342,7 @@
 
 	.benefits__right {
 		min-width: 0;
+		max-width: 34.6rem;
 	}
 
 	.books-section {
