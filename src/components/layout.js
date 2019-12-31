@@ -9,7 +9,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Header from './header';
-// import Footer from './footer';
+import Footer from './footer';
 import PageContainer from './PageContainer';
 import Transition from './Transition';
 
@@ -24,7 +24,7 @@ const Layout = ({ children, location }) => {
 			<PageContainer>
 				<Transition location={location}>{children}</Transition>
 			</PageContainer>
-			{/* <Footer /> */}
+			<Footer />
 		</div>
 	);
 };
