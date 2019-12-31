@@ -5,7 +5,7 @@ import useScrollToTop from '../hooks/useScrollToTop';
 
 import Section from '../components/shared/Section';
 import Carousel from '../components/Carousel';
-import SEO from '../components/seo';
+import SEO from '../components/Seo';
 
 import './Speaking.css';
 import eventPhotos from '../json/event-photos.json';

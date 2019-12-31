@@ -11,7 +11,7 @@ import Section from '../components/shared/Section';
 import Carousel from '../components/Carousel';
 import Card from '../components/Card';
 import Thumbnail from '../components/Thumbnail';
-import SEO from '../components/seo';
+import SEO from '../components/Seo';
 import Divider from '../components/shared/Divider';
 
 import './index.css';

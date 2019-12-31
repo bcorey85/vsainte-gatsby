@@ -3,7 +3,7 @@ import useScrollToTop from '../hooks/useScrollToTop';
 
 import Image from '../components/shared/Image';
 import Section from '../components/shared/Section';
-import SEO from '../components/seo';
+import SEO from '../components/Seo';
 
 import './About.css';
 import teamcvs from '../images/vsainte-teamcvs.jpg';

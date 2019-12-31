@@ -1,0 +1,143 @@
+:root {
+	--primary-light: hsl(175, 50%, 80%);
+	--primary-dark: hsl(175, 73%, 30%);
+	--red: hsl(0, 79%, 48%);
+	--yellow: hsl(48, 85%, 70%);
+	--gray-light: hsl(175, 5%, 95%);
+	--gray-medium: hsl(175, 5%, 80%);
+	--gray-dark: hsl(175, 5%, 35%);
+	--black: hsl(175, 10%, 25%);
+	--white: hsl(0, 0%, 100%);
+}
+
+.site {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+.site-content {
+	flex-grow: 1;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html,
+body {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+	width: 100vw;
+	overflow-x: hidden;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: 'Poppins', sans-serif;
+	color: var(--black);
+	line-height: 1.6;
+}
+
+h1 {
+	font-size: 4.8rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-style: italic;
+	line-height: 1;
+}
+
+h1.page-title {
+	font-weight: 400;
+	font-size: 1.6rem;
+	text-transform: none;
+	font-style: normal;
+	margin: 6rem 0;
+	text-align: right;
+}
+
+h2 {
+	font-size: 3.2rem;
+	font-weight: 600;
+	margin-bottom: .8rem;
+}
+
+h3 {
+	font-size: 2.4rem;
+	font-weight: 600;
+}
+
+h5 {
+	font-size: 1.6rem;
+	font-weight: 500;
+	color: var(--gray-dark);
+}
+
+p {
+	margin-bottom: 2.4rem;
+}
+
+.cta-emphasis {
+	color: var(--red);
+	font-weight: 500;
+}
+
+.link,
+.link-caps {
+	cursor: pointer;
+
+	color: var(--primary-dark);
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.link {
+	font-weight: 400;
+	text-transform: none;
+}
+.link-caps {
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+}
+
+.link:hover,
+.link-caps:hover {
+	color: var(--black);
+}
+
+button.link,
+button.link-caps {
+	background-color: transparent;
+	border: none;
+	font-size: 1.6rem;
+	text-align: left;
+	font-family: Poppins;
+}
+
+ul {
+	list-style: none;
+}
+
+/* 400px */
+@media only screen and (max-width: 25em) {
+	h2 {
+		font-size: 3.2rem;
+		line-height: 1;
+	}
+
+	h3 {
+		line-height: 1.2;
+		margin-bottom: .8rem;
+	}
+}

@@ -4,7 +4,7 @@ import ReactHtmlParser from 'react-html-parser';
 import useScrollToTop from '../hooks/useScrollToTop';
 import Section from '../components/shared/Section';
 import BlogPost from '../components/BlogPost';
-import SEO from '../components/seo';
+import SEO from '../components/Seo';
 
 import blogJSON from '../json/blog-posts.json';
 import './Blog.css';
