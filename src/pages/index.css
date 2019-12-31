@@ -1,7 +1,7 @@
 .hero-section {
 	display: flex;
 	align-items: center;
-	padding: 4.8rem 0;
+	padding: 8rem 0;
 }
 
 .hero-section__left {
@@ -12,7 +12,7 @@
 .hero-section__right {
 	flex: 1 1 51.2rem;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-end;
 }
 
 .hero-section__img {
@@ -90,7 +90,7 @@
 .books-section {
 	display: flex;
 	justify-content: space-around;
-	padding: calc(12rem + 3vw) 0;
+	padding: calc(9.6rem + 3vw) 0;
 }
 
 .books-teal {

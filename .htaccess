@@ -1,0 +1,45 @@
+# Needed before any rewriting
+RewriteEngine On
+
+### Built using the .htaccess 301 Redirect Generator from Web Site Advantage
+### https://websiteadvantage.com.au/HtAccess-301-Redirect-Generator
+### Place after 'RewriteEngine On' and before any CMS specific rewrite rules
+
+# Redirect HTTP with www to HTTPS with www
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+# Redirect HTTP without www to HTTPS with www
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule .* https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+# Redirect HTTPS without www to HTTPS with www
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule .* https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+## 301 Redirects
+
+<IfModule mod_expires.c>
+ExpiresActive On 
+ExpiresDefault "access plus 1 month"
+ExpiresByType image/gif "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/jpg "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/x-icon "access plus 1 year"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 year"
+</IfModule>
