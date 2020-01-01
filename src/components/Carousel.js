@@ -24,7 +24,6 @@ const Carousel = props => {
 
 	const incrementCarousel = (e, direction) => {
 		e.stopPropagation();
-		console.log(e.target);
 
 		if (currentIndex < data.length - 1 && direction === 'inc') {
 			setCurrentIndex(currentIndex + 1);

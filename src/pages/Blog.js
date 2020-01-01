@@ -35,7 +35,7 @@ const Blog = ({ location }) => {
 					);
 			}
 		},
-		[ currentYear, location.state ]
+		[ mostRecentYear, location.state ]
 	);
 
 	useScrollToTop(selectedPosts);
