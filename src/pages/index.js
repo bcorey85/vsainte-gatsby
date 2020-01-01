@@ -26,13 +26,22 @@ import headshot from '../images/vsainte-headshot.jpg';
 
 import testimonialJSON from '../json/testimonials.json';
 import blogJSON from '../json/blog-posts.json';
-
+console.log(blogJSON);
 const Home = ({ location }) => {
 	useScrollToTop();
 
 	const renderBlogTitles = () => {
 		const currentYear = new Date().getFullYear();
-		const titles = blogJSON.posts[currentYear]
+		const currentPosts = blogJSON.posts[currentYear];
+
+		let mostRecentYear;
+		if (!currentPosts) {
+			mostRecentYear = currentYear - 1;
+		} else {
+			mostRecentYear = currentYear;
+		}
+
+		const titles = blogJSON.posts[mostRecentYear]
 			.slice(0, 4)
 			.map((post, i) => (
 				<li key={post.title}>

@@ -10,10 +10,20 @@ import blogJSON from '../json/blog-posts.json';
 import './Blog.css';
 
 const Blog = ({ location }) => {
-	const [ currentYear ] = useState(new Date().getFullYear());
-	const [ selectedYear, setSelectedYear ] = useState(currentYear);
+	const currentYear = new Date().getFullYear();
+	const currentPosts = blogJSON.posts[currentYear];
+
+	let mostRecentYear;
+	if (!currentPosts) {
+		mostRecentYear = currentYear - 1;
+	} else {
+		mostRecentYear = currentYear;
+	}
+
+	// const [ currentYear ] = useState(new Date().getFullYear());
+	const [ selectedYear, setSelectedYear ] = useState(mostRecentYear);
 	const [ selectedPosts, setSelectedPosts ] = useState(
-		blogJSON.posts[currentYear]
+		blogJSON.posts[mostRecentYear]
 	);
 
 	useEffect(
