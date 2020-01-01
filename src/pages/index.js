@@ -26,7 +26,7 @@ import headshot from '../images/vsainte-headshot.jpg';
 
 import testimonialJSON from '../json/testimonials.json';
 import blogJSON from '../json/blog-posts.json';
-console.log(blogJSON);
+
 const Home = ({ location }) => {
 	useScrollToTop();
 
