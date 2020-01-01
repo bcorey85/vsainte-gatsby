@@ -55,14 +55,6 @@ const Speaking = ({ location }) => {
 									Book tour in Iowa - 12/7/2019 - Des Moines,
 									IA{' '}
 								</li>
-								<li>
-									Book presentation at Crossroads Academy -
-									10/7/2019 - Kansas City, MO{' '}
-								</li>
-								<li>
-									Book presentation at University Academy -
-									8/7/2019 - Kansas City, MO
-								</li>
 							</ul>
 						</div>
 					</div>
