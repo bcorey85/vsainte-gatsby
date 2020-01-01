@@ -4,6 +4,7 @@ import { faPencilAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ReactHtmlParser from 'react-html-parser';
 import useScrollToTop from '../hooks/useScrollToTop';
+import useMostRecentYear from '../hooks/useMostRecentYear';
 
 import Button from '../components/shared/Button';
 import Image from '../components/shared/Image';
@@ -29,17 +30,9 @@ import blogJSON from '../json/blog-posts.json';
 
 const Home = ({ location }) => {
 	useScrollToTop();
+	const [ mostRecentYear ] = useMostRecentYear(blogJSON.posts);
 
 	const renderBlogTitles = () => {
-		const years = Object.keys(blogJSON.posts);
-		const mostRecentYear = years
-			.filter(year => {
-				return blogJSON.posts[year].length > 0 ? year : '';
-			})
-			.reduce((acc, cur) => {
-				return cur > acc ? cur : acc;
-			});
-
 		const titles = blogJSON.posts[mostRecentYear]
 			.slice(0, 4)
 			.map((post, i) => (
@@ -51,6 +44,7 @@ const Home = ({ location }) => {
 			));
 		return titles;
 	};
+
 	return (
 		<React.Fragment>
 			<SEO title='Home' />

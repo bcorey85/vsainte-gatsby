@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ReactHtmlParser from 'react-html-parser';
 
 import useScrollToTop from '../hooks/useScrollToTop';
+import useMostRecentYear from '../hooks/useMostRecentYear';
 import Section from '../components/shared/Section';
 import BlogPost from '../components/BlogPost';
 import SEO from '../components/Seo';
@@ -10,15 +11,7 @@ import blogJSON from '../json/blog-posts.json';
 import './Blog.css';
 
 const Blog = ({ location }) => {
-	const years = Object.keys(blogJSON.posts);
-	const mostRecentYear = years
-		.filter(year => {
-			return blogJSON.posts[year].length > 0 ? year : '';
-		})
-		.reduce((acc, cur) => {
-			return cur > acc ? cur : acc;
-		});
-
+	const [ mostRecentYear ] = useMostRecentYear(blogJSON.posts);
 	const [ selectedYear, setSelectedYear ] = useState(mostRecentYear);
 	const [ selectedPosts, setSelectedPosts ] = useState(
 		blogJSON.posts[mostRecentYear]
