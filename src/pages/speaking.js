@@ -6,9 +6,11 @@ import useScrollToTop from '../hooks/useScrollToTop';
 import Section from '../components/shared/Section';
 import Carousel from '../components/Carousel';
 import SEO from '../components/Seo';
+import EventListing from '../components/EventListing';
 
 import './Speaking.css';
-import eventPhotos from '../json/event-photos.json';
+import eventPhotosJSON from '../json/event-photos.json';
+import eventsJSON from '../json/events.json';
 
 const Speaking = ({ location }) => {
 	useScrollToTop();
@@ -50,11 +52,16 @@ const Speaking = ({ location }) => {
 						</div>
 						<div>
 							<h2>Events</h2>
-							<ul>
-								<li>
-									Book tour in Iowa - 12/7/2019 - Des Moines,
-									IA{' '}
-								</li>
+							<ul className='event-list'>
+								{eventsJSON.events
+									.slice(0, 4)
+									.map(event => (
+										<EventListing
+											event={event.event}
+											date={event.date}
+											location={event.location}
+										/>
+									))}
 							</ul>
 						</div>
 					</div>
@@ -62,7 +69,7 @@ const Speaking = ({ location }) => {
 						<Carousel
 							title='Event Photos'
 							icon='camera'
-							data={eventPhotos.photos}
+							data={eventPhotosJSON.photos}
 							dataType='photos'
 						/>
 					</div>

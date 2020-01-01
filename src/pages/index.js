@@ -31,15 +31,14 @@ const Home = ({ location }) => {
 	useScrollToTop();
 
 	const renderBlogTitles = () => {
-		const currentYear = new Date().getFullYear();
-		const currentPosts = blogJSON.posts[currentYear];
-
-		let mostRecentYear;
-		if (!currentPosts) {
-			mostRecentYear = currentYear - 1;
-		} else {
-			mostRecentYear = currentYear;
-		}
+		const years = Object.keys(blogJSON.posts);
+		const mostRecentYear = years
+			.filter(year => {
+				return blogJSON.posts[year].length > 0 ? year : '';
+			})
+			.reduce((acc, cur) => {
+				return cur > acc ? cur : acc;
+			});
 
 		const titles = blogJSON.posts[mostRecentYear]
 			.slice(0, 4)

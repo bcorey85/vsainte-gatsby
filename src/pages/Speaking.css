@@ -20,6 +20,11 @@
 	margin: 16rem 0;
 }
 
+.event-list {
+	padding-left: 2rem;
+	list-style-type: disc;
+}
+
 .pricing {
 	text-align: center;
 }

@@ -10,17 +10,15 @@ import blogJSON from '../json/blog-posts.json';
 import './Blog.css';
 
 const Blog = ({ location }) => {
-	const currentYear = new Date().getFullYear();
-	const currentPosts = blogJSON.posts[currentYear];
+	const years = Object.keys(blogJSON.posts);
+	const mostRecentYear = years
+		.filter(year => {
+			return blogJSON.posts[year].length > 0 ? year : '';
+		})
+		.reduce((acc, cur) => {
+			return cur > acc ? cur : acc;
+		});
 
-	let mostRecentYear;
-	if (!currentPosts) {
-		mostRecentYear = currentYear - 1;
-	} else {
-		mostRecentYear = currentYear;
-	}
-
-	// const [ currentYear ] = useState(new Date().getFullYear());
 	const [ selectedYear, setSelectedYear ] = useState(mostRecentYear);
 	const [ selectedPosts, setSelectedPosts ] = useState(
 		blogJSON.posts[mostRecentYear]
