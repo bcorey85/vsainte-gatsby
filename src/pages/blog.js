@@ -31,7 +31,7 @@ const Blog = ({ location }) => {
 			if (location.state) {
 				if (location.state.index >= 0)
 					setSelectedPosts(
-						blogJSON.posts[currentYear][location.state.index]
+						blogJSON.posts[mostRecentYear][location.state.index]
 					);
 			}
 		},
