@@ -14,8 +14,9 @@
 	justify-content: center;
 	position: fixed;
 	top: 0;
-	left: -10rem;
+	left: 0;
 	opacity: 0;
+	visibility: hidden;
 	width: 0;
 	height: 100vh;
 	z-index: 99;
@@ -23,9 +24,8 @@
 }
 
 .mobile-menu__links.menu-open {
-	display: flex;
+	visibility: visible;
 	opacity: 1;
-	left: 0;
 	width: 100vw;
 }
 
