@@ -56,8 +56,9 @@
 }
 
 .footer__copyright {
+	text-align: right;
 	margin-top: -2.5rem;
-	margin-left: 6.3rem;
+	margin-right: 4.3rem;
 }
 
 .footer__social-icons {
