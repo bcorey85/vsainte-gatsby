@@ -57,11 +57,8 @@ const Home = ({ location }) => {
 						</div>
 
 						<p className='hero-section__cta-text'>
-							Join the story of{' '}
-							<span className='cta-emphasis'>Alma</span>, as she
-							learns to overcome her fears with the help of the
-							mighty{' '}
-							<span className='cta-emphasis'>Hope Shield</span>.
+							Join the story of Alma, as she learns to overcome
+							her fears with the help of the mighty Hope Shield.
 						</p>
 						<Button
 							href='https://www.amazon.com/Will-Okay-Just-Like-Hero/dp/1942005520/ref=sr_1_1?crid=2SQ0E2D0Z20WN&keywords=it+will+be+okay+vladimir+sainte&qid=1570911125&sprefix=it+will+be+okay+vladimi%2Caps%2C153&sr=8-1'

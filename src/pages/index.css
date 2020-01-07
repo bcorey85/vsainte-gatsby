@@ -17,20 +17,14 @@
 
 .hero-section__img {
 	width: 100%;
-	max-width: 47.2rem;
 	height: auto;
 }
 
-.hero-section h1 {
-	font-size: 5.7rem;
-}
-
 .hero-section__cta-text {
-	font-size: 1.8rem;
 	line-height: 2;
 	margin-top: 2.4rem;
 	margin-bottom: 6rem;
-	max-width: 44.8rem;
+	max-width: 41.8rem;
 }
 
 .details-section {
@@ -214,8 +208,7 @@
 	}
 
 	.hero-section__img {
-		margin-left: 8rem;
-		margin-top: 2.4rem;
+		margin: 2.4rem 0;
 	}
 
 	.hero-section__cta-text {
