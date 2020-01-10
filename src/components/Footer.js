@@ -7,6 +7,7 @@ import SocialIcons from './SocialIcons';
 // import Input from './shared/Input';
 import Divider from './shared/Divider';
 import logo from '../images/logo-gray-svg.svg';
+import bclogo from '../images/bc-logo-svg.svg';
 
 import './Footer.css';
 
@@ -57,11 +58,18 @@ const Footer = () => {
 					<div className='footer__nav'>
 						<MainNav location='footer' />
 
-						<a
-							href='mailto:bcorey85@gmail.com'
-							className='footer__link'>
-							Website by Brandon Corey
-						</a>
+						<div>
+							<a
+								href='mailto:bcorey85@gmail.com'
+								className='footer__link'>
+								Website by Brandon Corey
+								<img
+									class='footer__bc-svg'
+									src={bclogo}
+									alt='BC Dev Co.'
+								/>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
