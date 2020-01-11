@@ -53,6 +53,7 @@
 	font-size: 2.4rem;
 	outline: none;
 	cursor: pointer;
+	display: inline-block;
 }
 
 .carousel__icon:hover {
