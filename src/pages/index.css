@@ -1,7 +1,7 @@
 .hero-section {
 	display: flex;
 	align-items: center;
-	padding: 8rem 0;
+	padding: 12rem 0;
 }
 
 .hero-section__left {
@@ -17,6 +17,7 @@
 
 .hero-section__img {
 	width: 100%;
+	max-width: 56rem;
 	height: auto;
 }
 
@@ -28,7 +29,7 @@
 }
 
 .details-section {
-	padding: 14.4rem 0;
+	padding: 15.2rem 0;
 }
 
 .details-section__heading {
@@ -39,11 +40,11 @@
 .features {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 14.4rem;
+	margin-bottom: 15.2rem;
 }
 
 .features__item {
-	max-width: 28.8rem;
+	max-width: 32rem;
 }
 
 .features__item:not(:last-of-type) {
@@ -57,17 +58,19 @@
 .benefits {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 14.4rem;
+	margin-bottom: 15.2rem;
 }
 
 .benefits__left {
-	flex: 0 1 37.6rem;
+	flex: 0 1 41.6rem;
 	margin-right: 3.2rem;
-	max-width: 34.6rem;
 }
 
 .benefits__right {
 	flex: 0 1 49.6rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .benefits__p1 {
@@ -84,7 +87,7 @@
 .books-section {
 	display: flex;
 	justify-content: space-around;
-	padding: calc(9.6rem + 3vw) 0;
+	padding: calc(15.2rem + 3vw) 0;
 }
 
 .books-teal {
@@ -97,7 +100,7 @@
 .speaking-section {
 	display: flex;
 	justify-content: space-between;
-	padding: 14.4rem 0;
+	padding: 15.2rem 0;
 }
 
 .speaking-section h2 {
@@ -130,7 +133,7 @@
 }
 
 .about-section {
-	padding: 14.4rem 0;
+	padding: 15.2rem 0;
 	display: flex;
 	justify-content: space-between;
 }
@@ -321,7 +324,7 @@
 
 	.features__item:not(:last-of-type) {
 		margin-right: 0;
-		margin-bottom: 9.6rem;
+		margin-bottom: 8rem;
 	}
 
 	.benefits {
@@ -344,6 +347,7 @@
 	.books-section {
 		flex-direction: column;
 		align-items: center;
+		padding: calc(9.6rem + 3vw) 0;
 	}
 
 	.books-section .card:not(:last-of-type) {

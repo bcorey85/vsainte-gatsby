@@ -58,16 +58,18 @@ const Footer = () => {
 					<div className='footer__nav'>
 						<MainNav location='footer' />
 
-						<div>
+						<div className='footer__bc'>
+							<img
+								class='footer__bc-svg'
+								src={bclogo}
+								alt='BC Dev Co.'
+							/>
 							<a
 								href='mailto:bcorey85@gmail.com'
 								className='footer__link'>
-								Website by Brandon Corey
-								<img
-									class='footer__bc-svg'
-									src={bclogo}
-									alt='BC Dev Co.'
-								/>
+								<div className='footer__bc-text'>
+									Website by Brandon Corey
+								</div>
 							</a>
 						</div>
 					</div>
