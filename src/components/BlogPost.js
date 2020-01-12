@@ -6,7 +6,7 @@ import Image from '../components/shared/Image';
 import './BlogPost.css';
 
 const BlogPost = props => {
-	const { src, title, date, body, link, linkTxt, mediaType } = props;
+	const { src, alt, title, date, body, link, linkTxt, mediaType } = props;
 
 	const linkMarkup = (
 		<div className='blog-post__link'>
@@ -32,6 +32,7 @@ const BlogPost = props => {
 							allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
 							allowFullScreen
 							className='lazyload'
+							alt={alt}
 						/>
 					</div>
 					<p>{body}</p>
@@ -47,7 +48,7 @@ const BlogPost = props => {
 				<h5>{date}</h5>
 				<h3>{title}</h3>
 				<div className='blog-post__img'>
-					<Image src={src} boxShadow='default' />
+					<Image src={src} alt={alt} boxShadow='default' />
 				</div>
 				<p>{body}</p>
 				{link ? linkMarkup : ''}

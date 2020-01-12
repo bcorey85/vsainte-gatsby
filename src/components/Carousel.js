@@ -8,13 +8,12 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
-config.autoAddCss = false;
-
 import Testimonial from './Testimonial';
 import Image from './shared/Image';
 
 import './Carousel.css';
 
+config.autoAddCss = false;
 const Carousel = props => {
 	const { title, icon, data, dataType } = props;
 

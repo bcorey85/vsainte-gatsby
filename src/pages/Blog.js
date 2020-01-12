@@ -41,6 +41,7 @@ const Blog = ({ location }) => {
 						title={ReactHtmlParser(post.title)}
 						mediaType={post.mediaType}
 						src={post.mediaSrc}
+						alt={post.alt}
 						body={ReactHtmlParser(post.body)}
 						link={post.link}
 						linkTxt={post.linkTxt}
