@@ -37,7 +37,7 @@ module.exports = {
 			options: {
 				fonts: [
 					`poppins\:400,400i,500`,
-					`aleo\:700, 700i` // you can also specify font weights and styles
+					`aleo\:700,700i` // you can also specify font weights and styles
 				],
 				display: 'swap'
 			}

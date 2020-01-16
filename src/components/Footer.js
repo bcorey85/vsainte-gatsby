@@ -60,7 +60,7 @@ const Footer = () => {
 
 						<div className='footer__bc'>
 							<img
-								class='footer__bc-svg'
+								className='footer__bc-svg'
 								src={bclogo}
 								alt='BC Dev Co.'
 							/>
