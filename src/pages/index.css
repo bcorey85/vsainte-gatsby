@@ -5,19 +5,19 @@
 }
 
 .hero-section__left {
-	flex: 0 1 51.2rem;
+	flex: 1 1 51.2rem;
 	margin-top: -3.8rem;
 }
 
 .hero-section__right {
-	flex: 1 1 51.2rem;
+	flex: 0 1 51.2rem;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
 }
 
 .hero-section__img {
 	width: 100%;
-	max-width: 52rem;
+	max-width: 46.7rem;
 	height: auto;
 }
 
@@ -26,6 +26,7 @@
 	margin-top: 2.4rem;
 	margin-bottom: 6rem;
 	max-width: 41.8rem;
+	font-size: 1.8rem;
 }
 
 .details-section {
