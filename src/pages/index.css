@@ -91,7 +91,7 @@
 .books-section {
 	display: flex;
 	justify-content: space-around;
-	padding: calc(15.2rem + 3vw) 0;
+	padding: calc(11.2rem + 3vw) 0;
 }
 
 .books-teal {
