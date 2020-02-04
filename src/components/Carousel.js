@@ -49,7 +49,7 @@ const Carousel = props => {
 					<Testimonial
 						name={currentItem.name}
 						title={currentItem.title}
-						location={currentItem.location}
+						title2={currentItem.title2}
 						body={currentItem.body}
 					/>
 				</React.Fragment>
