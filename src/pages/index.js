@@ -25,7 +25,7 @@ const Home = ({ location }) => {
 	useScrollToTop();
 	const [ mostRecentYear ] = useMostRecentYear(blogJSON.posts);
 	const indexImages = useStaticQuery(imageQuery);
-	console.log(indexImages);
+
 	const renderBlogTitles = () => {
 		const titles = blogJSON.posts[mostRecentYear]
 			.slice(0, 4)
