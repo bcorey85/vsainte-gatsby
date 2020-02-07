@@ -1,7 +1,7 @@
 module.exports = {
 	siteMetadata: {
 		title: `Vladimir Sainte, LCSW| Author of the Just Like a Hero series`,
-		description: `Website of Vladimir Sainte, LCSW. Author and illustrator of children's books about discovering their own superhero.`,
+		description: `Website of Vladimir Sainte, LCSW. Author and illustrator of children's books about finding inner strength and becoming a superhero.`,
 		author: `Vladimir Sainte`
 	},
 	plugins: [

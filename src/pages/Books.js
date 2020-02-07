@@ -1,6 +1,6 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
-import { Link } from 'gatsby';
+import { Link, graphql, useStaticQuery } from 'gatsby';
 
 import useScrollToTop from '../hooks/useScrollToTop';
 
@@ -8,19 +8,12 @@ import BookDetails from '../components/BookDetails';
 import SEO from '../components/Seo';
 import Section from '../components/shared/Section';
 
-import iwboblackphoto from '../images/iwboblackphoto.jpg';
-import iwbopurplephoto from '../images/iwbopurplephoto.jpg';
-import iwboredphoto from '../images/iwboredphoto.jpg';
-import iwbocover from '../images/iwbocover.jpg';
-import jlahblackphoto from '../images/jlahblackphoto.jpg';
-import jlahyellowphoto from '../images/jlahyellowphoto.jpg';
-import jlahpurplephoto from '../images/jlahpurplephoto.jpg';
-import jlahcover from '../images/jlahcover.jpg';
-
 import './Books.css';
 
 const Books = ({ location }) => {
 	useScrollToTop();
+	const booksData = useStaticQuery(imageQuery);
+	console.log(booksData);
 	return (
 		<React.Fragment>
 			<SEO title='Books' />
@@ -30,10 +23,16 @@ const Books = ({ location }) => {
 					<h1 className='page-title'>Books by Vladimir Sainte</h1>
 					<div className='books__content'>
 						<BookDetails
-							subImg1={iwboblackphoto}
-							subImg2={iwboredphoto}
-							subImg3={iwbopurplephoto}
-							mainImg={iwbocover}
+							subImg1={
+								booksData.iwboblackphoto.childImageSharp.fluid
+							}
+							subImg2={
+								booksData.iwboredphoto.childImageSharp.fluid
+							}
+							subImg3={
+								booksData.iwbopurplephoto.childImageSharp.fluid
+							}
+							mainImg={booksData.iwboCover.childImageSharp.fluid}
 							date='2019'
 							title='It Will Be Okay'
 							desc='<em>It Will Be Okay</em> is about a young girl
@@ -43,10 +42,16 @@ const Books = ({ location }) => {
 							href='https://www.amazon.com/Will-Okay-Just-Like-Hero/dp/1942005520/ref=sr_1_1?crid=2SQ0E2D0Z20WN&keywords=it+will+be+okay+vladimir+sainte&qid=1570911125&sprefix=it+will+be+okay+vladimi%2Caps%2C153&sr=8-1'
 						/>
 						<BookDetails
-							subImg1={jlahblackphoto}
-							subImg2={jlahpurplephoto}
-							subImg3={jlahyellowphoto}
-							mainImg={jlahcover}
+							subImg1={
+								booksData.jlahblackphoto.childImageSharp.fluid
+							}
+							subImg2={
+								booksData.jlahpurplephoto.childImageSharp.fluid
+							}
+							subImg3={
+								booksData.jlahyellowphoto.childImageSharp.fluid
+							}
+							mainImg={booksData.jlahCover.childImageSharp.fluid}
 							date='2018'
 							title='Just Like A Hero'
 							desc='<em>Just Like A Hero</em> teaches personal
@@ -77,3 +82,89 @@ const Books = ({ location }) => {
 };
 
 export default Books;
+
+const imageQuery = graphql`
+	query BooksImgs {
+		iwboCover: file(
+			relativePath: { eq: "it-will-be-okay-book-cover.jpg" }
+		) {
+			childImageSharp {
+				fluid(webpQuality: 100, jpegQuality: 100) {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
+		jlahCover: file(
+			relativePath: { eq: "just-like-a-hero-book-cover.jpg" }
+		) {
+			childImageSharp {
+				fluid(webpQuality: 100, jpegQuality: 100) {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
+		iwboblackphoto: file(
+			relativePath: { eq: "it-will-be-okay-book-img1.jpg" }
+		) {
+			childImageSharp {
+				fluid(webpQuality: 100, jpegQuality: 100) {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
+		iwboredphoto: file(
+			relativePath: { eq: "it-will-be-okay-book-img2.jpg" }
+		) {
+			childImageSharp {
+				fluid(webpQuality: 100, jpegQuality: 100) {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
+		iwbopurplephoto: file(
+			relativePath: { eq: "it-will-be-okay-book-img3.jpg" }
+		) {
+			childImageSharp {
+				fluid(webpQuality: 100, jpegQuality: 100) {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
+		iwbobluephoto: file(
+			relativePath: { eq: "it-will-be-okay-book-img4.jpg" }
+		) {
+			childImageSharp {
+				fluid(webpQuality: 100, jpegQuality: 100) {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
+		jlahblackphoto: file(
+			relativePath: { eq: "just-like-a-hero-book-img1.jpg" }
+		) {
+			childImageSharp {
+				fluid(webpQuality: 100, jpegQuality: 100) {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
+		jlahpurplephoto: file(
+			relativePath: { eq: "just-like-a-hero-book-img2.jpg" }
+		) {
+			childImageSharp {
+				fluid(webpQuality: 100, jpegQuality: 100) {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
+		jlahyellowphoto: file(
+			relativePath: { eq: "just-like-a-hero-book-img3.jpg" }
+		) {
+			childImageSharp {
+				fluid(webpQuality: 100, jpegQuality: 100) {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
+	}
+`;

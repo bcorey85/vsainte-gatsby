@@ -17,6 +17,7 @@ const BookDetails = props => {
 		desc,
 		href
 	} = props;
+
 	return (
 		<div className='book-details'>
 			<div className='book-details__images'>

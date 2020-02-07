@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'gatsby-image';
 import 'lazysizes';
 
 import './ImageGrid.css';
@@ -30,43 +31,38 @@ const ImageGrid = props => {
 	return (
 		<div className='image-grid'>
 			<div className='image-grid__sub-images'>
-				<input
-					type='image'
-					src={subImg1}
-					alt=''
+				<div
+					role='button'
+					tabIndex={0}
 					onMouseEnter={() => swapImgHover(subImg1)}
 					onMouseLeave={() => swapImgHover(mainImg)}
 					onClick={() => swapImgClick(subImg1)}
 					onKeyDown={() => swapImgClick(subImg1)}
-					className='image-grid__img lazyload'
-				/>
-				<input
-					type='image'
-					src={subImg2}
-					alt=''
+					className='image-grid__img'>
+					<Image fluid={subImg1} alt='' />
+				</div>
+				<div
+					role='button'
+					tabIndex={0}
 					onMouseEnter={() => swapImgHover(subImg2)}
 					onMouseLeave={() => swapImgHover(mainImg)}
 					onClick={() => swapImgClick(subImg2)}
-					onKeyDown={() => swapImgClick(subImg2)}
-					className='image-grid__img lazyload'
-				/>
-				<input
-					type='image'
-					src={subImg3}
-					alt=''
+					onKeyDown={() => swapImgClick(subImg2)}>
+					<Image fluid={subImg2} alt='' className='image-grid__img' />
+				</div>
+				<div
+					role='button'
+					tabIndex={0}
 					onMouseEnter={() => swapImgHover(subImg3)}
 					onMouseLeave={() => swapImgHover(mainImg)}
 					onClick={() => swapImgClick(subImg3)}
 					onKeyDown={() => swapImgClick(subImg3)}
-					className='image-grid__img lazyload'
-				/>
+					className='image-grid__img '>
+					<Image fluid={subImg3} alt='' />
+				</div>
 			</div>
 			<div className='image-grid__main-image'>
-				<img
-					src={focusedImg}
-					alt=''
-					className='image-grid__img lazyload'
-				/>
+				<Image fluid={focusedImg} alt='' className='image-grid__img' />
 			</div>
 		</div>
 	);

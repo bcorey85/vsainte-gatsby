@@ -6,6 +6,9 @@
 .image-grid__sub-images {
 	flex: 0 1 9.6rem;
 	margin-right: 1.6rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 .image-grid__main-image {
 	flex: 0 1 30.4rem;

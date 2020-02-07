@@ -8,7 +8,7 @@
 }
 
 .about__left {
-	flex: 1 1 auto;
+	flex: 0 1 42rem;
 	border-right: 1px solid var(--gray-medium);
 	display: flex;
 	flex-direction: column;

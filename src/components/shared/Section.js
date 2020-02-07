@@ -9,7 +9,7 @@ import darkGrayPaper from '../../images/dark-gray-paper-bg.jpg';
 import tealPaper from '../../images/teal-paper-bg.jpg';
 
 const Section = props => {
-	const { color, paper, className, angle, padding, margin } = props;
+	const { color, paper, className, angle, padding, margin, wide } = props;
 	const colors = {
 		teal: 'var(--primary-light)',
 		lightGray: 'var(--gray-light)',
@@ -47,7 +47,9 @@ const Section = props => {
 				? `section--angle-${angle}`
 				: ''}`}
 			style={styles}>
-			<div className='section-inner'>{props.children}</div>
+			<div className={`section-inner ${wide && 'section-inner--wide'}`}>
+				{props.children}
+			</div>
 		</section>
 	);
 };

@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 import { faPencilAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ReactHtmlParser from 'react-html-parser';
+
 import useScrollToTop from '../hooks/useScrollToTop';
 import useMostRecentYear from '../hooks/useMostRecentYear';
 
@@ -16,14 +17,6 @@ import SEO from '../components/Seo';
 import Divider from '../components/shared/Divider';
 
 import './index.css';
-import iwbocover from '../images/iwbocover.jpg';
-import jlahcover from '../images/jlahcover.jpg';
-import iwboctasection from '../images/iwbo-cta-section.jpg';
-import iwboblackphoto from '../images/iwboblackphoto.jpg';
-import iwboredphoto from '../images/iwboredphoto.jpg';
-import iwbopurplephoto from '../images/iwbopurplephoto.jpg';
-import iwbobluephoto from '../images/iwbobluephoto.jpg';
-import headshot from '../images/vsainte-headshot.jpg';
 
 import testimonialJSON from '../json/testimonials.json';
 import blogJSON from '../json/blog-posts.json';
@@ -31,7 +24,8 @@ import blogJSON from '../json/blog-posts.json';
 const Home = ({ location }) => {
 	useScrollToTop();
 	const [ mostRecentYear ] = useMostRecentYear(blogJSON.posts);
-
+	const indexImages = useStaticQuery(imageQuery);
+	console.log(indexImages);
 	const renderBlogTitles = () => {
 		const titles = blogJSON.posts[mostRecentYear]
 			.slice(0, 4)
@@ -48,8 +42,8 @@ const Home = ({ location }) => {
 	return (
 		<React.Fragment>
 			<SEO title='Home' />
-			<Section color='white' margin='0 0 2vw 0'>
-				<section className='hero-section'>
+			<Section color='white' margin='0 0 2vw 0' wide className='fullvh'>
+				<div className='hero-section'>
 					<div className='hero-section__left'>
 						<div>
 							<h5>new release</h5>
@@ -64,28 +58,30 @@ const Home = ({ location }) => {
 						<Button
 							href='https://www.amazon.com/Will-Okay-Just-Like-Hero/dp/1942005520/ref=sr_1_1?crid=2SQ0E2D0Z20WN&keywords=it+will+be+okay+vladimir+sainte&qid=1570911125&sprefix=it+will+be+okay+vladimi%2Caps%2C153&sr=8-1'
 							color='cta'
-							width='full'
 							margin='none'>
 							Buy Now
 						</Button>
 					</div>
 					<div className='hero-section__right'>
 						<Image
-							src={iwboctasection}
+							fluid={indexImages.cta.childImageSharp.fluid}
 							alt='It Will Be Okay book cover'
 							className='hero-section__img'
 						/>
 					</div>
-				</section>
+				</div>
 			</Section>
 			<Divider angle />
 			<Section color='lightGray' paper angle='both' padding='1.5vw 0'>
-				<section className='details-section'>
-					<h2 className='details-section__heading'>Peak inside...</h2>
+				<div className='details-section'>
+					<h2 className='details-section__heading'>Peek inside...</h2>
 					<div className='features'>
 						<div className='features__item'>
 							<Image
-								src={iwboblackphoto}
+								fluid={
+									indexImages.iwboblackphoto.childImageSharp
+										.fluid
+								}
 								alt='Alma sad in corner'
 								boxShadow='default'
 								className='features__img'
@@ -102,7 +98,10 @@ const Home = ({ location }) => {
 						</div>
 						<div className='features__item'>
 							<Image
-								src={iwboredphoto}
+								fluid={
+									indexImages.iwboredphoto.childImageSharp
+										.fluid
+								}
 								alt='Limbo laughing'
 								boxShadow='default'
 								className='features__img'
@@ -116,7 +115,10 @@ const Home = ({ location }) => {
 						</div>
 						<div className='features__item'>
 							<Image
-								src={iwbopurplephoto}
+								fluid={
+									indexImages.iwbopurplephoto.childImageSharp
+										.fluid
+								}
 								alt='Alma hero'
 								boxShadow='default'
 								className='features__img'
@@ -134,7 +136,10 @@ const Home = ({ location }) => {
 					<div className='benefits'>
 						<div className='benefits__left'>
 							<Image
-								src={iwbobluephoto}
+								fluid={
+									indexImages.iwbobluephoto.childImageSharp
+										.fluid
+								}
 								alt='Alma crying'
 								boxShadow='default'
 							/>
@@ -183,14 +188,16 @@ const Home = ({ location }) => {
 							dataType='text'
 						/>
 					</div>
-				</section>
+				</div>
 			</Section>
 			<Divider angle />
 			<Section color='teal' className='books-teal' angle='both'>
-				<section className='books-section'>
+				<div className='books-section'>
 					<Card
 						href='https://www.amazon.com/Will-Okay-Just-Like-Hero/dp/1942005520/ref=sr_1_1?crid=2SQ0E2D0Z20WN&keywords=it+will+be+okay+vladimir+sainte&qid=1570911125&sprefix=it+will+be+okay+vladimi%2Caps%2C153&sr=8-1'
-						imgSrc={iwbocover}
+						imgSrcFluid={
+							indexImages.iwboCover.childImageSharp.fluid
+						}
 						imgAlt={'It Will Be Okay'}
 						btnColor={'cta'}
 						btnText={'Buy Now'}
@@ -198,17 +205,19 @@ const Home = ({ location }) => {
 					/>
 					<Card
 						href='https://www.amazon.com/Just-Like-Hero-Vladimir-Sainte/dp/194200544X/ref=sr_1_1?ie=UTF8&qid=1549147023&sr=8-1&keywords=just+like+a+hero'
-						imgSrc={jlahcover}
+						imgSrcFluid={
+							indexImages.jlahCover.childImageSharp.fluid
+						}
 						imgAlt={'Just Like A Hero'}
 						btnColor={'default'}
 						btnText={'Buy Now'}
 						boxShadow={'default'}
 					/>
-				</section>
+				</div>
 			</Section>
 			<Divider angle />
 			<Section color='lightGray' paper angle='top' padding='1.5vw 0 0 0'>
-				<section className='speaking-section'>
+				<div className='speaking-section'>
 					<div className='speaking-section__left'>
 						<h2>Speaking</h2>
 						<div className='speaking-section__content'>
@@ -234,15 +243,20 @@ const Home = ({ location }) => {
 							allowFullScreen
 						/>
 					</div>
-				</section>
+				</div>
 			</Section>
 			<Divider />
 			<Section color='var(--white)'>
-				<section className='about-section'>
+				<div className='about-section'>
 					<div className='about-section__left'>
 						<div className='about-section__header'>
 							<h3>About Vladimir</h3>
-							<Thumbnail src={headshot} alt='Vladimir Sainte' />
+							<Thumbnail
+								fluid={
+									indexImages.headshot.childImageSharp.fluid
+								}
+								alt='Vladimir Sainte'
+							/>
 						</div>
 
 						<div className='about-section__content'>
@@ -276,10 +290,85 @@ const Home = ({ location }) => {
 							</Link>
 						</div>
 					</div>
-				</section>
+				</div>
 			</Section>
 		</React.Fragment>
 	);
 };
 
 export default Home;
+
+const imageQuery = graphql`
+	query IndexImgs {
+		cta: file(
+			relativePath: { eq: "it-will-be-okay-book-cta-section.jpg" }
+		) {
+			childImageSharp {
+				fluid(webpQuality: 100, jpegQuality: 100) {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
+		iwboCover: file(
+			relativePath: { eq: "it-will-be-okay-book-cover.jpg" }
+		) {
+			childImageSharp {
+				fluid(webpQuality: 100, jpegQuality: 100) {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
+		jlahCover: file(
+			relativePath: { eq: "just-like-a-hero-book-cover.jpg" }
+		) {
+			childImageSharp {
+				fluid(webpQuality: 100, jpegQuality: 100) {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
+		iwboblackphoto: file(
+			relativePath: { eq: "it-will-be-okay-book-img1.jpg" }
+		) {
+			childImageSharp {
+				fluid(webpQuality: 100, jpegQuality: 100) {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
+		iwboredphoto: file(
+			relativePath: { eq: "it-will-be-okay-book-img2.jpg" }
+		) {
+			childImageSharp {
+				fluid(webpQuality: 100, jpegQuality: 100) {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
+		iwbopurplephoto: file(
+			relativePath: { eq: "it-will-be-okay-book-img3.jpg" }
+		) {
+			childImageSharp {
+				fluid(webpQuality: 100, jpegQuality: 100) {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
+		iwbobluephoto: file(
+			relativePath: { eq: "it-will-be-okay-book-img4.jpg" }
+		) {
+			childImageSharp {
+				fluid(webpQuality: 100, jpegQuality: 100) {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
+		headshot: file(relativePath: { eq: "vladimir-sainte-headshot.jpg" }) {
+			childImageSharp {
+				fluid(webpQuality: 100, jpegQuality: 100) {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
+	}
+`;

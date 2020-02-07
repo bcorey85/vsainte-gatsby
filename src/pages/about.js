@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import useScrollToTop from '../hooks/useScrollToTop';
 
 import Image from '../components/shared/Image';
@@ -6,11 +7,29 @@ import Section from '../components/shared/Section';
 import SEO from '../components/Seo';
 
 import './About.css';
-import teamcvs from '../images/vsainte-teamcvs.jpg';
-import young from '../images/vsainte-young.jpg';
+
+const imageQuery = graphql`
+	query AboutImgs {
+		teamCVS: file(relativePath: { eq: "vladimir-sainte-teamcvs.jpg" }) {
+			childImageSharp {
+				fluid(webpQuality: 100, jpegQuality: 100) {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
+		young: file(relativePath: { eq: "vladimir-sainte-young.jpg" }) {
+			childImageSharp {
+				fluid(webpQuality: 100, jpegQuality: 100) {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
+	}
+`;
 
 const About = ({ location }) => {
 	useScrollToTop();
+	const booksData = useStaticQuery(imageQuery);
 	return (
 		<React.Fragment>
 			<SEO title='About' />
@@ -20,12 +39,12 @@ const About = ({ location }) => {
 					<div className='about__content'>
 						<div className='about__left'>
 							<Image
-								src={teamcvs}
+								fluid={booksData.teamCVS.childImageSharp.fluid}
 								boxShadow='default'
 								className='about__img'
 							/>
 							<Image
-								src={young}
+								fluid={booksData.young.childImageSharp.fluid}
 								boxShadow='default'
 								className='about__img'
 							/>
