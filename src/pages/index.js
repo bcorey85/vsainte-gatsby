@@ -305,7 +305,7 @@ const imageQuery = graphql`
 		) {
 			childImageSharp {
 				fluid(webpQuality: 100, jpegQuality: 100) {
-					...GatsbyImageSharpFluid_withWebp_tracedSVG
+					...GatsbyImageSharpFluid_withWebp
 				}
 			}
 		}
