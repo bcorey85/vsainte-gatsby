@@ -8,7 +8,7 @@ import Carousel from '../components/Carousel';
 import SEO from '../components/Seo';
 import EventListing from '../components/EventListing';
 
-import './Speaking.css';
+import './speaking.css';
 import eventPhotosJSON from '../json/event-photos.json';
 import eventsJSON from '../json/events.json';
 

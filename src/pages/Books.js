@@ -8,7 +8,7 @@ import BookDetails from '../components/BookDetails';
 import SEO from '../components/Seo';
 import Section from '../components/shared/Section';
 
-import './Books.css';
+import './books.css';
 
 const imageQuery = graphql`
 	query BooksImgs {

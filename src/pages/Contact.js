@@ -6,7 +6,7 @@ import Input from '../components/shared/Input';
 import Button from '../components/shared/Button';
 import SEO from '../components/Seo';
 
-import './Contact.css';
+import './contact.css';
 
 const Contact = ({ location }) => {
 	useScrollToTop();

@@ -6,7 +6,7 @@ import Image from '../components/shared/Image';
 import Section from '../components/shared/Section';
 import SEO from '../components/Seo';
 
-import './About.css';
+import './about.css';
 
 const imageQuery = graphql`
 	query AboutImgs {

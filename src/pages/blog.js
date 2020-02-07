@@ -8,7 +8,7 @@ import BlogPost from '../components/BlogPost';
 import SEO from '../components/Seo';
 
 import blogJSON from '../json/blog-posts.json';
-import './Blog.css';
+import './blog.css';
 
 const Blog = ({ location }) => {
 	const [ mostRecentYear ] = useMostRecentYear(blogJSON.posts);
