@@ -8,6 +8,25 @@ import SEO from '../components/Seo';
 
 import './About.css';
 
+const imageQuery = graphql`
+	query AboutImgs {
+		teamCVS: file(relativePath: { eq: "vladimir-sainte-teamcvs.jpg" }) {
+			childImageSharp {
+				fluid(webpQuality: 100, jpegQuality: 100) {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
+		young: file(relativePath: { eq: "vladimir-sainte-young.jpg" }) {
+			childImageSharp {
+				fluid(webpQuality: 100, jpegQuality: 100) {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
+	}
+`;
+
 const About = ({ location }) => {
 	useScrollToTop();
 	const booksData = useStaticQuery(imageQuery);
@@ -96,22 +115,3 @@ const About = ({ location }) => {
 };
 
 export default About;
-
-const imageQuery = graphql`
-	query AboutImgs {
-		teamCVS: file(relativePath: { eq: "vladimir-sainte-teamcvs.jpg" }) {
-			childImageSharp {
-				fluid(webpQuality: 100, jpegQuality: 100) {
-					...GatsbyImageSharpFluid_withWebp
-				}
-			}
-		}
-		young: file(relativePath: { eq: "vladimir-sainte-young.jpg" }) {
-			childImageSharp {
-				fluid(webpQuality: 100, jpegQuality: 100) {
-					...GatsbyImageSharpFluid_withWebp
-				}
-			}
-		}
-	}
-`;
