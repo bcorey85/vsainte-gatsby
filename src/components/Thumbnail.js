@@ -5,7 +5,7 @@ import './Thumbnail.css';
 
 const Thumbnail = props => {
 	const { src, fluid, fixed, alt } = props;
-	console.log(props);
+
 	return (
 		<div className='thumbnail'>
 			{fluid && (
