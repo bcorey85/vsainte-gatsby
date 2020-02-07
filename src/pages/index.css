@@ -1,0 +1,394 @@
+.hero-section {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 12rem 0;
+}
+
+.hero-section__left {
+	margin-top: -3.8rem;
+}
+
+.hero-section__right {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	max-width: 56rem;
+}
+
+.hero-section__img {
+	width: 100%;
+	max-width: 56rem;
+	height: auto;
+}
+
+.hero-section__cta-text {
+	line-height: 2;
+	margin-top: 1.6rem;
+	margin-bottom: 6.4rem;
+	max-width: 53.8rem;
+	font-size: 1.8rem;
+}
+
+.details-section {
+	padding: 15.2rem 0;
+}
+
+.details-section__heading {
+	margin-top: -3.6rem;
+	margin-bottom: 3.6rem;
+}
+
+.features {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 15.2rem;
+}
+
+.features__item {
+	max-width: 32rem;
+}
+
+.features__item:not(:last-of-type) {
+	margin-right: 3.2rem;
+}
+
+.features__img {
+	margin-bottom: 1.6rem;
+}
+
+.benefits {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 15.2rem;
+}
+
+.benefits__left {
+	flex: 0 1 41.6rem;
+	margin-right: 3.2rem;
+}
+
+.benefits__right {
+	flex: 0 1 49.6rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.benefits__p1 {
+	margin-bottom: 4.8rem;
+}
+
+.benefits__p2 {
+	text-transform: uppercase;
+	font-family: Aleo, serif;
+	color: var(--black);
+	letter-spacing: .1rem;
+	font-weight: 600;
+	font-size: 3.2rem;
+	margin-bottom: 4.8rem;
+}
+
+.books-section {
+	display: flex;
+	justify-content: space-around;
+	padding: calc(11.2rem + 3vw) 0;
+}
+
+.books-teal {
+	background-image: url("../images/willandalmabg.jpg");
+	background-size: auto;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.speaking-section {
+	display: flex;
+	justify-content: space-between;
+	padding: 15.2rem 0;
+}
+
+.speaking-section h2 {
+	margin-top: -1.7rem;
+}
+
+.speaking-section__left {
+	flex: 0 1 40%;
+	margin-right: 3.2rem;
+}
+
+.speaking-section__right {
+	flex: 0 1 60%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.speaking-section__content {
+	margin-top: 2.4rem;
+	margin-bottom: 7.2rem;
+}
+
+.speaking-section__video {
+	height: 100%;
+	min-height: 32rem;
+	width: 100%;
+	max-width: 52rem;
+	border-radius: .4rem;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.about-section {
+	padding: 15.2rem 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.about-section__left {
+	flex: 0 1 46.4rem;
+	margin-right: 4.8rem;
+}
+
+.about-section__right {
+	flex: 0 1 46.4rem;
+}
+
+.about-section__header {
+	height: 4rem;
+	margin-bottom: 2.4rem;
+	position: relative;
+}
+
+.about-section__header .thumbnail {
+	position: absolute;
+	right: 0;
+	top: -1.8rem;
+}
+
+.about-section__header-icon {
+	position: absolute;
+	font-size: 3.2rem;
+	right: 0;
+	top: 0;
+}
+
+.about-section__content {
+	margin-bottom: 7.2rem;
+}
+
+.about-section__link {
+	display: flex;
+	justify-content: flex-end;
+}
+
+@media only screen and (max-width: 90em) {
+	.hero-section {
+		justify-content: space-around;
+	}
+
+	.hero-section__img {
+		max-width: 48rem;
+	}
+}
+
+/* 1024px */
+@media only screen and (max-width: 64em) {
+	.hero-section__cta-text {
+		font-size: 1.6rem;
+		max-width: 46rem;
+	}
+
+	.hero-section__hero-container {
+		right: 10%;
+	}
+}
+
+/* 900px */
+@media only screen and (max-width: 56.25em) {
+	.hero-section {
+		flex-direction: column-reverse;
+		align-items: center;
+		padding: 6.4rem 0 12.8rem 0;
+	}
+
+	.hero-section__left {
+		flex: 1 1 auto;
+		margin-right: 0;
+		margin-top: -4.8rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		z-index: 1;
+	}
+
+	.hero-section__left h1 {
+		font-size: 4rem;
+	}
+
+	.hero-section__right {
+		z-index: 0;
+		flex: 1 1 auto;
+		margin-top: -6.4rem;
+	}
+
+	.hero-section__img {
+		margin: 2.4rem 0;
+	}
+
+	.hero-section__cta-text {
+		margin-bottom: 6.4rem;
+	}
+
+	.details-section {
+		padding: 12.8rem 0;
+	}
+
+	.features {
+		margin-bottom: 9.6rem;
+	}
+
+	.benefits {
+		margin-bottom: 9.6rem;
+	}
+
+	.benefits__right {
+		max-width: 49.6rem;
+		min-width: 34rem;
+		flex: 1 1 auto;
+	}
+
+	.benefits__p2 {
+		font-size: 2.4rem;
+	}
+
+	.testimonials {
+		padding: 1.6rem;
+	}
+
+	.books-section {
+		background-size: cover;
+	}
+
+	.books-section .card:not(:last-of-type) {
+		margin-right: 3.2rem;
+	}
+
+	.speaking-section {
+		padding: 12.8rem 0;
+		flex-direction: column-reverse;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.speaking-section__right {
+		flex: 1 1 32rem;
+		width: 100%;
+		margin-bottom: 9.6rem;
+		justify-content: center;
+	}
+
+	.speaking-section__left {
+		max-width: 49.6rem;
+		margin-right: 0;
+	}
+
+	.speaking-section__content {
+		margin-bottom: 5.6rem;
+	}
+
+	.speaking-section__video {
+		height: auto;
+		min-height: 0;
+		max-width: 49.6rem;
+	}
+
+	.speaking-section__btn {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.about-section {
+		padding: 12.8rem 0;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.about-section__left {
+		flex: 0 1 auto;
+		margin-right: 0;
+		margin-bottom: 9.6rem;
+		width: 100%;
+		max-width: 48rem;
+	}
+
+	.about-section__right {
+		flex: 0 1 auto;
+		width: 100%;
+		max-width: 48rem;
+	}
+}
+
+/* 600px */
+@media only screen and (max-width: 37.5em) {
+	.hero-section__right img {
+		margin-left: 0;
+	}
+
+	.features {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.features__item {
+		max-width: 34.6rem;
+	}
+
+	.features__item:not(:last-of-type) {
+		margin-right: 0;
+		margin-bottom: 8rem;
+	}
+
+	.benefits {
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 9.6rem;
+	}
+
+	.benefits__left {
+		margin-right: 0rem;
+		margin-bottom: 1.6rem;
+		flex: 0 0 auto;
+		width: 100%;
+		max-width: 34.6rem;
+	}
+
+	.benefits__right {
+		min-width: 0;
+		max-width: 34.6rem;
+	}
+
+	.books-section {
+		flex-direction: column;
+		align-items: center;
+		padding: calc(9.6rem + 3vw) 0;
+	}
+
+	.books-section .card:not(:last-of-type) {
+		margin-right: 0;
+		margin-bottom: 9.6rem;
+	}
+
+	.books-teal {
+		background-image: url('../images/willandalmabg-vertical.jpg');
+	}
+}
+
+/* 400px */
+@media only screen and (max-width: 25em) {
+	.hero-section h1 {
+		font-size: 3.2rem;
+	}
+
+	.hero-section__cta-text {
+		font-size: 1.6rem;
+	}
+}
