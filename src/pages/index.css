@@ -9,6 +9,22 @@
 	margin-top: -3.8rem;
 }
 
+.hero-section__left h1 {
+	animation: floatUp .8s cubic-bezier(.52, .67, .73, .74);
+	animation-delay: .2s;
+	animation-fill-mode: backwards;
+}
+
+.hero-section__left h5 {
+	animation: floatUp .8s cubic-bezier(.52, .67, .73, .74);
+}
+
+.hero-section__left a {
+	animation: floatUp .8s cubic-bezier(.52, .67, .73, .74);
+	animation-delay: .4s;
+	animation-fill-mode: backwards;
+}
+
 .hero-section__right {
 	display: flex;
 	justify-content: center;
@@ -20,6 +36,9 @@
 	width: 100%;
 	max-width: 56rem;
 	height: auto;
+	animation: floatUp .8s cubic-bezier(.52, .67, .73, .74);
+	animation-delay: .5s;
+	animation-fill-mode: backwards;
 }
 
 .hero-section__cta-text {
@@ -28,6 +47,9 @@
 	margin-bottom: 6.4rem;
 	max-width: 53.8rem;
 	font-size: 1.8rem;
+	animation: floatUp .8s cubic-bezier(.52, .67, .73, .74);
+	animation-delay: .3s;
+	animation-fill-mode: backwards;
 }
 
 .details-section {
@@ -390,5 +412,17 @@
 
 	.hero-section__cta-text {
 		font-size: 1.6rem;
+	}
+}
+
+@keyframes floatUp {
+	0% {
+		transform: translateY(6.4rem);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0rem);
+		opacity: 1;
 	}
 }

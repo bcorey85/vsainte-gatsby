@@ -23,7 +23,7 @@
 
 .main-nav__link::after {
 	width: 0;
-	transition: width .1s;
+	transition: width .2s;
 }
 
 .main-nav__link:hover::after {
