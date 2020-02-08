@@ -50,7 +50,7 @@ const BlogPost = props => {
 				<div className='blog-post__img'>
 					<Image src={src} alt={alt} boxShadow='default' />
 				</div>
-				<p>{body}</p>
+				<div>{body}</div>
 				{link ? linkMarkup : ''}
 			</div>
 		</article>
