@@ -10,17 +10,17 @@
 }
 
 .hero-section__left h1 {
-	animation: floatUp .8s cubic-bezier(.52, .67, .73, .74);
+	animation: floatUp .8s ease-out;
 	animation-delay: .2s;
 	animation-fill-mode: backwards;
 }
 
 .hero-section__left h5 {
-	animation: floatUp .8s cubic-bezier(.52, .67, .73, .74);
+	animation: floatUp .8s ease-out;
 }
 
 .hero-section__left a {
-	animation: floatUp .8s cubic-bezier(.52, .67, .73, .74);
+	animation: floatUp .8s ease-out;
 	animation-delay: .4s;
 	animation-fill-mode: backwards;
 }
@@ -36,7 +36,7 @@
 	width: 100%;
 	max-width: 56rem;
 	height: auto;
-	animation: floatUp .8s cubic-bezier(.52, .67, .73, .74);
+	animation: floatUp .8s ease-out;
 	animation-delay: .5s;
 	animation-fill-mode: backwards;
 }
@@ -47,7 +47,7 @@
 	margin-bottom: 6.4rem;
 	max-width: 53.8rem;
 	font-size: 1.8rem;
-	animation: floatUp .8s cubic-bezier(.52, .67, .73, .74);
+	animation: floatUp .8s ease-out;
 	animation-delay: .3s;
 	animation-fill-mode: backwards;
 }
