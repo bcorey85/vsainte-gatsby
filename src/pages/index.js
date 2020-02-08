@@ -304,9 +304,7 @@ const imageQuery = graphql`
 			relativePath: { eq: "it-will-be-okay-book-cta-section.jpg" }
 		) {
 			childImageSharp {
-				fluid(
-					traceSVG: { color: "rgb(179, 230, 225)", threshold: 75 }
-				) {
+				fluid(traceSVG: { color: "rgb(179, 230, 225)", threshold: 0 }) {
 					...GatsbyImageSharpFluid_withWebp_tracedSVG
 				}
 			}
