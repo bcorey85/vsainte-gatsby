@@ -72,6 +72,7 @@ const Carousel = props => {
 	const rightBtn = (
 		<button
 			className='carousel__icon'
+			aria-label='right arrow'
 			onClick={e => {
 				incrementCarousel(e, 'inc');
 			}}>
@@ -82,6 +83,7 @@ const Carousel = props => {
 	const leftBtn = (
 		<button
 			className='carousel__icon'
+			aria-label='left arrow'
 			onClick={e => {
 				incrementCarousel(e, 'dec');
 			}}>
