@@ -12,14 +12,14 @@ const imageQuery = graphql`
 	query AboutImgs {
 		teamCVS: file(relativePath: { eq: "vladimir-sainte-teamcvs.jpg" }) {
 			childImageSharp {
-				fluid(webpQuality: 100, jpegQuality: 100) {
+				fluid {
 					...GatsbyImageSharpFluid_withWebp
 				}
 			}
 		}
 		young: file(relativePath: { eq: "vladimir-sainte-young.jpg" }) {
 			childImageSharp {
-				fluid(webpQuality: 100, jpegQuality: 100) {
+				fluid {
 					...GatsbyImageSharpFluid_withWebp
 				}
 			}

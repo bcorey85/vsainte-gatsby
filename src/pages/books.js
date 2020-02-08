@@ -16,7 +16,7 @@ const imageQuery = graphql`
 			relativePath: { eq: "it-will-be-okay-book-cover.jpg" }
 		) {
 			childImageSharp {
-				fluid(webpQuality: 100, jpegQuality: 100) {
+				fluid {
 					...GatsbyImageSharpFluid_withWebp
 				}
 			}
@@ -25,7 +25,7 @@ const imageQuery = graphql`
 			relativePath: { eq: "just-like-a-hero-book-cover.jpg" }
 		) {
 			childImageSharp {
-				fluid(webpQuality: 100, jpegQuality: 100) {
+				fluid {
 					...GatsbyImageSharpFluid_withWebp
 				}
 			}
@@ -34,7 +34,7 @@ const imageQuery = graphql`
 			relativePath: { eq: "it-will-be-okay-book-img1.jpg" }
 		) {
 			childImageSharp {
-				fluid(webpQuality: 100, jpegQuality: 100) {
+				fluid {
 					...GatsbyImageSharpFluid_withWebp
 				}
 			}
@@ -43,7 +43,7 @@ const imageQuery = graphql`
 			relativePath: { eq: "it-will-be-okay-book-img2.jpg" }
 		) {
 			childImageSharp {
-				fluid(webpQuality: 100, jpegQuality: 100) {
+				fluid {
 					...GatsbyImageSharpFluid_withWebp
 				}
 			}
@@ -52,7 +52,7 @@ const imageQuery = graphql`
 			relativePath: { eq: "it-will-be-okay-book-img3.jpg" }
 		) {
 			childImageSharp {
-				fluid(webpQuality: 100, jpegQuality: 100) {
+				fluid {
 					...GatsbyImageSharpFluid_withWebp
 				}
 			}
@@ -61,7 +61,7 @@ const imageQuery = graphql`
 			relativePath: { eq: "it-will-be-okay-book-img4.jpg" }
 		) {
 			childImageSharp {
-				fluid(webpQuality: 100, jpegQuality: 100) {
+				fluid {
 					...GatsbyImageSharpFluid_withWebp
 				}
 			}
@@ -70,7 +70,7 @@ const imageQuery = graphql`
 			relativePath: { eq: "just-like-a-hero-book-img1.jpg" }
 		) {
 			childImageSharp {
-				fluid(webpQuality: 100, jpegQuality: 100) {
+				fluid {
 					...GatsbyImageSharpFluid_withWebp
 				}
 			}
@@ -79,7 +79,7 @@ const imageQuery = graphql`
 			relativePath: { eq: "just-like-a-hero-book-img2.jpg" }
 		) {
 			childImageSharp {
-				fluid(webpQuality: 100, jpegQuality: 100) {
+				fluid {
 					...GatsbyImageSharpFluid_withWebp
 				}
 			}
@@ -88,7 +88,7 @@ const imageQuery = graphql`
 			relativePath: { eq: "just-like-a-hero-book-img3.jpg" }
 		) {
 			childImageSharp {
-				fluid(webpQuality: 100, jpegQuality: 100) {
+				fluid {
 					...GatsbyImageSharpFluid_withWebp
 				}
 			}

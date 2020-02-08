@@ -35,7 +35,7 @@ const BlogPost = props => {
 							alt={alt}
 						/>
 					</div>
-					<p>{body}</p>
+					<div>{body}</div>
 					{link ? linkMarkup : ''}
 				</div>
 			</article>

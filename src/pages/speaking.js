@@ -60,6 +60,7 @@ const Speaking = ({ location }) => {
 											event={event.event}
 											date={event.date}
 											location={event.location}
+											key={event.event}
 										/>
 									))}
 							</ul>
