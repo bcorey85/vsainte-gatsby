@@ -7,4 +7,4 @@ image-desc: Vladimir Sainte South Patrol Presentation
 link: ''
 link-text: ''
 ---
-I was invited by Sergeant Cranston of the South Patrol Police Department to be a speaker for their monthly film festival on Saturday, June 15th at 7:30 p.m. Due to being a volunteer for Lead to Read, Sergeant Cranston read my book and was impressed with my message of worth. The focus of my speech was on the importance of family bonds. Copies of *Just Like A Hero*were gifted to families in attendance. What a great night!
+I was invited by Sergeant Cranston of the South Patrol Police Department to be a speaker for their monthly film festival on Saturday, June 15th at 7:30 p.m. Due to being a volunteer for Lead to Read, Sergeant Cranston read my book and was impressed with my message of worth. The focus of my speech was on the importance of family bonds. Copies of *Just Like A Hero* were gifted to families in attendance. What a great night!
