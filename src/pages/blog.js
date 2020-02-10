@@ -18,8 +18,12 @@ const Blog = ({ location }) => {
 		blogJSON.posts[mostRecentYear]
 	);
 	const blogData = useStaticQuery(blogQuery);
-	const blogArray = blogData.allMarkdownRemark.edges;
-	console.log(blogArray);
+	const blogObject = {
+		2020: blogData.year2,
+		2019: blogData.year1
+	};
+	console.log(blogObject);
+	console.log(blogJSON);
 
 	useEffect(
 		() => {
@@ -159,15 +163,19 @@ export default Blog;
 
 const blogQuery = graphql`
 	query Blog {
-		allMarkdownRemark(
-			filter: { frontmatter: { type: { eq: "blog-post" } } }
-			sort: { fields: frontmatter___date, order: DESC }
+		year2: allMarkdownRemark(
+			filter: {
+				frontmatter: { type: { eq: "blog-post" } }
+				fileAbsolutePath: { regex: "/2020/g" }
+			}
+			sort: { fields: frontmatter___date, order: ASC }
 		) {
 			edges {
 				node {
 					id
 					frontmatter {
 						image_desc
+						date(formatString: "MMMM Do, YYYY")
 						image {
 							childImageSharp {
 								fluid(maxWidth: 630) {
@@ -175,7 +183,35 @@ const blogQuery = graphql`
 								}
 							}
 						}
+						link
+						link_text
+						location
+						title
+						video
+					}
+				}
+			}
+		}
+		year1: allMarkdownRemark(
+			filter: {
+				frontmatter: { type: { eq: "blog-post" } }
+				fileAbsolutePath: { regex: "/2019/g" }
+			}
+			sort: { fields: frontmatter___date, order: ASC }
+		) {
+			edges {
+				node {
+					id
+					frontmatter {
+						image_desc
 						date(formatString: "MMMM Do, YYYY")
+						image {
+							childImageSharp {
+								fluid(maxWidth: 630) {
+									...GatsbyImageSharpFluid
+								}
+							}
+						}
 						link
 						link_text
 						location
