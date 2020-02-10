@@ -1,5 +1,6 @@
 backend: 
-  name: test-repo
+  name: bcorey85/vsainte-gatsby
+  branch: blog
 media_folder: static/assets
 public_folder: /assets
 collections: 
@@ -8,7 +9,28 @@ collections:
     folder: blog
     create: true
     fields: 
-      - { name: path, label: Path}
-      - { name: date, label: Date, widget: datetime }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - {name: 'type', name: 'Type', widget: 'hidden', default: 'blog-post'}
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "title", label: "Title", widget: "string", required: "true" }
+      - { name: "image", label: "Image", widget: "image"}
+      - { name: "image-desc", label: "Image Description", widget: "string", required: "true"}
+      - { name: "body", label: "Body", widget: "markdown", required: "true"  }
+      - { name: "link", label: "Link", widget: "string"}
+      - { name: "link-text", label: "Link Text", widget: "string"}
+  - name: event
+    label: Event
+    folder: event
+    create: true
+    fields: 
+      - {name: 'type', name: 'Type', widget: 'hidden', default: 'event'}
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "title", label: "Title", widget: "string", required: "true" }
+      - { name: "location", label: "Location", widget: "string", required: "true" }
+  - name: event-photo
+    label: Event Photo
+    folder: event-photo
+    create: true
+    fields: 
+      - {name: 'type', name: 'Type', widget: 'hidden', default: 'event'}
+      - { name: "image", label: "Image", widget: "image"}
+      - { name: "image-desc", label: "Image Description", widget: "string", required: "true"}
