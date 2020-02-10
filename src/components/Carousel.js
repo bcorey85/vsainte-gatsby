@@ -16,7 +16,6 @@ import './Carousel.css';
 config.autoAddCss = false;
 const Carousel = props => {
 	const { title, icon, data, dataType } = props;
-
 	const [ currentIndex, setCurrentIndex ] = useState(0);
 	const [ currentItem, setCurrentItem ] = useState(data[currentIndex]);
 	const icons = {
@@ -59,8 +58,11 @@ const Carousel = props => {
 				<React.Fragment>
 					<div className='carousel__photo'>
 						<Image
-							src={currentItem.src}
-							alt={currentItem.alt}
+							fluid={
+								currentItem.node.frontmatter.image
+									.childImageSharp.fluid
+							}
+							alt={currentItem.node.frontmatter.image_desc}
 							boxShadow='default'
 						/>
 					</div>

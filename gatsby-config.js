@@ -7,10 +7,39 @@ module.exports = {
 	plugins: [
 		`gatsby-plugin-react-helmet`,
 		{
+			//Has to stay at top for MarkdownRemark to identify image strings
 			resolve: `gatsby-source-filesystem`,
 			options: {
-				name: `images`,
-				path: `${__dirname}/src/images`
+				path: `${__dirname}/static/assets`,
+				name: `static-assets`
+			}
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				path: `${__dirname}/src/images`,
+				name: `images`
+			}
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				path: `${__dirname}/blog`,
+				name: `blog`
+			}
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				path: `${__dirname}/event`,
+				name: `event`
+			}
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				path: `${__dirname}/event-photo`,
+				name: `event-photo`
 			}
 		},
 		`gatsby-transformer-sharp`,
@@ -71,6 +100,27 @@ module.exports = {
 				defaultDataLayer: { platform: 'gatsby' }
 			}
 		},
-		`gatsby-plugin-netlify-cms`
+		`gatsby-plugin-netlify-cms`,
+		{
+			resolve: `gatsby-transformer-remark`,
+			options: {
+				plugins: [
+					// gatsby-remark-relative-images must
+					// go before gatsby-remark-images
+					{
+						resolve: `gatsby-remark-relative-images`
+					},
+					{
+						resolve: `gatsby-remark-images`,
+						options: {
+							// It's important to specify the maxWidth (in pixels) of
+							// the content container as this plugin uses this as the
+							// base for generating different widths of each image.
+							maxWidth: 536
+						}
+					}
+				]
+			}
+		}
 	]
 };

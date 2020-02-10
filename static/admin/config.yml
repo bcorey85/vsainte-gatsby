@@ -1,5 +1,6 @@
 backend: 
-  name: bcorey85/vsainte-gatsby
+  name: github
+  repo: bcorey85/vsainte-gatsby
   branch: blog
 media_folder: static/assets
 public_folder: /assets
@@ -10,27 +11,29 @@ collections:
     create: true
     fields: 
       - { name: "type", label: "Type", widget: "hidden", default: "blog-post"}
-      - { name: "date", label: "Date", widget: "datetime" }
-      - { name: "title", label: "Title", widget: "string", required: "true" }
-      - { name: "image", label: "Image", widget: "image"}
-      - { name: "image-desc", label: "Image Description", widget: "string", required: "true"}
-      - { name: "body", label: "Body", widget: "markdown", required: "true"  }
-      - { name: "link", label: "Link", widget: "string"}
-      - { name: "link-text", label: "Link Text", widget: "string"}
+      - { name: "date", label: "Date", widget: "datetime", dateFormat: "DD/MM/YYYY", timeFormat: false}
+      - { name: "title", label: "Title", widget: "string", required: true }
+      - { name: "image", label: "Image", widget: "image", required: false}
+      - { name: "image-desc", label: "Image Description", widget: "string", required: false}
+      - { name: "video", label: "Video Link", widget: "string", required: false}
+      - { name: "body", label: "Body", widget: "markdown", required: true  }
+      - { name: "link", label: "Link", widget: "string", required: false}
+      - { name: "link-text", label: "Link Text", widget: "string", required: false}
   - name: event
     label: Event
     folder: event
     create: true
     fields: 
       - { name: "type", label: "Type", widget: "hidden", default: "event"}
-      - { name: "date", label: "Date", widget: "datetime" }
-      - { name: "title", label: "Title", widget: "string", required: "true" }
-      - { name: "location", label: "Location", widget: "string", required: "true" }
+      - { name: "date", label: "Date", widget: "datetime", dateFormat: "DD/MM/YYYY", timeFormat: false}
+      - { name: "title", label: "Title", widget: "string", required: true }
+      - { name: "location", label: "Location", widget: "string", required: true }
   - name: event-photo
     label: Event Photo
     folder: event-photo
+    identifier_field: image-desc
     create: true
     fields: 
       - { name: "type", label: "Type", widget: "hidden", default: "event-photo"}
-      - { name: "image", label: "Image", widget: "image"}
-      - { name: "image-desc", label: "Image Description", widget: "string", required: "true"}
+      - { name: "image", label: "Image", widget: "image", required: true}
+      - { name: "image-desc", label: "Image Description", widget: "string", required: true}

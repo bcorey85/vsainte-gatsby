@@ -1,6 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
-import { Link } from 'gatsby';
+import { Link, graphql, useStaticQuery } from 'gatsby';
 import useScrollToTop from '../hooks/useScrollToTop';
 
 import Section from '../components/shared/Section';
@@ -9,11 +8,13 @@ import SEO from '../components/Seo';
 import EventListing from '../components/EventListing';
 
 import './speaking.css';
-import eventPhotosJSON from '../json/event-photos.json';
-import eventsJSON from '../json/events.json';
 
 const Speaking = ({ location }) => {
 	useScrollToTop();
+	const eventsData = useStaticQuery(eventsQuery);
+	const eventsArray = eventsData.events.edges;
+	const eventPhotoArray = eventsData.eventPhotos.edges;
+
 	return (
 		<React.Fragment>
 			<SEO title='Speaking' />
@@ -53,16 +54,18 @@ const Speaking = ({ location }) => {
 						<div>
 							<h2>Events</h2>
 							<ul className='event-list'>
-								{eventsJSON.events
-									.slice(0, 4)
-									.map(event => (
+								{eventsArray.map(event => {
+									return (
 										<EventListing
-											event={event.event}
-											date={event.date}
-											location={event.location}
-											key={event.event}
+											event={event.node.frontmatter.title}
+											date={event.node.frontmatter.date}
+											location={
+												event.node.frontmatter.location
+											}
+											key={event.node.id}
 										/>
-									))}
+									);
+								})}
 							</ul>
 						</div>
 					</div>
@@ -70,7 +73,7 @@ const Speaking = ({ location }) => {
 						<Carousel
 							title='Event Photos'
 							icon='camera'
-							data={eventPhotosJSON.photos}
+							data={eventPhotoArray}
 							dataType='photos'
 						/>
 					</div>
@@ -92,3 +95,43 @@ const Speaking = ({ location }) => {
 };
 
 export default Speaking;
+
+const eventsQuery = graphql`
+	query EventsQuery {
+		events: allMarkdownRemark(
+			filter: { frontmatter: { type: { eq: "event" } } }
+			limit: 4
+		) {
+			edges {
+				node {
+					id
+					frontmatter {
+						date(formatString: "MM/DD/YYYY")
+						location
+						title
+					}
+				}
+			}
+		}
+		eventPhotos: allMarkdownRemark(
+			filter: { frontmatter: { type: { eq: "event-photo" } } }
+			limit: 4
+		) {
+			edges {
+				node {
+					id
+					frontmatter {
+						image_desc
+						image {
+							childImageSharp {
+								fluid(maxWidth: 630) {
+									...GatsbyImageSharpFluid
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+`;
