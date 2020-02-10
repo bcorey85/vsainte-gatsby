@@ -18,7 +18,8 @@ const Blog = ({ location }) => {
 		blogJSON.posts[mostRecentYear]
 	);
 	const blogData = useStaticQuery(blogQuery);
-	console.log(blogData);
+	const blogArray = blogData.allMarkdownRemark.edges;
+	console.log(blogArray);
 
 	useEffect(
 		() => {

@@ -9,6 +9,7 @@ collections:
     label: Blog
     folder: blog
     create: true
+    slug: "{{year}}_{{slug}}"
     fields: 
       - { name: "type", label: "Type", widget: "hidden", default: "blog-post"}
       - { name: "date", label: "Date", widget: "datetime", dateFormat: "DD/MM/YYYY", timeFormat: false}
