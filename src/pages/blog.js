@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactHtmlParser from 'react-html-parser';
+import { graphql, useStaticQuery } from 'gatsby';
 
 import useScrollToTop from '../hooks/useScrollToTop';
 import useMostRecentYear from '../hooks/useMostRecentYear';
@@ -16,6 +17,8 @@ const Blog = ({ location }) => {
 	const [ selectedPosts, setSelectedPosts ] = useState(
 		blogJSON.posts[mostRecentYear]
 	);
+	const blogData = useStaticQuery(blogQuery);
+	console.log(blogData);
 
 	useEffect(
 		() => {
@@ -152,3 +155,34 @@ const Blog = ({ location }) => {
 };
 
 export default Blog;
+
+const blogQuery = graphql`
+	query Blog {
+		allMarkdownRemark(
+			filter: { frontmatter: { type: { eq: "blog-post" } } }
+			sort: { fields: frontmatter___date, order: DESC }
+		) {
+			edges {
+				node {
+					id
+					frontmatter {
+						image_desc
+						image {
+							childImageSharp {
+								fluid(maxWidth: 630) {
+									...GatsbyImageSharpFluid
+								}
+							}
+						}
+						date(formatString: "MMMM Do, YYYY")
+						link
+						link_text
+						location
+						title
+						video
+					}
+				}
+			}
+		}
+	}
+`;
