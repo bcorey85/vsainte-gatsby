@@ -32,11 +32,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 		//Add slug to Graphql blog query, value adds starting /
 		const value = createFilePath({ node, getNode });
 		const year = node.frontmatter.date.substring(0, 4);
-		console.log(year, value);
+		const valueWithoutPrefix = value.substring(6);
 		createNodeField({
 			name: `path`,
 			node,
-			value: `/blog/${year}${value}`
+			value: `/blog/${year}/${valueWithoutPrefix}`
 		});
 
 		//Add year to Graphql blog query
@@ -65,7 +65,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 		}
 	}
   `);
-	console.log(result.data.allMarkdownRemark.edges);
+
 	if (result.errors) {
 		reporter.panicOnBuild('Error while running GraphQL query.');
 		return;
@@ -78,28 +78,4 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 			context: {}
 		});
 	});
-	// 	.then(result => {
-	// 	if (result.errors) {
-	// 		result.errors.forEach(e => console.error(e.toString()));
-	// 		return Promise.reject(result.errors);
-	// 	}
-
-	// 	const posts = result.data.allMarkdownRemark.edges;
-
-	//   posts.forEach(edge => {
-	// 	  const id = edge.node.id;
-	// 	  createPage({
-	// 		  path: edge.node.fields.slug,
-	// 		  component: path.resolve(
-	// 			  `src/templates/${String(
-	// 				  edge.node.frontmatter.templateKey
-	// 			  )}.js`
-	// 		  ),
-	// 		  // additional data can be passed via context
-	// 		  context: {
-	// 			  id
-	// 		  }
-	// 	  });
-	//   });
-	// });
 };

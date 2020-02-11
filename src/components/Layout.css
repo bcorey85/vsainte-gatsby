@@ -164,6 +164,12 @@ ul {
 	}
 }
 
+@media only screen and (max-width: 37.5em) {
+	h1.page-title {
+		margin: 2.4rem 0;
+	}
+}
+
 @media only screen and (max-width: 25em) {
 	h2 {
 		font-size: 3.2rem;
