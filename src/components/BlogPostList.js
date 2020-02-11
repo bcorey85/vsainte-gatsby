@@ -17,7 +17,7 @@ const BlogPostList = ({ selectedPosts }) => {
 				mediaType: 'image',
 				src: post.frontmatter.image.childImageSharp.fluid
 			};
-		} else if (data.frontmatter.video) {
+		} else if (post.frontmatter.video) {
 			return {
 				mediaType: 'video',
 				src: post.frontmatter.video
