@@ -55,6 +55,6 @@ collections:
       - { name: "type", label: "Type", widget: "hidden", default: "testimonial"}
       - { name: "date", label: "Date", widget: "datetime", dateFormat: "MM/DD/YYYY", timeFormat: false}
       - { name: "author", label: "Author", widget: "string", required: true }
-      - { name: "address1", label: "Address 1", widget: "string", required: false }
-      - { name: "address2", label: "Address 2", widget: "string", required: false }
+      - { name: "title1", label: "Title 1", widget: "string", required: false }
+      - { name: "title2", label: "Title 2", widget: "string", required: false }
       - { name: "body", label: "Body", widget: "markdown", required: true  }

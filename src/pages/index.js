@@ -25,6 +25,7 @@ const Home = ({ location }) => {
 	useScrollToTop();
 	const [ mostRecentYear ] = useMostRecentYear(blogJSON.posts);
 	const indexData = useStaticQuery(indexQuery);
+	console.log(indexData.testimonials);
 
 	const renderBlogTitles = () => {
 		const titles = blogJSON.posts[mostRecentYear]
@@ -183,7 +184,7 @@ const Home = ({ location }) => {
 						<Carousel
 							title='Testimonials'
 							icon='thumbsup'
-							data={testimonialJSON.testimonials}
+							data={indexData.testimonials.nodes}
 							dataType='text'
 						/>
 					</div>
@@ -361,6 +362,19 @@ const indexQuery = graphql`
 				fluid {
 					...GatsbyImageSharpFluid_withWebp
 				}
+			}
+		}
+		testimonials: allMarkdownRemark(
+			filter: { frontmatter: { type: { eq: "testimonial" } } }
+		) {
+			nodes {
+				frontmatter {
+					title1
+					title2
+					author
+				}
+				html
+				id
 			}
 		}
 	}

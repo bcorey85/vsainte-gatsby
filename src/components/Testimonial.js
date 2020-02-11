@@ -7,7 +7,10 @@ const Testimonial = props => {
 	return (
 		<div className='testimonial'>
 			<div className='testimonial__quote'>“</div>
-			<div className='testimonial__body'>{body}</div>
+			<div
+				className='testimonial__body'
+				dangerouslySetInnerHTML={{ __html: body }}
+			/>
 			<div className='testimonial__meta'>
 				<div>
 					<div className='testimonial__author'>{name}</div>

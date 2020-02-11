@@ -22,6 +22,9 @@ const Carousel = props => {
 		thumbsup: faThumbsUp,
 		camera: faCamera
 	};
+	console.log(currentItem);
+	console.log(data);
+	console.log(dataType);
 
 	const incrementCarousel = (e, direction) => {
 		e.stopPropagation();
@@ -46,10 +49,10 @@ const Carousel = props => {
 			return (
 				<React.Fragment>
 					<Testimonial
-						name={currentItem.name}
-						title={currentItem.title}
-						title2={currentItem.title2}
-						body={currentItem.body}
+						name={currentItem.frontmatter.author}
+						title={currentItem.frontmatter.title1}
+						title2={currentItem.frontmatter.title2}
+						body={currentItem.html}
 					/>
 				</React.Fragment>
 			);

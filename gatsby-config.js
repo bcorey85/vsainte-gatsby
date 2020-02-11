@@ -73,6 +73,13 @@ module.exports = {
 			}
 		},
 		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				path: `${__dirname}/testimonial`,
+				name: `testimonial`
+			}
+		},
+		{
 			resolve: `gatsby-plugin-layout`,
 			options: {
 				component: require.resolve(`./src/components/Layout.js`)
