@@ -24,7 +24,7 @@ const Home = ({ location }) => {
 	const renderBlogTitles = () => {
 		const titles = indexData.blogPostTitles.nodes.map((post, i) => (
 			<li key={post.id}>
-				<Link to='/blog' state={{ index: i }} className='link'>
+				<Link to={post.fields.path} className='link'>
 					{ReactHtmlParser(post.frontmatter.title)}
 				</Link>
 			</li>
@@ -370,10 +370,7 @@ const indexQuery = graphql`
 			}
 		}
 		blogPostTitles: allMarkdownRemark(
-			filter: {
-				frontmatter: { type: { eq: "blog-post" } }
-				fileAbsolutePath: { regex: "/2020/" }
-			}
+			filter: { frontmatter: { type: { eq: "blog-post" } } }
 			limit: 4
 			sort: { fields: frontmatter___date, order: DESC }
 		) {
@@ -382,6 +379,9 @@ const indexQuery = graphql`
 					title
 				}
 				id
+				fields {
+					path
+				}
 			}
 		}
 	}

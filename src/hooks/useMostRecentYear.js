@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function useMostRecentYear(obj) {
+const useMostRecentYear = obj => {
 	const years = Object.keys(obj);
 	const recentYear = years
 		.filter(year => {
@@ -11,6 +11,6 @@ function useMostRecentYear(obj) {
 		});
 	const [ mostRecentYear, setMostRecentYear ] = useState(recentYear);
 	return [ mostRecentYear, setMostRecentYear ];
-}
+};
 
 export default useMostRecentYear;
