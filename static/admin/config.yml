@@ -14,6 +14,7 @@ collections:
     fields: 
       - { name: "type", label: "Type", widget: "hidden", default: "blog-post"}
       - { name: "date", label: "Date", widget: "datetime", dateFormat: "MM/DD/YYYY", timeFormat: false}
+      - { name: "year", label: "Year", widget: "string", default: {{year}}, hidden: "true"}
       - { name: "title", label: "Title", widget: "markdown", required: true, buttons: ['italic', 'quote'], hint: "Use italic button for book titles" }
       - { name: "image", label: "Image", widget: "image", required: false}
       - { name: "image-desc", label: "Image Description", widget: "string", required: false, hint: "Required if there's an image - Used for accessiblity and search engine optimization"}

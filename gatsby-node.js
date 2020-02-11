@@ -1,9 +1,8 @@
 // gatsby-node.js
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
-const remark = require('remark');
-const remarkHTML = require('remark-html');
+const { createFilePath } = require('gatsby-source-filesystem');
 
-exports.onCreateNode = ({ node }) => {
+exports.onCreateNode = ({ node, actions, getNode }) => {
 	//Transform image paths to relative for Gatsby internals
 	fmImagesToRelative(node);
 
@@ -23,5 +22,18 @@ exports.onCreateNode = ({ node }) => {
 			node.frontmatter.title = htmlTitle;
 		}
 	}
-	return node;
+
+	//Add slug to GraphQl query
+	const { createNodeField } = actions;
+	if (
+		node.internal.type === `MarkdownRemark` &&
+		node.frontmatter.type === 'blog-post'
+	) {
+		const value = createFilePath({ node, getNode });
+		createNodeField({
+			name: `slug`,
+			node,
+			value: `/blog${value}`
+		});
+	}
 };
