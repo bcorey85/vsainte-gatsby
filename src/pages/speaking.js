@@ -101,6 +101,7 @@ const eventsQuery = graphql`
 		events: allMarkdownRemark(
 			filter: { frontmatter: { type: { eq: "event" } } }
 			limit: 4
+			sort: { fields: frontmatter___date, order: DESC }
 		) {
 			edges {
 				node {
@@ -115,7 +116,6 @@ const eventsQuery = graphql`
 		}
 		eventPhotos: allMarkdownRemark(
 			filter: { frontmatter: { type: { eq: "event-photo" } } }
-			limit: 4
 		) {
 			edges {
 				node {

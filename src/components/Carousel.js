@@ -64,6 +64,7 @@ const Carousel = props => {
 							}
 							alt={currentItem.node.frontmatter.image_desc}
 							boxShadow='default'
+							style={{ height: '100%' }}
 						/>
 					</div>
 				</React.Fragment>

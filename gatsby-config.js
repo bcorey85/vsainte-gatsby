@@ -5,6 +5,7 @@ module.exports = {
 		author: `Vladimir Sainte`
 	},
 	plugins: [
+		`gatsby-plugin-netlify-cms`,
 		`gatsby-transformer-sharp`,
 		{
 			resolve: `gatsby-transformer-remark`,
@@ -127,7 +128,6 @@ module.exports = {
 				// Defaults to null
 				defaultDataLayer: { platform: 'gatsby' }
 			}
-		},
-		`gatsby-plugin-netlify-cms`
+		}
 	]
 };

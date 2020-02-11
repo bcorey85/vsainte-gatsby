@@ -14,13 +14,13 @@ collections:
     fields: 
       - { name: "type", label: "Type", widget: "hidden", default: "blog-post"}
       - { name: "date", label: "Date", widget: "datetime", dateFormat: "MM/DD/YYYY", timeFormat: false}
-      - { name: "title", label: "Title", widget: "markdown", required: true }
+      - { name: "title", label: "Title", widget: "markdown", required: true, buttons: ['italic', 'quote'], hint: "Use italic button for book titles" }
       - { name: "image", label: "Image", widget: "image", required: false}
-      - { name: "image-desc", label: "Image Description - REQUIRED for images", widget: "string", required: false}
-      - { name: "video", label: "Video Link", widget: "string", required: false}
-      - { name: "body", label: "Body", widget: "markdown", required: true  }
-      - { name: "link", label: "Link", widget: "string", required: false}
-      - { name: "link-text", label: "Link Text", widget: "string", required: false}
+      - { name: "image-desc", label: "Image Description", widget: "string", required: false, hint: "Required if there's an image - Used for accessiblity and search engine optimization"}
+      - { name: "video", label: "Video Link", widget: "string", required: false, hint: 'Only one video or image is supported'}
+      - { name: "body", label: "Body", widget: "markdown", required: true, buttons: ['bold', 'italic', 'quote', 'link'], hint: "Additional photos are not supported"}
+      - { name: "link", label: "Link", widget: "string", required: false, hint: "Start with ( http:// ) for outside links or ( / ) for internal links. IE: ( /speaking ) to go to the speaking page or ( /contact ) to link to contact page, etc."}
+      - { name: "link-text", label: "Link Text", widget: "string", required: false, hint: "Required if there's a link"}
   - name: event
     label: Event
     folder: event

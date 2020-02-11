@@ -47,7 +47,10 @@ const Section = props => {
 				? `section--angle-${angle}`
 				: ''}`}
 			style={styles}>
-			<div className={`section-inner ${wide && 'section-inner--wide'}`}>
+			<div
+				className={`section-inner ${wide
+					? 'section-inner--wide'
+					: ''}`}>
 				{props.children}
 			</div>
 		</section>

@@ -8,11 +8,11 @@ import Section from '../components/shared/Section';
 import BlogPost from '../components/BlogPost';
 import SEO from '../components/Seo';
 
-import blogJSON from '../json/blog-posts.json';
 import './blog.css';
 
 const Blog = ({ location }) => {
 	const blogData = useStaticQuery(blogQuery);
+	//Rename query aliases to years
 	const blogObject = {
 		2020: blogData.year2.edges,
 		2019: blogData.year1.edges
@@ -23,25 +23,40 @@ const Blog = ({ location }) => {
 		blogObject[mostRecentYear]
 	);
 
-	console.log(blogObject);
-	console.log(blogJSON);
+	//Handle 'recent blog post' links from index page
+	useEffect(() => {
+		if (location.state) {
+			if (location.state.index >= 0)
+				setSelectedPosts(
+					blogObject[mostRecentYear][location.state.index]
+				);
+		}
+	}, []);
 
-	useEffect(
-		() => {
-			if (location.state) {
-				if (location.state.index >= 0)
-					setSelectedPosts(
-						blogJSON.posts[mostRecentYear][location.state.index]
-					);
-			}
-		},
-		[ mostRecentYear, location.state ]
-	);
-
+	//Scroll to top of page on selectedPosts state change
 	useScrollToTop(selectedPosts);
 
+	const setMediaType = post => {
+		if (post.node.frontmatter.image) {
+			return {
+				mediaType: 'image',
+				src: post.node.frontmatter.image.childImageSharp.fluid
+			};
+		} else if (post.node.frontmatter.video) {
+			return {
+				mediaType: 'video',
+				src: post.node.frontmatter.video
+			};
+		} else {
+			return {
+				mediaType: null,
+				src: null
+			};
+		}
+	};
+
+	//Handle rendering blog post array ('view all') or individual post
 	const renderPosts = data => {
-		console.log(data);
 		if (Array.isArray(data)) {
 			return data.map(post => {
 				return (
@@ -49,17 +64,8 @@ const Blog = ({ location }) => {
 						key={post.node.id}
 						date={post.node.frontmatter.date}
 						title={ReactHtmlParser(post.node.frontmatter.title)}
-						mediaType={
-							post.node.frontmatter.image ? 'image' : 'video'
-						}
-						src={
-							post.node.frontmatter.image ? (
-								post.node.frontmatter.image.childImageSharp
-									.fluid
-							) : (
-								post.node.frontmatter.video
-							)
-						}
+						mediaType={setMediaType(post).mediaType}
+						src={setMediaType(post).src}
 						alt={post.node.frontmatter.image_desc}
 						body={post.node.html}
 						link={post.node.frontmatter.link}
@@ -73,14 +79,8 @@ const Blog = ({ location }) => {
 				key={data.node.id}
 				date={data.node.frontmatter.date}
 				title={ReactHtmlParser(data.node.frontmatter.title)}
-				mediaType={data.node.frontmatter.image ? 'image' : 'video'}
-				src={
-					data.node.frontmatter.image ? (
-						data.node.frontmatter.image.childImageSharp.fluid
-					) : (
-						data.node.frontmatter.video
-					)
-				}
+				mediaType={setMediaType(data).mediaType}
+				src={setMediaType(data).src}
 				alt={data.node.frontmatter.image_desc}
 				body={data.node.html}
 				link={data.node.frontmatter.link}
@@ -89,18 +89,22 @@ const Blog = ({ location }) => {
 		);
 	};
 
+	const blogPosts = renderPosts(selectedPosts);
+
+	//Set selected post after filtering array by title
 	const filterByTitle = selectedTitle =>
-		blogJSON.posts[selectedYear].filter(post => {
-			if (post.title === selectedTitle) {
+		blogObject[selectedYear].filter(post => {
+			if (post.node.frontmatter.title === selectedTitle) {
 				return post;
 			}
 			return null;
 		});
 
+	//Show all blog title links from selectedYear
 	const viewAll = () => {
 		const allRendered =
 			selectedPosts.length >= 1 &&
-			blogJSON.posts[selectedYear].length === selectedPosts.length;
+			blogObject[selectedYear].length === selectedPosts.length;
 
 		if (!allRendered) {
 			return (
@@ -109,7 +113,7 @@ const Blog = ({ location }) => {
 						<button
 							className='link-caps'
 							onClick={() => {
-								setSelectedPosts(blogJSON.posts[selectedYear]);
+								setSelectedPosts(blogObject[selectedYear]);
 							}}>
 							View All
 						</button>
@@ -120,17 +124,7 @@ const Blog = ({ location }) => {
 		return '';
 	};
 
-	const blogPosts = renderPosts(selectedPosts);
-
-	// const postTitleLinks = blogJSON.posts[selectedYear].map(post => (
-	// 	<li key={post.title}>
-	// 		<button
-	// 			className='link'
-	// 			onClick={() => setSelectedPosts(filterByTitle(post.title))}>
-	// 			{ReactHtmlParser(post.title)}
-	// 		</button>
-	// 	</li>
-	// ));
+	//Render blog post title links for side bar navigation
 	const postTitleLinks = blogObject[selectedYear].map(post => (
 		<li key={post.node.id}>
 			<button
@@ -143,20 +137,8 @@ const Blog = ({ location }) => {
 			</button>
 		</li>
 	));
-	// const yearsLinks = Object.keys(blogJSON.posts)
-	// 	.sort((a, b) => b - a)
-	// 	.map(year => (
-	// 		<li key={year}>
-	// 			<button
-	// 				className='link'
-	// 				onClick={() => {
-	// 					setSelectedPosts(blogJSON.posts[year]);
-	// 					setSelectedYear(year);
-	// 				}}>
-	// 				{year}
-	// 			</button>
-	// 		</li>
-	// 	));
+
+	//Render year links for side bar navigation
 	const yearsLinks = Object.keys(blogObject)
 		.sort((a, b) => b - a)
 		.map(year => (
@@ -211,7 +193,7 @@ const blogQuery = graphql`
 				frontmatter: { type: { eq: "blog-post" } }
 				fileAbsolutePath: { regex: "/2020/" }
 			}
-			sort: { fields: frontmatter___date, order: ASC }
+			sort: { fields: frontmatter___date, order: DESC }
 		) {
 			edges {
 				node {
@@ -241,7 +223,7 @@ const blogQuery = graphql`
 				frontmatter: { type: { eq: "blog-post" } }
 				fileAbsolutePath: { regex: "/2019/" }
 			}
-			sort: { fields: frontmatter___date, order: ASC }
+			sort: { fields: frontmatter___date, order: DESC }
 		) {
 			edges {
 				node {

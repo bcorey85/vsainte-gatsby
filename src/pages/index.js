@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ReactHtmlParser from 'react-html-parser';
 
 import useScrollToTop from '../hooks/useScrollToTop';
-import useMostRecentYear from '../hooks/useMostRecentYear';
 
 import Button from '../components/shared/Button';
 import Image from '../components/shared/Image';
@@ -285,8 +284,6 @@ const Home = ({ location }) => {
 
 export default Home;
 
-const currentYear = new Date().getFullYear();
-
 const indexQuery = graphql`
 	query IndexData {
 		cta: file(
@@ -375,9 +372,10 @@ const indexQuery = graphql`
 		blogPostTitles: allMarkdownRemark(
 			filter: {
 				frontmatter: { type: { eq: "blog-post" } }
-				fileAbsolutePath: { regex: "/2020/g" }
+				fileAbsolutePath: { regex: "/2020/" }
 			}
 			limit: 4
+			sort: { fields: frontmatter___date, order: DESC }
 		) {
 			nodes {
 				frontmatter {
