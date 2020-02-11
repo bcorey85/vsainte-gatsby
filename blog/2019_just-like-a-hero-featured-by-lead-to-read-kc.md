@@ -1,7 +1,7 @@
 ---
 type: blog-post
 date: 2019-02-08T15:30:17.698Z
-title: Just Like A Hero Featured by Lead to Read KC
+title: '*Just Like A Hero* Featured by Lead to Read KC'
 image: /assets/IMG_9876-1024x733.jpg
 image-desc: Vladimir Sainte at Lead to Read
 link: >-
