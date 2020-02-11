@@ -1,7 +1,7 @@
 ---
 type: blog-post
 date: 2019-05-10T14:36:52.607Z
-title: Just Like A Hero featured on KCPT – Kansas City PBS
+title: '*Just Like A Hero* featured on KCPT – Kansas City PBS'
 image: /assets/kcptscreencap.jpg
 image-desc: Vladimir Sainte in KCPT screen capture
 link: >-
