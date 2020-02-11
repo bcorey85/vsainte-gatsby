@@ -65,12 +65,7 @@ const BlogPost = props => {
 					<h5>{date}</h5>
 					<h3>{title}</h3>
 					<div className='blog-post__img'>
-						<Image
-							fluid={src}
-							alt={alt}
-							boxShadow='default'
-							style={{ height: '100%', maxHeight: '32rem' }}
-						/>
+						<Image fluid={src} alt={alt} boxShadow='default' />
 					</div>
 					<div dangerouslySetInnerHTML={{ __html: body }} />
 					{linkMarkup}

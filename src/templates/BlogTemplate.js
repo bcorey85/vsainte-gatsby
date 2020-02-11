@@ -9,7 +9,6 @@ import '../pages/blog.css';
 
 const BlogTemplate = ({ data }) => {
 	const { markdownRemark } = data;
-
 	return (
 		<React.Fragment>
 			<SEO title='Blog' />
