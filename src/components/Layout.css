@@ -109,15 +109,16 @@ p {
 	font-weight: 500;
 }
 
+a,
 .link,
 .link-caps {
 	cursor: pointer;
-
 	color: var(--primary-dark);
 	cursor: pointer;
 	text-decoration: none;
 }
 
+a,
 .link {
 	font-weight: 400;
 	text-transform: none;
@@ -130,6 +131,7 @@ p {
 	transition: all .2s;
 }
 
+a:hover,
 .link:hover,
 .link-caps:hover {
 	color: var(--black);
