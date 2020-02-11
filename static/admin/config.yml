@@ -1,5 +1,5 @@
-backend: 
-  name: github
+backend:
+  name: git-gateway
   repo: bcorey85/vsainte-gatsby
   branch: blog
 media_folder: static/assets
