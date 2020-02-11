@@ -1,7 +1,7 @@
 ---
 type: blog-post
 date: 2019-11-08T15:54:35.144Z
-title: Just Like Jaelah
+title: '*Just Like Jaelah*'
 image: /assets/vladimir-sainte-just-like-jaelah.jpg
 image-desc: Vladimir Sainte holding Just Like Jaelah book
 ---
