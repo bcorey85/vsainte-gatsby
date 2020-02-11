@@ -12,16 +12,17 @@ import blogJSON from '../json/blog-posts.json';
 import './blog.css';
 
 const Blog = ({ location }) => {
-	const [ mostRecentYear ] = useMostRecentYear(blogJSON.posts);
-	const [ selectedYear, setSelectedYear ] = useState(mostRecentYear);
-	const [ selectedPosts, setSelectedPosts ] = useState(
-		blogJSON.posts[mostRecentYear]
-	);
 	const blogData = useStaticQuery(blogQuery);
 	const blogObject = {
 		2020: blogData.year2,
 		2019: blogData.year1
 	};
+	const [ mostRecentYear ] = useMostRecentYear(blogJSON.posts);
+	const [ selectedYear, setSelectedYear ] = useState(mostRecentYear);
+	const [ selectedPosts, setSelectedPosts ] = useState(
+		blogJSON.posts[mostRecentYear]
+	);
+
 	console.log(blogObject);
 	console.log(blogJSON);
 
@@ -39,9 +40,9 @@ const Blog = ({ location }) => {
 
 	useScrollToTop(selectedPosts);
 
-	const renderPosts = posts => {
-		if (Array.isArray(posts)) {
-			return posts.map(post => {
+	const renderPosts = data => {
+		if (Array.isArray(data)) {
+			return data.map(post => {
 				return (
 					<BlogPost
 						key={post.title}
@@ -59,14 +60,14 @@ const Blog = ({ location }) => {
 		}
 		return (
 			<BlogPost
-				key={posts.title}
-				date={posts.date}
-				title={ReactHtmlParser(posts.title)}
-				mediaType={posts.mediaType}
-				src={posts.mediaSrc}
-				body={ReactHtmlParser(posts.body)}
-				link={posts.link}
-				linkTxt={posts.linkTxt}
+				key={data.title}
+				date={data.date}
+				title={ReactHtmlParser(data.title)}
+				mediaType={data.mediaType}
+				src={data.mediaSrc}
+				body={ReactHtmlParser(data.body)}
+				link={data.link}
+				linkTxt={data.linkTxt}
 			/>
 		);
 	};

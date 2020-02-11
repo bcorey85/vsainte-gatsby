@@ -5,6 +5,36 @@ module.exports = {
 		author: `Vladimir Sainte`
 	},
 	plugins: [
+		`gatsby-transformer-sharp`,
+		{
+			resolve: `gatsby-transformer-remark`,
+			options: {
+				plugins: [
+					// gatsby-remark-relative-images must
+					// go before gatsby-remark-images
+					{
+						resolve: `gatsby-remark-relative-images`
+					},
+					{
+						resolve: `gatsby-remark-images`,
+						options: {
+							// It's important to specify the maxWidth (in pixels) of
+							// the content container as this plugin uses this as the
+							// base for generating different widths of each image.
+							maxWidth: 536
+						}
+					}
+				]
+			}
+		},
+		{
+			resolve: `gatsby-plugin-sharp`,
+			options: {
+				useMozJpeg: false,
+				stripMetadata: true,
+				defaultQuality: 85
+			}
+		},
 		`gatsby-plugin-react-helmet`,
 		{
 			//Has to stay at top for MarkdownRemark to identify image strings
@@ -40,15 +70,6 @@ module.exports = {
 			options: {
 				path: `${__dirname}/event-photo`,
 				name: `event-photo`
-			}
-		},
-		`gatsby-transformer-sharp`,
-		{
-			resolve: `gatsby-plugin-sharp`,
-			options: {
-				useMozJpeg: false,
-				stripMetadata: true,
-				defaultQuality: 85
 			}
 		},
 		{
@@ -100,27 +121,6 @@ module.exports = {
 				defaultDataLayer: { platform: 'gatsby' }
 			}
 		},
-		`gatsby-plugin-netlify-cms`,
-		{
-			resolve: `gatsby-transformer-remark`,
-			options: {
-				plugins: [
-					// gatsby-remark-relative-images must
-					// go before gatsby-remark-images
-					{
-						resolve: `gatsby-remark-relative-images`
-					},
-					{
-						resolve: `gatsby-remark-images`,
-						options: {
-							// It's important to specify the maxWidth (in pixels) of
-							// the content container as this plugin uses this as the
-							// base for generating different widths of each image.
-							maxWidth: 536
-						}
-					}
-				]
-			}
-		}
+		`gatsby-plugin-netlify-cms`
 	]
 };

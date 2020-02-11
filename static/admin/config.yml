@@ -10,12 +10,13 @@ collections:
     folder: blog
     create: true
     slug: "{{year}}_{{slug}}"
+    summary: "{{title}} - {{month}}/{{day}}/{{year}}"
     fields: 
       - { name: "type", label: "Type", widget: "hidden", default: "blog-post"}
-      - { name: "date", label: "Date", widget: "datetime", dateFormat: "DD/MM/YYYY", timeFormat: false}
+      - { name: "date", label: "Date", widget: "datetime", dateFormat: "MM/DD/YYYY", timeFormat: false}
       - { name: "title", label: "Title", widget: "string", required: true }
       - { name: "image", label: "Image", widget: "image", required: false}
-      - { name: "image-desc", label: "Image Description", widget: "string", required: false}
+      - { name: "image-desc", label: "Image Description - REQUIRED for images", widget: "string", required: false}
       - { name: "video", label: "Video Link", widget: "string", required: false}
       - { name: "body", label: "Body", widget: "markdown", required: true  }
       - { name: "link", label: "Link", widget: "string", required: false}
@@ -24,9 +25,11 @@ collections:
     label: Event
     folder: event
     create: true
+    slug: "{{year}}_{{slug}}"
+    summary: "{{title}} - {{month}}/{{day}}/{{year}}"
     fields: 
       - { name: "type", label: "Type", widget: "hidden", default: "event"}
-      - { name: "date", label: "Date", widget: "datetime", dateFormat: "DD/MM/YYYY", timeFormat: false}
+      - { name: "date", label: "Date", widget: "datetime", dateFormat: "MM/DD/YYYY", timeFormat: false}
       - { name: "title", label: "Title", widget: "string", required: true }
       - { name: "location", label: "Location", widget: "string", required: true }
   - name: event-photo
@@ -34,7 +37,24 @@ collections:
     folder: event-photo
     identifier_field: image-desc
     create: true
+    slug: "{{year}}_{{slug}}"
+    summary: "{{image-desc}} - {{month}}/{{day}}/{{year}}"
     fields: 
       - { name: "type", label: "Type", widget: "hidden", default: "event-photo"}
+      - { name: "date", label: "Date", widget: "datetime", dateFormat: "MM/DD/YYYY", timeFormat: false}
       - { name: "image", label: "Image", widget: "image", required: true}
       - { name: "image-desc", label: "Image Description", widget: "string", required: true}
+  - name: testimonial
+    label: Testimonial
+    folder: testimonial
+    identifier_field: author
+    create: true
+    slug: "{{year}}_{{slug}}"
+    summary: "{{author}} - {{month}}/{{day}}/{{year}}"
+    fields: 
+      - { name: "type", label: "Type", widget: "hidden", default: "testimonial"}
+      - { name: "date", label: "Date", widget: "datetime", dateFormat: "MM/DD/YYYY", timeFormat: false}
+      - { name: "author", label: "Author", widget: "string", required: true }
+      - { name: "address1", label: "Address 1", widget: "string", required: false }
+      - { name: "address2", label: "Address 2", widget: "string", required: false }
+      - { name: "body", label: "Body", widget: "markdown", required: true  }

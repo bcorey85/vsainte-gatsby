@@ -24,7 +24,7 @@ import blogJSON from '../json/blog-posts.json';
 const Home = ({ location }) => {
 	useScrollToTop();
 	const [ mostRecentYear ] = useMostRecentYear(blogJSON.posts);
-	const indexImages = useStaticQuery(imageQuery);
+	const indexData = useStaticQuery(indexQuery);
 
 	const renderBlogTitles = () => {
 		const titles = blogJSON.posts[mostRecentYear]
@@ -64,7 +64,7 @@ const Home = ({ location }) => {
 					</div>
 					<div className='hero-section__right'>
 						<Image
-							fluid={indexImages.cta.childImageSharp.fluid}
+							fluid={indexData.cta.childImageSharp.fluid}
 							alt='It Will Be Okay book cover'
 							className='hero-section__img'
 						/>
@@ -79,7 +79,7 @@ const Home = ({ location }) => {
 						<div className='features__item'>
 							<Image
 								fluid={
-									indexImages.iwboblackphoto.childImageSharp
+									indexData.iwboblackphoto.childImageSharp
 										.fluid
 								}
 								alt='Alma sad in corner'
@@ -99,8 +99,7 @@ const Home = ({ location }) => {
 						<div className='features__item'>
 							<Image
 								fluid={
-									indexImages.iwboredphoto.childImageSharp
-										.fluid
+									indexData.iwboredphoto.childImageSharp.fluid
 								}
 								alt='Limbo laughing'
 								boxShadow='default'
@@ -116,7 +115,7 @@ const Home = ({ location }) => {
 						<div className='features__item'>
 							<Image
 								fluid={
-									indexImages.iwbopurplephoto.childImageSharp
+									indexData.iwbopurplephoto.childImageSharp
 										.fluid
 								}
 								alt='Alma hero'
@@ -137,7 +136,7 @@ const Home = ({ location }) => {
 						<div className='benefits__left'>
 							<Image
 								fluid={
-									indexImages.iwbobluephoto.childImageSharp
+									indexData.iwbobluephoto.childImageSharp
 										.fluid
 								}
 								alt='Alma crying'
@@ -195,9 +194,7 @@ const Home = ({ location }) => {
 				<div className='books-section'>
 					<Card
 						href='https://www.amazon.com/Will-Okay-Just-Like-Hero/dp/1942005520/ref=sr_1_1?crid=2SQ0E2D0Z20WN&keywords=it+will+be+okay+vladimir+sainte&qid=1570911125&sprefix=it+will+be+okay+vladimi%2Caps%2C153&sr=8-1'
-						imgSrcFluid={
-							indexImages.iwboCover.childImageSharp.fluid
-						}
+						imgSrcFluid={indexData.iwboCover.childImageSharp.fluid}
 						imgAlt={'It Will Be Okay'}
 						btnColor={'cta'}
 						btnText={'Buy Now'}
@@ -205,9 +202,7 @@ const Home = ({ location }) => {
 					/>
 					<Card
 						href='https://www.amazon.com/Just-Like-Hero-Vladimir-Sainte/dp/194200544X/ref=sr_1_1?ie=UTF8&qid=1549147023&sr=8-1&keywords=just+like+a+hero'
-						imgSrcFluid={
-							indexImages.jlahCover.childImageSharp.fluid
-						}
+						imgSrcFluid={indexData.jlahCover.childImageSharp.fluid}
 						imgAlt={'Just Like A Hero'}
 						btnColor={'default'}
 						btnText={'Buy Now'}
@@ -252,9 +247,7 @@ const Home = ({ location }) => {
 						<div className='about-section__header'>
 							<h3>About Vladimir</h3>
 							<Thumbnail
-								fluid={
-									indexImages.headshot.childImageSharp.fluid
-								}
+								fluid={indexData.headshot.childImageSharp.fluid}
 								alt='Vladimir Sainte'
 							/>
 						</div>
@@ -298,8 +291,8 @@ const Home = ({ location }) => {
 
 export default Home;
 
-const imageQuery = graphql`
-	query IndexImgs {
+const indexQuery = graphql`
+	query IndexData {
 		cta: file(
 			relativePath: { eq: "it-will-be-okay-book-cta-section.jpg" }
 		) {
