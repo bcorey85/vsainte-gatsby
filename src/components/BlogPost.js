@@ -7,6 +7,7 @@ import './BlogPost.css';
 
 const BlogPost = props => {
 	const { src, alt, title, date, body, link, linkTxt, mediaType } = props;
+	console.log(src);
 
 	const linkMarkup = (
 		<div className='blog-post__link'>
@@ -16,7 +17,7 @@ const BlogPost = props => {
 		</div>
 	);
 
-	if (mediaType.toLowerCase() === 'video') {
+	if (mediaType === 'video') {
 		return (
 			<article className='blog-post'>
 				<div className='blog-post__content'>
@@ -48,9 +49,14 @@ const BlogPost = props => {
 				<h5>{date}</h5>
 				<h3>{title}</h3>
 				<div className='blog-post__img'>
-					<Image src={src} alt={alt} boxShadow='default' />
+					<Image
+						fluid={src}
+						alt={alt}
+						boxShadow='default'
+						style={{ height: '100%', maxHeight: '32rem' }}
+					/>
 				</div>
-				<div>{body}</div>
+				<div dangerouslySetInnerHTML={{ __html: body }} />
 				{link ? linkMarkup : ''}
 			</div>
 		</article>

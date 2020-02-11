@@ -5,8 +5,7 @@ import 'lazysizes';
 import './Image.css';
 
 const Image = props => {
-	const { src, alt, className, boxShadow, borderRadius } = props;
-
+	const { src, alt, className, boxShadow, borderRadius, style } = props;
 	const shadows = {
 		default: '0px 4px 14px rgba(0, 0, 0, 0.25)',
 		thick:
@@ -20,6 +19,7 @@ const Image = props => {
 				alt={alt}
 				className={`img lazyload ${className ? className : ''}`}
 				style={{
+					...style,
 					boxShadow: shadows[boxShadow],
 					borderRadius: borderRadius
 				}}
@@ -34,6 +34,7 @@ const Image = props => {
 				alt={alt}
 				className={`img lazyload ${className ? className : ''}`}
 				style={{
+					...style,
 					boxShadow: shadows[boxShadow],
 					borderRadius: borderRadius
 				}}

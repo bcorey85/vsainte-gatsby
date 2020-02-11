@@ -14,13 +14,13 @@ import './blog.css';
 const Blog = ({ location }) => {
 	const blogData = useStaticQuery(blogQuery);
 	const blogObject = {
-		2020: blogData.year2,
-		2019: blogData.year1
+		2020: blogData.year2.edges,
+		2019: blogData.year1.edges
 	};
-	const [ mostRecentYear ] = useMostRecentYear(blogJSON.posts);
+	const [ mostRecentYear ] = useMostRecentYear(blogObject);
 	const [ selectedYear, setSelectedYear ] = useState(mostRecentYear);
 	const [ selectedPosts, setSelectedPosts ] = useState(
-		blogJSON.posts[mostRecentYear]
+		blogObject[mostRecentYear]
 	);
 
 	console.log(blogObject);
@@ -41,33 +41,50 @@ const Blog = ({ location }) => {
 	useScrollToTop(selectedPosts);
 
 	const renderPosts = data => {
+		console.log(data);
 		if (Array.isArray(data)) {
 			return data.map(post => {
 				return (
 					<BlogPost
-						key={post.title}
-						date={post.date}
-						title={ReactHtmlParser(post.title)}
-						mediaType={post.mediaType}
-						src={post.mediaSrc}
-						alt={post.alt}
-						body={ReactHtmlParser(post.body)}
-						link={post.link}
-						linkTxt={post.linkTxt}
+						key={post.node.id}
+						date={post.node.frontmatter.date}
+						title={ReactHtmlParser(post.node.frontmatter.title)}
+						mediaType={
+							post.node.frontmatter.image ? 'image' : 'video'
+						}
+						src={
+							post.node.frontmatter.image ? (
+								post.node.frontmatter.image.childImageSharp
+									.fluid
+							) : (
+								post.node.frontmatter.video
+							)
+						}
+						alt={post.node.frontmatter.image_desc}
+						body={post.node.html}
+						link={post.node.frontmatter.link}
+						linkTxt={post.node.frontmatter.link_text}
 					/>
 				);
 			});
 		}
 		return (
 			<BlogPost
-				key={data.title}
-				date={data.date}
-				title={ReactHtmlParser(data.title)}
-				mediaType={data.mediaType}
-				src={data.mediaSrc}
-				body={ReactHtmlParser(data.body)}
-				link={data.link}
-				linkTxt={data.linkTxt}
+				key={data.node.id}
+				date={data.node.frontmatter.date}
+				title={ReactHtmlParser(data.node.frontmatter.title)}
+				mediaType={data.node.frontmatter.image ? 'image' : 'video'}
+				src={
+					data.node.frontmatter.image ? (
+						data.node.frontmatter.image.childImageSharp.fluid
+					) : (
+						data.node.frontmatter.video
+					)
+				}
+				alt={data.node.frontmatter.image_desc}
+				body={data.node.html}
+				link={data.node.frontmatter.link}
+				linkTxt={data.node.frontmatter.link_text}
 			/>
 		);
 	};
@@ -105,24 +122,49 @@ const Blog = ({ location }) => {
 
 	const blogPosts = renderPosts(selectedPosts);
 
-	const postTitleLinks = blogJSON.posts[selectedYear].map(post => (
-		<li key={post.title}>
+	// const postTitleLinks = blogJSON.posts[selectedYear].map(post => (
+	// 	<li key={post.title}>
+	// 		<button
+	// 			className='link'
+	// 			onClick={() => setSelectedPosts(filterByTitle(post.title))}>
+	// 			{ReactHtmlParser(post.title)}
+	// 		</button>
+	// 	</li>
+	// ));
+	const postTitleLinks = blogObject[selectedYear].map(post => (
+		<li key={post.node.id}>
 			<button
 				className='link'
-				onClick={() => setSelectedPosts(filterByTitle(post.title))}>
-				{ReactHtmlParser(post.title)}
+				onClick={() =>
+					setSelectedPosts(
+						filterByTitle(post.node.frontmatter.title)
+					)}>
+				{ReactHtmlParser(post.node.frontmatter.title)}
 			</button>
 		</li>
 	));
-
-	const yearsLinks = Object.keys(blogJSON.posts)
+	// const yearsLinks = Object.keys(blogJSON.posts)
+	// 	.sort((a, b) => b - a)
+	// 	.map(year => (
+	// 		<li key={year}>
+	// 			<button
+	// 				className='link'
+	// 				onClick={() => {
+	// 					setSelectedPosts(blogJSON.posts[year]);
+	// 					setSelectedYear(year);
+	// 				}}>
+	// 				{year}
+	// 			</button>
+	// 		</li>
+	// 	));
+	const yearsLinks = Object.keys(blogObject)
 		.sort((a, b) => b - a)
 		.map(year => (
 			<li key={year}>
 				<button
 					className='link'
 					onClick={() => {
-						setSelectedPosts(blogJSON.posts[year]);
+						setSelectedPosts(blogObject[year]);
 						setSelectedYear(year);
 					}}>
 					{year}
@@ -167,7 +209,7 @@ const blogQuery = graphql`
 		year2: allMarkdownRemark(
 			filter: {
 				frontmatter: { type: { eq: "blog-post" } }
-				fileAbsolutePath: { regex: "/2020/g" }
+				fileAbsolutePath: { regex: "/2020/" }
 			}
 			sort: { fields: frontmatter___date, order: ASC }
 		) {
@@ -190,13 +232,14 @@ const blogQuery = graphql`
 						title
 						video
 					}
+					html
 				}
 			}
 		}
 		year1: allMarkdownRemark(
 			filter: {
 				frontmatter: { type: { eq: "blog-post" } }
-				fileAbsolutePath: { regex: "/2019/g" }
+				fileAbsolutePath: { regex: "/2019/" }
 			}
 			sort: { fields: frontmatter___date, order: ASC }
 		) {
@@ -219,6 +262,7 @@ const blogQuery = graphql`
 						title
 						video
 					}
+					html
 				}
 			}
 		}

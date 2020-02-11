@@ -14,7 +14,7 @@ collections:
     fields: 
       - { name: "type", label: "Type", widget: "hidden", default: "blog-post"}
       - { name: "date", label: "Date", widget: "datetime", dateFormat: "MM/DD/YYYY", timeFormat: false}
-      - { name: "title", label: "Title", widget: "string", required: true }
+      - { name: "title", label: "Title", widget: "markdown", required: true }
       - { name: "image", label: "Image", widget: "image", required: false}
       - { name: "image-desc", label: "Image Description - REQUIRED for images", widget: "string", required: false}
       - { name: "video", label: "Video Link", widget: "string", required: false}

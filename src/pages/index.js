@@ -18,25 +18,18 @@ import Divider from '../components/shared/Divider';
 
 import './index.css';
 
-import testimonialJSON from '../json/testimonials.json';
-import blogJSON from '../json/blog-posts.json';
-
 const Home = ({ location }) => {
 	useScrollToTop();
-	const [ mostRecentYear ] = useMostRecentYear(blogJSON.posts);
 	const indexData = useStaticQuery(indexQuery);
-	console.log(indexData.testimonials);
 
 	const renderBlogTitles = () => {
-		const titles = blogJSON.posts[mostRecentYear]
-			.slice(0, 4)
-			.map((post, i) => (
-				<li key={post.title}>
-					<Link to='/blog' state={{ index: i }} className='link'>
-						{ReactHtmlParser(post.title)}
-					</Link>
-				</li>
-			));
+		const titles = indexData.blogPostTitles.nodes.map((post, i) => (
+			<li key={post.id}>
+				<Link to='/blog' state={{ index: i }} className='link'>
+					{ReactHtmlParser(post.frontmatter.title)}
+				</Link>
+			</li>
+		));
 		return titles;
 	};
 
@@ -292,6 +285,8 @@ const Home = ({ location }) => {
 
 export default Home;
 
+const currentYear = new Date().getFullYear();
+
 const indexQuery = graphql`
 	query IndexData {
 		cta: file(
@@ -374,6 +369,20 @@ const indexQuery = graphql`
 					author
 				}
 				html
+				id
+			}
+		}
+		blogPostTitles: allMarkdownRemark(
+			filter: {
+				frontmatter: { type: { eq: "blog-post" } }
+				fileAbsolutePath: { regex: "/2020/g" }
+			}
+			limit: 4
+		) {
+			nodes {
+				frontmatter {
+					title
+				}
 				id
 			}
 		}

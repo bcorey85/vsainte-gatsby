@@ -3,16 +3,16 @@
 	max-width: 80rem;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 }
 
 .blog-post__content {
 	max-width: 53.6rem;
 }
 
-.blog-post__img img {
+.blog-post__img {
 	max-width: 53.6rem;
 	margin-bottom: 2.4rem;
+	height: 100%;
 	max-height: 32rem;
 	object-fit: cover;
 }

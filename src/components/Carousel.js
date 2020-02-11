@@ -22,9 +22,6 @@ const Carousel = props => {
 		thumbsup: faThumbsUp,
 		camera: faCamera
 	};
-	console.log(currentItem);
-	console.log(data);
-	console.log(dataType);
 
 	const incrementCarousel = (e, direction) => {
 		e.stopPropagation();
