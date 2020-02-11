@@ -3,7 +3,7 @@ type: blog-post
 date: 2020-01-26T15:58:12.980Z
 title: KCUR 89.3/NPR Interview
 image: /assets/AK_vladimirsainte_childrensbook2_0.jpg
-image-desc: Vladimir Sainte KCUR
+image-desc: Vladimir Sainte Signing Books
 link: >-
   https://www.kcur.org/post/kansas-city-childrens-book-author-gives-kids-hope-shields-and-other-emotional-super-hero-tools?fbclid=IwAR2xch3AOy050DzPCXzXjqJlri5FIpSOhw2GUNYv0IAf0haaXOKOWu3OVic#stream/0
 link-text: KCUR Interview
