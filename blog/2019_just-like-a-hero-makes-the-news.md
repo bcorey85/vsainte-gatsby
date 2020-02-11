@@ -1,7 +1,7 @@
 ---
 type: blog-post
 date: 2019-03-25T14:33:40.810Z
-title: Just Like A Hero Makes the News!
+title: '*Just Like A Hero* Makes the News!'
 image: /assets/hero.jpg
 image-desc: Just Like A Hero
 link: >-
