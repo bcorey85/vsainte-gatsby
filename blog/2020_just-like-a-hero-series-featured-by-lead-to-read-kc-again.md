@@ -2,8 +2,10 @@
 type: blog-post
 date: 2020-02-11T23:28:33.315Z
 title: '*Just Like A Hero* Series Featured by Lead to Read KC Again!'
-image: /assets/vladimir-sainte-lead-to-read-2-11-2020.png
+image: /assets/vladimir-sainte-lead-to-read-2-11-2020.jpg
 image-desc: Vladimir Sainte holding the Just Like A Hero series books
+link: 'http://www.leadtoreadkc.org/'
+link-text: Lead to Read KC
 ---
 I was honored to be featured in an email by Lead to Read again. Check out what they had to say!
 
