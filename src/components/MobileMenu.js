@@ -15,17 +15,14 @@ const MobileMenu = props => {
 				onClick={toggleMobileNav}
 				onKeyDown={toggleMobileNav}
 				role='button'
+				aria-label='mobile navigation'
 				tabIndex={0}>
 				<span />
 				<span />
 				<span />
 			</div>
 			<div
-				className={`mobile-menu__links ${menuOpen ? 'menu-open' : ''}`}
-				onClick={toggleMobileNav}
-				onKeyDown={toggleMobileNav}
-				role='button'
-				tabIndex={0}>
+				className={`mobile-menu__links ${menuOpen ? 'menu-open' : ''}`}>
 				<img
 					src={hero}
 					alt='Just Like A Hero logo'
