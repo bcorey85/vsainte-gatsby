@@ -7,7 +7,7 @@ import { Link } from 'gatsby';
 import './MainNav.css';
 
 const MainNav = props => {
-	const { location, color } = props;
+	const { location, color, onClick, onKeyDown } = props;
 
 	return (
 		<nav className={`main-nav ${location}`} style={{ color: color }}>
@@ -17,7 +17,9 @@ const MainNav = props => {
 					<Link
 						to='/'
 						className='main-nav__link'
-						activeClassName={`${location}Active`}>
+						activeClassName={`${location}Active`}
+						onClick={onClick}
+						onKeyDown={onKeyDown}>
 						Home
 					</Link>
 				</li>
@@ -25,7 +27,9 @@ const MainNav = props => {
 					<Link
 						to='/books'
 						className='main-nav__link'
-						activeClassName={`${location}Active`}>
+						activeClassName={`${location}Active`}
+						onClick={onClick}
+						onKeyDown={onKeyDown}>
 						Books
 					</Link>
 				</li>
@@ -33,7 +37,9 @@ const MainNav = props => {
 					<Link
 						to='/speaking'
 						className='main-nav__link'
-						activeClassName={`${location}Active`}>
+						activeClassName={`${location}Active`}
+						onClick={onClick}
+						onKeyDown={onKeyDown}>
 						Speaking
 					</Link>
 				</li>
@@ -41,7 +47,9 @@ const MainNav = props => {
 					<Link
 						to='/about'
 						className='main-nav__link'
-						activeClassName={`${location}Active`}>
+						activeClassName={`${location}Active`}
+						onClick={onClick}
+						onKeyDown={onKeyDown}>
 						About
 					</Link>
 				</li>
@@ -49,7 +57,9 @@ const MainNav = props => {
 					<Link
 						to='/blog'
 						className='main-nav__link'
-						activeClassName={`${location}Active`}>
+						activeClassName={`${location}Active`}
+						onClick={onClick}
+						onKeyDown={onKeyDown}>
 						Blog
 					</Link>
 				</li>
@@ -57,7 +67,9 @@ const MainNav = props => {
 					<Link
 						to='/contact'
 						className='main-nav__link'
-						activeClassName={`${location}Active`}>
+						activeClassName={`${location}Active`}
+						onClick={onClick}
+						onKeyDown={onKeyDown}>
 						Contact
 					</Link>
 				</li>

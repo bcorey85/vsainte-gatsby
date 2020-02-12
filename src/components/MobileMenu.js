@@ -28,7 +28,12 @@ const MobileMenu = props => {
 					alt='Just Like A Hero logo'
 					className='header__hero--mobile'
 				/>
-				<MainNav color='var(--black)' location='mobile' />
+				<MainNav
+					color='var(--black)'
+					location='mobile'
+					onClick={toggleMobileNav}
+					onKeyDown={toggleMobileNav}
+				/>
 			</div>
 		</div>
 	);
