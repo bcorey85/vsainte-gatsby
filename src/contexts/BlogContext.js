@@ -4,7 +4,7 @@ import { createBlogObject } from '../utils/createBlogObject';
 
 import useMostRecentYear from '../hooks/useMostRecentYear';
 
-export const BlogContext = createContext(blogQuery);
+export const BlogContext = createContext();
 
 const blogQuery = graphql`
 	query BlogData {
