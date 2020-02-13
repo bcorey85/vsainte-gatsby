@@ -5,6 +5,7 @@ import Section from '../components/shared/Section';
 import BlogPostList from '../components/BlogPostList';
 import BlogNavigation from '../components/BlogNavigation';
 import SEO from '../components/Seo';
+
 import '../pages/blog.css';
 
 const BlogTemplate = ({ data }) => {
@@ -51,6 +52,9 @@ export const pageQuery = graphql`
 				title
 				type
 				video
+			}
+			fields {
+				year
 			}
 		}
 	}

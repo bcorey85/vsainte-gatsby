@@ -1,22 +1,23 @@
-import React from 'react';
-
-import { graphql, useStaticQuery } from 'gatsby';
+import React, { useContext } from 'react';
 
 import useScrollToTop from '../hooks/useScrollToTop';
 
-import useBlogState from '../hooks/useBlogState';
 import Section from '../components/shared/Section';
 import BlogPostList from '../components/BlogPostList';
 import BlogNavigation from '../components/BlogNavigation';
 import SEO from '../components/Seo';
+import { BlogContext } from '../contexts/BlogContext';
 
 import './blog.css';
 
 const Blog = () => {
-	const blogData = useStaticQuery(blogQuery);
-	const blogArray = blogData.allMarkdownRemark.edges;
-	const { selectedPosts } = useBlogState(blogArray);
-
+	const {
+		blogObject,
+		selectedYear,
+		setSelectedYear,
+		selectedPosts,
+		setSelectedPosts
+	} = useContext(BlogContext);
 	//Scroll to top of page on selectedPosts state change
 	useScrollToTop(selectedPosts);
 
@@ -32,7 +33,12 @@ const Blog = () => {
 							<BlogPostList selectedPosts={selectedPosts} />
 						</div>
 						<div className='blog-content__right'>
-							<BlogNavigation />
+							<BlogNavigation
+								setSelectedPosts={setSelectedPosts}
+								setSelectedYear={setSelectedYear}
+								selectedYear={selectedYear}
+								blogObject={blogObject}
+							/>
 						</div>
 					</div>
 				</div>
@@ -42,39 +48,3 @@ const Blog = () => {
 };
 
 export default Blog;
-
-const blogQuery = graphql`
-	query Blog {
-		allMarkdownRemark(
-			filter: { frontmatter: { type: { eq: "blog-post" } } }
-			sort: { fields: frontmatter___date, order: DESC }
-		) {
-			edges {
-				node {
-					id
-					frontmatter {
-						image_desc
-						date(formatString: "MMMM Do, YYYY")
-						image {
-							childImageSharp {
-								fluid(maxWidth: 630) {
-									...GatsbyImageSharpFluid
-								}
-							}
-						}
-						link
-						link_text
-						location
-						title
-						video
-					}
-					html
-					fields {
-						path
-						year
-					}
-				}
-			}
-		}
-	}
-`;

@@ -51,20 +51,21 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = async ({ actions, graphql, reporter }) => {
 	const { createPage } = actions;
 	const blogPostTemplate = path.resolve(`src/templates/BlogTemplate.js`);
-	//Create Blog Pages
+
+	//Create Individual Blog Pages
 	const result = await graphql(`
-    {
-		allMarkdownRemark(filter: {frontmatter: {type: {eq: "blog-post"}}}) {
-			edges {
-			node {
-				fields {
-				path
+			{
+				allMarkdownRemark(filter: {frontmatter: {type: {eq: "blog-post"}}}) {
+					edges {
+					node {
+						fields {
+						path
+						}
+					}
+					}
 				}
 			}
-			}
-		}
-	}
-  `);
+		`);
 
 	if (result.errors) {
 		reporter.panicOnBuild('Error while running GraphQL query.');

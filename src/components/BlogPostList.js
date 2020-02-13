@@ -4,14 +4,7 @@ import ReactHtmlParser from 'react-html-parser';
 import BlogPost from './BlogPost';
 
 const BlogPostList = ({ selectedPosts }) => {
-	const setMediaType = data => {
-		let post;
-		if (data.node) {
-			post = data.node;
-		} else {
-			post = data;
-		}
-
+	const setMediaType = post => {
 		if (post.frontmatter.image) {
 			return {
 				mediaType: 'image',
@@ -35,15 +28,15 @@ const BlogPostList = ({ selectedPosts }) => {
 			return data.map(post => {
 				return (
 					<BlogPost
-						key={post.node.id}
-						date={post.node.frontmatter.date}
-						title={ReactHtmlParser(post.node.frontmatter.title)}
+						key={post.id}
+						date={post.frontmatter.date}
+						title={ReactHtmlParser(post.frontmatter.title)}
 						mediaType={setMediaType(post).mediaType}
 						src={setMediaType(post).src}
-						alt={post.node.frontmatter.image_desc}
-						body={post.node.html}
-						link={post.node.frontmatter.link}
-						linkTxt={post.node.frontmatter.link_text}
+						alt={post.frontmatter.image_desc}
+						body={post.html}
+						link={post.frontmatter.link}
+						linkTxt={post.frontmatter.link_text}
 					/>
 				);
 			});

@@ -1,7 +1,4 @@
 import React from 'react';
-
-// import { NavLink } from 'react-router-dom';
-
 import { Link } from 'gatsby';
 
 import './MainNav.css';
@@ -17,7 +14,7 @@ const MainNav = props => {
 					<Link
 						to='/'
 						className='main-nav__link'
-						activeClassName={`${location}Active`}
+						activeClassName={`${location}Active`} //different active states in header & footer
 						onClick={onClick}
 						onKeyDown={onKeyDown}>
 						Home

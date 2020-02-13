@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import useMostRecentYear from './useMostRecentYear';
-import createBlogObject from '../utils/createBlogObject';
+import { createBlogObject } from '../utils/createBlogObject';
 
 const useBlogState = blogArray => {
 	//Sort blog posts into obj by year

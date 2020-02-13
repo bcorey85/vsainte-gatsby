@@ -1,20 +1,18 @@
-import React from 'react';
-import { graphql, useStaticQuery, Link } from 'gatsby';
+import React, { useContext } from 'react';
+import { Link } from 'gatsby';
 import ReactHtmlParser from 'react-html-parser';
+import { BlogContext } from '../contexts/BlogContext';
 
-import useBlogState from '../hooks/useBlogState';
+import './BlogNavigation.css';
 
 const BlogNavigation = () => {
-	const blogData = useStaticQuery(blogNavQuery);
-	const blogArray = blogData.allMarkdownRemark.edges;
-
 	const {
 		blogObject,
 		selectedYear,
 		setSelectedYear,
 		selectedPosts,
 		setSelectedPosts
-	} = useBlogState(blogArray);
+	} = useContext(BlogContext);
 
 	const viewAll = () => {
 		const allRendered =
@@ -25,13 +23,13 @@ const BlogNavigation = () => {
 			return (
 				<ul>
 					<li>
-						<button
-							className='link-caps'
+						<Link
 							onClick={() => {
 								setSelectedPosts(blogObject[selectedYear]);
-							}}>
-							View All
-						</button>
+							}}
+							to='/blog'>
+							View All {selectedYear} Posts
+						</Link>
 					</li>
 				</ul>
 			);
@@ -40,10 +38,15 @@ const BlogNavigation = () => {
 	};
 
 	//Render blog post title links for side bar navigation
-	const postTitleLinks = blogObject[selectedYear].map(post => (
-		<li key={post.node.id}>
-			<Link to={post.node.fields.path} className='link'>
-				{ReactHtmlParser(post.node.frontmatter.title)}
+	const postTitleLinks = blogObject[selectedYear].map((post, index) => (
+		<li key={post.id}>
+			<Link
+				to={post.fields.path}
+				onClick={() => {
+					setSelectedPosts(blogObject[selectedYear][index]);
+				}}
+				className='link'>
+				{ReactHtmlParser(post.frontmatter.title)}
 			</Link>
 		</li>
 	));
@@ -53,14 +56,15 @@ const BlogNavigation = () => {
 		.sort((a, b) => b - a)
 		.map(year => (
 			<li key={year}>
-				<button
+				<Link
+					to='/blog'
 					className='link'
 					onClick={() => {
 						setSelectedPosts(blogObject[year]);
 						setSelectedYear(year);
 					}}>
 					{year}
-				</button>
+				</Link>
 			</li>
 		));
 
@@ -83,39 +87,3 @@ const BlogNavigation = () => {
 };
 
 export default BlogNavigation;
-
-const blogNavQuery = graphql`
-	query BlogNav {
-		allMarkdownRemark(
-			filter: { frontmatter: { type: { eq: "blog-post" } } }
-			sort: { fields: frontmatter___date, order: DESC }
-		) {
-			edges {
-				node {
-					id
-					frontmatter {
-						image_desc
-						date(formatString: "MMMM Do, YYYY")
-						image {
-							childImageSharp {
-								fluid(maxWidth: 630) {
-									...GatsbyImageSharpFluid
-								}
-							}
-						}
-						link
-						link_text
-						location
-						title
-						video
-					}
-					html
-					fields {
-						path
-						year
-					}
-				}
-			}
-		}
-	}
-`;

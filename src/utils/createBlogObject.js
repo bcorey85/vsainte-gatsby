@@ -10,12 +10,10 @@ const createBlogObject = arr => {
 
 	//Sort blog posts into array by year
 	const sortedBlogData = blogYears.map(year => {
-		const posts = arr.filter(post => {
-			if (post.node.fields.year === year) {
-				return post;
-			}
-			return null;
-		});
+		const posts = arr
+			.filter(post => post.node.fields.year === year)
+			.map(post => (post = post.node)); //return post without .node
+
 		return { year, posts };
 	});
 
@@ -32,4 +30,6 @@ const createBlogObject = arr => {
 	return toObject(sortedBlogData);
 };
 
-export default createBlogObject;
+module.exports = {
+	createBlogObject
+};
