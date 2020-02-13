@@ -19,7 +19,7 @@ const Blog = () => {
 		setSelectedPosts
 	} = useContext(BlogContext);
 	//Scroll to top of page on selectedPosts state change
-	useScrollToTop(selectedPosts);
+	useScrollToTop([ selectedPosts, selectedYear ]);
 
 	return (
 		<React.Fragment>
