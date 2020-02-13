@@ -6,35 +6,6 @@ import useMostRecentYear from '../hooks/useMostRecentYear';
 
 export const BlogContext = createContext(blogQuery);
 
-export const BlogContextProvider = props => {
-	const blogData = useStaticQuery(blogQuery);
-	const blogArray = blogData.allMarkdownRemark.edges;
-
-	//Sort blog posts into obj by year
-	const blogObject = createBlogObject(blogArray);
-
-	//Avoid new year empty blog post bug
-	const [ mostRecentYear ] = useMostRecentYear(blogObject);
-
-	const [ selectedYear, setSelectedYear ] = useState(mostRecentYear);
-	const [ selectedPosts, setSelectedPosts ] = useState(
-		blogObject[mostRecentYear]
-	);
-
-	return (
-		<BlogContext.Provider
-			value={{
-				blogObject,
-				selectedYear,
-				setSelectedYear,
-				selectedPosts,
-				setSelectedPosts
-			}}>
-			{props.children}
-		</BlogContext.Provider>
-	);
-};
-
 const blogQuery = graphql`
 	query BlogData {
 		allMarkdownRemark(
@@ -70,3 +41,32 @@ const blogQuery = graphql`
 		}
 	}
 `;
+
+export const BlogContextProvider = props => {
+	const blogData = useStaticQuery(blogQuery);
+	const blogArray = blogData.allMarkdownRemark.edges;
+
+	//Sort blog posts into obj by year
+	const blogObject = createBlogObject(blogArray);
+
+	//Avoid new year empty blog post bug
+	const [ mostRecentYear ] = useMostRecentYear(blogObject);
+
+	const [ selectedYear, setSelectedYear ] = useState(mostRecentYear);
+	const [ selectedPosts, setSelectedPosts ] = useState(
+		blogObject[mostRecentYear]
+	);
+
+	return (
+		<BlogContext.Provider
+			value={{
+				blogObject,
+				selectedYear,
+				setSelectedYear,
+				selectedPosts,
+				setSelectedPosts
+			}}>
+			{props.children}
+		</BlogContext.Provider>
+	);
+};
