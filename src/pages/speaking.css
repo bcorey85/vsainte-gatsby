@@ -29,10 +29,6 @@
 	text-align: center;
 }
 
-.speaking h2 {
-	margin-top: -1.7rem;
-}
-
 /* 900px  */
 @media only screen and (max-width: 56.25em) {
 	.speaking__content {
