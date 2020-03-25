@@ -130,10 +130,6 @@
 	padding: 15.2rem 0;
 }
 
-.speaking-section h2 {
-	margin-top: -1.7rem;
-}
-
 .speaking-section__left {
 	flex: 0 1 40%;
 	margin-right: 3.2rem;
@@ -176,21 +172,20 @@
 
 .about-section__header {
 	height: 4rem;
-	margin-bottom: 2.4rem;
 	position: relative;
 }
 
 .about-section__header .thumbnail {
 	position: absolute;
 	right: 0;
-	top: -1.8rem;
+	top: -4rem;
 }
 
 .about-section__header-icon {
 	position: absolute;
 	font-size: 3.2rem;
 	right: 0;
-	top: 0;
+	top: -.5rem;
 }
 
 .about-section__content {
