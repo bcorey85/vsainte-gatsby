@@ -23,19 +23,17 @@
 .book-details__buy {
 	display: flex;
 	justify-content: flex-end;
-	margin-top: 8rem;
+	margin-top: 4.8rem;
 }
 
 .book-details h2 {
 	text-transform: uppercase;
 	font-size: 4rem;
 	font-style: italic;
-	margin-top: -1.2rem;
 }
 
 .book-details h5 {
 	margin-top: -.7rem;
-	margin-bottom: .8rem;
 }
 
 /* 750px  */

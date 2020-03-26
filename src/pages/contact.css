@@ -25,7 +25,7 @@
 }
 
 .contact__item {
-	margin-bottom: 3.6rem;
+	margin-bottom: 4.8rem;
 }
 
 .contact__comments {
@@ -36,13 +36,13 @@
 }
 
 .contact__comments input {
-	margin-bottom: 1.6rem;
+	margin-bottom: 2.4rem;
 }
 
 .contact__comments-submit {
 	display: flex;
 	justify-content: flex-end;
-	margin-top: 5.6rem;
+	margin-top: 4.8rem;
 }
 
 /* 600px */

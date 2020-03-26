@@ -42,18 +42,17 @@
 }
 
 .hero-section__cta-text {
-	line-height: 1.6;
 	margin-top: .8rem;
 	margin-bottom: 6.4rem;
-	max-width: 53.8rem;
-	font-size: 1.8rem;
+	max-width: 59.8rem;
+	font-size: 2rem;
 	animation: floatUp .8s ease-out;
 	animation-delay: .3s;
 	animation-fill-mode: backwards;
 }
 
 .details-section {
-	padding: 15.2rem 0;
+	padding: 14.4rem 0 4.8rem 0;
 }
 
 .details-section__heading {
@@ -64,7 +63,7 @@
 .features {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 15.2rem;
+	margin-bottom: 14.4rem;
 }
 
 .features__item {
@@ -76,13 +75,13 @@
 }
 
 .features__img {
-	margin-bottom: 1.6rem;
+	margin-bottom: 2.4rem;
 }
 
 .benefits {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 15.2rem;
+	margin-bottom: 14.4rem;
 }
 
 .benefits__left {
@@ -127,7 +126,7 @@
 .speaking-section {
 	display: flex;
 	justify-content: space-between;
-	padding: 15.2rem 0;
+	padding: 14.4rem 0;
 }
 
 .speaking-section__left {
@@ -143,7 +142,7 @@
 
 .speaking-section__content {
 	margin-top: 2.4rem;
-	margin-bottom: 7.2rem;
+	margin-bottom: 4.8rem;
 }
 
 .speaking-section__video {
@@ -156,7 +155,7 @@
 }
 
 .about-section {
-	padding: 15.2rem 0;
+	padding: 14.4rem 0 9.6rem 0;
 	display: flex;
 	justify-content: space-between;
 }
@@ -208,12 +207,15 @@
 }
 
 /* 1024px */
-@media only screen and (max-width: 64em) {
+@media only screen and (max-width: 90em) {
 	.hero-section__cta-text {
 		font-size: 1.6rem;
-		max-width: 46rem;
+		max-width: 48rem;
 	}
+}
 
+/* 1024px */
+@media only screen and (max-width: 64em) {
 	.hero-section__hero-container {
 		right: 10%;
 	}
@@ -224,7 +226,7 @@
 	.hero-section {
 		flex-direction: column-reverse;
 		align-items: center;
-		padding: 6.4rem 0 12.8rem 0;
+		padding: 6.4rem 0 12rem 0;
 	}
 
 	.hero-section__left {
@@ -256,7 +258,7 @@
 	}
 
 	.details-section {
-		padding: 12.8rem 0;
+		padding: 12rem 0 4.8rem 0;
 	}
 
 	.features {
@@ -286,7 +288,7 @@
 	}
 
 	.speaking-section {
-		padding: 12.8rem 0;
+		padding: 12rem 0;
 		flex-direction: column-reverse;
 		align-items: center;
 		justify-content: center;
@@ -320,7 +322,7 @@
 	}
 
 	.about-section {
-		padding: 12.8rem 0;
+		padding: 12rem 0;
 		flex-direction: column;
 		align-items: center;
 	}
@@ -357,7 +359,7 @@
 
 	.features__item:not(:last-of-type) {
 		margin-right: 0;
-		margin-bottom: 8rem;
+		margin-bottom: 7.2rem;
 	}
 
 	.benefits {
@@ -398,7 +400,7 @@
 /* 400px */
 @media only screen and (max-width: 25em) {
 	.hero-section h1 {
-		font-size: 2.6rem;
+		font-size: 3.2rem;
 	}
 
 	.hero-section__cta-text {
