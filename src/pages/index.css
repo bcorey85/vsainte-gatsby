@@ -42,22 +42,21 @@
 }
 
 .hero-section__cta-text {
-	margin-top: .8rem;
-	margin-bottom: 6.4rem;
+	margin-bottom: 7.2rem;
 	max-width: 59.8rem;
-	font-size: 2rem;
+	font-size: 1.8rem;
 	animation: floatUp .8s ease-out;
 	animation-delay: .3s;
 	animation-fill-mode: backwards;
 }
 
 .details-section {
-	padding: 14.4rem 0 4.8rem 0;
+	padding: 14.4rem 0 9.6rem 0;
 }
 
 .details-section__heading {
-	margin-top: -3.6rem;
-	margin-bottom: 3.6rem;
+	margin-top: -2.4rem;
+	margin-bottom: 4.8rem;
 }
 
 .features {
@@ -80,7 +79,7 @@
 
 .benefits {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	margin-bottom: 14.4rem;
 }
 
@@ -206,11 +205,16 @@
 	}
 }
 
-/* 1024px */
+/* 1440px */
 @media only screen and (max-width: 90em) {
 	.hero-section__cta-text {
 		font-size: 1.6rem;
 		max-width: 48rem;
+	}
+
+	.hero-section__left h1 {
+		margin-bottom: 0;
+		white-space: nowrap;
 	}
 }
 
@@ -226,7 +230,7 @@
 	.hero-section {
 		flex-direction: column-reverse;
 		align-items: center;
-		padding: 6.4rem 0 12rem 0;
+		padding: 7.2rem 0 12rem 0;
 	}
 
 	.hero-section__left {
@@ -246,7 +250,7 @@
 	.hero-section__right {
 		z-index: 0;
 		flex: 1 1 auto;
-		margin-top: -6.4rem;
+		margin-top: -7.2rem;
 	}
 
 	.hero-section__img {
@@ -254,7 +258,7 @@
 	}
 
 	.hero-section__cta-text {
-		margin-bottom: 6.4rem;
+		margin-bottom: 4.8rem;
 	}
 
 	.details-section {
@@ -297,7 +301,7 @@
 	.speaking-section__right {
 		flex: 1 1 32rem;
 		width: 100%;
-		margin-bottom: 9.6rem;
+		margin-bottom: 7.2rem;
 		justify-content: center;
 	}
 
@@ -389,7 +393,7 @@
 
 	.books-section .card:not(:last-of-type) {
 		margin-right: 0;
-		margin-bottom: 9.6rem;
+		margin-bottom: 7.2rem;
 	}
 
 	.books-teal {
@@ -401,10 +405,12 @@
 @media only screen and (max-width: 25em) {
 	.hero-section h1 {
 		font-size: 3.2rem;
+		line-height: 4.8rem;
 	}
 
 	.hero-section__cta-text {
 		font-size: 1.6rem;
+		line-height: 2.4rem;
 	}
 }
 
