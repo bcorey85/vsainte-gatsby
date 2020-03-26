@@ -50,13 +50,13 @@ body {
 }
 
 h1 {
-	font-size: 5.6rem;
+	font-size: 6.8rem;
 	font-weight: 600;
 	text-transform: uppercase;
 	font-style: italic;
-	letter-spacing: .1rem;
 	line-height: 1;
 	font-family: Aleo, serif;
+	letter-spacing: .05rem;
 	color: var(--black);
 }
 
@@ -77,7 +77,7 @@ h2 {
 	margin-bottom: .8rem;
 	font-weight: 600;
 	font-family: Aleo, serif;
-	letter-spacing: .1rem;
+	letter-spacing: .05rem;
 	color: var(--black);
 }
 
@@ -130,7 +130,7 @@ a,
 .link-caps {
 	font-weight: 500;
 	text-transform: uppercase;
-	letter-spacing: .1rem;
+	letter-spacing: .05rem;
 	transition: all .2s;
 }
 
@@ -155,6 +155,13 @@ ul {
 
 .fullvh {
 	height: 82vh;
+}
+
+@media only screen and (max-width: 90rem) {
+	h1 {
+		font-size: 5.2rem;
+		white-space: nowrap;
+	}
 }
 
 @media only screen and (max-width: 64rem) {
