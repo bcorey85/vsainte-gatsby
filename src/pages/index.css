@@ -106,6 +106,7 @@
 	letter-spacing: .1rem;
 	font-weight: 600;
 	font-size: 3.2rem;
+	line-height: 4.8rem;
 	margin-bottom: 4.8rem;
 }
 
@@ -281,6 +282,12 @@
 
 	.benefits__p2 {
 		font-size: 2.4rem;
+		line-height: 2.4rem;
+	}
+
+	.benefits__p1,
+	.benefits__p2 {
+		margin-bottom: 2.4rem;
 	}
 
 	.books-section {

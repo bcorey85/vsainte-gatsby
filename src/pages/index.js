@@ -80,13 +80,8 @@ const Home = ({ location }) => {
 								className='features__img'
 							/>
 							<div>
-								Alma is a young girl who struggles with many{' '}
-								<span className='cta-emphasis'>
-									anxieties
-								</span>{' '}
-								and <span className='cta-emphasis'>
-									fears
-								</span>...
+								Alma is a young girl who struggles with many
+								anxieties and fears.
 							</div>
 						</div>
 						<div className='features__item'>
@@ -99,10 +94,8 @@ const Home = ({ location }) => {
 								className='features__img'
 							/>
 							<div>
-								...a monster named{' '}
-								<span className='cta-emphasis'>Limbo</span>{' '}
-								controls Alma through her fears and makes her
-								feel miserable...
+								A monster named Limbo controls Alma through her
+								fears and makes her feel miserable...
 							</div>
 						</div>
 						<div className='features__item'>
@@ -117,11 +110,8 @@ const Home = ({ location }) => {
 							/>
 							<div>
 								...but that all changes when Alma discovers the
-								Hope Shield and unlocks the{' '}
-								<span className='cta-emphasis'>
-									superhero
-								</span>{' '}
-								inside of her!
+								Hope Shield and unlocks the superhero inside of
+								her!
 							</div>
 						</div>
 					</div>
@@ -138,37 +128,24 @@ const Home = ({ location }) => {
 						</div>
 						<div className='benefits__right'>
 							<div className='benefits__p1'>
-								Do you have a child struggling with{' '}
-								<span className='cta-emphasis'>
-									{' '}
-									bullying{' '}
-								</span>{' '}
-								or who faces challenges with controlling their{' '}
-								<span className='cta-emphasis'>
-									{' '}
-									big emotions{' '}
-								</span>?
+								Do you have a child struggling with bullying or
+								who faces challenges with controlling their big
+								emotions ?
 							</div>
 							<div className='benefits__p2'>
 								if so, this book is for you!
 							</div>
 							<div className='benefits__p3'>
 								<p>
-									During my career, I have gained over{' '}
-									<span className='cta-emphasis'>
-										10 years
-									</span>{' '}
-									of valuable experience as a child and family
-									therapist.
+									During my career, I have gained over 10
+									years of valuable experience as a child and
+									family therapist.
 								</p>
 								This experience gives me unique insight into
 								writing fun stories for kids that help
-								strengthen their{' '}
-								<span className='cta-emphasis'>
-									self-regulation
-								</span>{' '}
-								skills and learn healthy new ways of managing
-								their emotions.
+								strengthen their self-regulation skills and
+								learn healthy new ways of managing their
+								emotions.
 							</div>
 						</div>
 					</div>
