@@ -80,7 +80,7 @@
 
 .benefits {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	margin-bottom: 14.4rem;
 }
 
@@ -90,7 +90,7 @@
 }
 
 .benefits__right {
-	flex: 0 1 49.6rem;
+	flex: 0 1 59.6rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
