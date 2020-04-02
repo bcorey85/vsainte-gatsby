@@ -64,7 +64,7 @@
 .features {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 14.4rem;
+	margin-bottom: 16rem;
 }
 
 .features__item {
@@ -82,7 +82,7 @@
 .benefits {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 14.4rem;
+	margin-bottom: 16rem;
 }
 
 .benefits__left {
