@@ -198,6 +198,7 @@
 	justify-content: flex-end;
 }
 
+/* 1440px */
 @media only screen and (max-width: 90em) {
 	.hero-section {
 		justify-content: space-around;
@@ -206,16 +207,14 @@
 	.hero-section__img {
 		max-width: 48rem;
 	}
-}
 
-/* 1440px */
-@media only screen and (max-width: 90em) {
 	.hero-section__cta-text {
 		font-size: 1.6rem;
 		max-width: 48rem;
 	}
 
 	.hero-section__left h1 {
+		font-size: 5.6rem;
 		margin-bottom: 1.6rem;
 		white-space: nowrap;
 	}

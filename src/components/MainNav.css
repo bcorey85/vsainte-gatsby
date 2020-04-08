@@ -9,6 +9,10 @@
 	margin-left: 3.2rem;
 }
 
+.main-nav ul li::before {
+	content: none;
+}
+
 .main-nav__link {
 	font-size: 1.4rem;
 	letter-spacing: .05rem;
