@@ -2,14 +2,16 @@
 .divider--angle {
 	height: .8rem;
 	width: 100%;
-	border-top: 1px solid var(--gray-dark);
-	border-bottom: 1px solid var(--gray-dark);
+	border-top: 1px solid var(--gray-dark-2);
+	border-bottom: 1px solid var(--gray-dark-2);
 	background-color: var(--white);
 	position: relative;
 	z-index: 1;
 }
 
-.divider--angle {
-	transform: rotate(-1.7deg);
-	transform-origin: top left;
+@supports (clip-path: polygon(0 3vw, 100% 0, 100% calc(100% - 3vw), 0% 100%)) {
+	.divider--angle {
+		transform: rotate(-1.7deg);
+		transform-origin: top left;
+	}
 }

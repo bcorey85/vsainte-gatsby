@@ -16,14 +16,17 @@
 	max-width: 122.4rem;
 }
 
-.section--angle-top {
-	clip-path: polygon(0 3vw, 100% 0, 100% 100%, 0% 100%);
-	margin-top: -3vw;
+@supports (clip-path: polygon(0 3vw, 100% 0, 100% 100%, 0% 100%)) {
+	.section--angle-top {
+		clip-path: polygon(0 3vw, 100% 0, 100% 100%, 0% 100%);
+		margin-top: -3vw;
+	}
 }
-
-.section--angle-both {
-	clip-path: polygon(0 3vw, 100% 0, 100% calc(100% - 3vw), 0% 100%);
-	margin-top: -3vw;
+@supports (clip-path: polygon(0 3vw, 100% 0, 100% calc(100% - 3vw), 0% 100%)) {
+	.section--angle-both {
+		clip-path: polygon(0 3vw, 100% 0, 100% calc(100% - 3vw), 0% 100%);
+		margin-top: -3vw;
+	}
 }
 
 @media only screen and (max-width: 90em) {
