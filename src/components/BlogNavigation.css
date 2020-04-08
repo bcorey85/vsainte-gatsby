@@ -3,8 +3,7 @@
 }
 
 .blog__post-titles-header {
-	display: flex;
-	justify-content: space-between;
+	margin-bottom: .8rem;
 }
 
 .blog__oldlinks {
