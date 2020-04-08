@@ -1,8 +1,6 @@
 .blog-post {
 	width: 100%;
 	max-width: 80rem;
-	display: flex;
-	flex-direction: column;
 }
 
 .blog-post__content {
