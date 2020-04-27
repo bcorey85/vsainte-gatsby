@@ -132,7 +132,7 @@ const Home = ({ location }) => {
 							</h2>
 							<div className='benefits__p3'>
 								I have over 10 years of experience as a child
-								and family therapist. This helps me write fun
+								and family therapist, which helps me write fun
 								children's books and social stories that boost
 								self-regulation development and teach new ways
 								of managing emotions.
