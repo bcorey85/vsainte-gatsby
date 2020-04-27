@@ -127,32 +127,21 @@ const Home = ({ location }) => {
 							/>
 						</div>
 						<div className='benefits__right'>
-							<div className='benefits__p1'>
-								Do you have a child struggling with bullying or
-								who faces challenges with controlling their big
-								emotions ?
-							</div>
-							<div className='benefits__p2'>
-								if so, this book is for you!
-							</div>
+							<h2 className='details-section__subheading'>
+								Perfect for children coping with big emotions
+							</h2>
 							<div className='benefits__p3'>
-								<p>
-									During my career, I have gained over 10
-									years of valuable experience as a child and
-									family therapist.
-								</p>
-								This experience gives me unique insight into
-								writing fun stories for kids that help
-								strengthen their self-regulation skills and
-								learn healthy new ways of managing their
-								emotions.
+								I have over 10 years of experience as a child
+								and family therapist. This helps me write fun
+								children's books and social stories that boost
+								self-regulation development and teach new ways
+								of managing emotions.
 							</div>
 						</div>
 					</div>
 					<div className='testimonials'>
 						<Carousel
 							title='Testimonials'
-							icon='thumbsup'
 							data={indexData.testimonials.nodes}
 							dataType='text'
 						/>

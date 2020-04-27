@@ -72,7 +72,6 @@ const Speaking = ({ location }) => {
 					<div className='event-photos'>
 						<Carousel
 							title='Event Photos'
-							icon='camera'
 							data={eventPhotoArray}
 							dataType='photos'
 						/>

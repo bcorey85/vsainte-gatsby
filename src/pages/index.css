@@ -58,13 +58,17 @@
 
 .details-section__heading {
 	margin-top: -2.4rem;
-	margin-bottom: 4.8rem;
+	margin-bottom: 3.6rem;
+}
+
+.details-section__subheading {
+	margin-bottom: 2.4rem;
 }
 
 .features {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 16rem;
+	margin-bottom: 17.6rem;
 }
 
 .features__item {
@@ -82,7 +86,7 @@
 .benefits {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 16rem;
+	margin-bottom: 17.6rem;
 }
 
 .benefits__left {
@@ -91,7 +95,7 @@
 }
 
 .benefits__right {
-	flex: 0 1 59.6rem;
+	flex: 0 1 56rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -368,12 +372,16 @@
 	}
 
 	.features__item {
-		max-width: 34.6rem;
+		max-width: 44.8rem;
 	}
 
 	.features__item:not(:last-of-type) {
 		margin-right: 0;
 		margin-bottom: 4.8rem;
+	}
+
+	.details-section__subheading {
+		margin-top: 1.6rem;
 	}
 
 	.benefits {
@@ -386,12 +394,12 @@
 		margin-bottom: 1.6rem;
 		flex: 0 0 auto;
 		width: 100%;
-		max-width: 34.6rem;
+		max-width: 44.8rem;
 	}
 
 	.benefits__right {
 		min-width: 0;
-		max-width: 34.6rem;
+		max-width: 44.8rem;
 	}
 
 	.books-section {

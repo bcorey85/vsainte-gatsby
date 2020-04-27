@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import {
 	faChevronLeft,
-	faChevronRight,
-	faThumbsUp,
-	faCamera
+	faChevronRight
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '@fortawesome/fontawesome-svg-core/styles.css';
@@ -15,13 +13,9 @@ import './Carousel.css';
 
 config.autoAddCss = false;
 const Carousel = props => {
-	const { title, icon, data, dataType } = props;
+	const { title, data, dataType } = props;
 	const [ currentIndex, setCurrentIndex ] = useState(0);
 	const [ currentItem, setCurrentItem ] = useState(data[currentIndex]);
-	const icons = {
-		thumbsup: faThumbsUp,
-		camera: faCamera
-	};
 
 	const incrementCarousel = (e, direction) => {
 		e.stopPropagation();
@@ -98,10 +92,6 @@ const Carousel = props => {
 		<div className='carousel'>
 			<div className='carousel__banner'>
 				<h3>{title}</h3>
-				<FontAwesomeIcon
-					icon={icons[icon]}
-					className='carousel__banner-icon'
-				/>
 			</div>
 
 			<div className='carousel__content'>

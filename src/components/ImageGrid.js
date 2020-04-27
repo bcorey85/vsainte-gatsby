@@ -37,9 +37,8 @@ const ImageGrid = props => {
 					onMouseEnter={() => swapImgHover(subImg1)}
 					onMouseLeave={() => swapImgHover(mainImg)}
 					onClick={() => swapImgClick(subImg1)}
-					onKeyDown={() => swapImgClick(subImg1)}
-					className='image-grid__img'>
-					<Image fluid={subImg1} alt='' />
+					onKeyDown={() => swapImgClick(subImg1)}>
+					<Image fluid={subImg1} alt='' className='image-grid__img' />
 				</div>
 				<div
 					role='button'
@@ -56,9 +55,8 @@ const ImageGrid = props => {
 					onMouseEnter={() => swapImgHover(subImg3)}
 					onMouseLeave={() => swapImgHover(mainImg)}
 					onClick={() => swapImgClick(subImg3)}
-					onKeyDown={() => swapImgClick(subImg3)}
-					className='image-grid__img '>
-					<Image fluid={subImg3} alt='' />
+					onKeyDown={() => swapImgClick(subImg3)}>
+					<Image fluid={subImg3} alt='' className='image-grid__img' />
 				</div>
 			</div>
 			<div className='image-grid__main-image'>
