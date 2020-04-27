@@ -27,6 +27,8 @@
 	display: flex;
 	justify-content: space-between;
 	min-height: 32rem;
+	max-width: 80rem;
+	margin: 0 auto;
 }
 
 .carousel__larrow,
