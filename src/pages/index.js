@@ -128,14 +128,14 @@ const Home = ({ location }) => {
 						</div>
 						<div className='benefits__right'>
 							<h2 className='details-section__subheading'>
-								Perfect for children coping with big emotions
+								Help children develop emotion regulation skills
 							</h2>
 							<div className='benefits__p3'>
 								I have over 10 years of experience as a child
-								and family therapist, which helps me write fun
-								children's books and social stories that boost
-								self-regulation development and teach new ways
-								of managing emotions.
+								and family therapist. This experience helps me
+								write fun children's books and social stories
+								that boost self-regulation development and teach
+								new ways of managing emotions.
 							</div>
 						</div>
 					</div>
