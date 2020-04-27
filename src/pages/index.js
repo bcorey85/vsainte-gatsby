@@ -131,11 +131,20 @@ const Home = ({ location }) => {
 								Help children manage big feelings
 							</h2>
 							<div className='benefits__p3'>
-								I have over 10 years of experience as a child
-								and family therapist. This experience helps me
-								write fun children's books and social stories
-								that boost self-regulation development and teach
-								new ways of managing emotions.
+								<p>
+									With my 10 years of experience as a child
+									and family therapist, I have learned how
+									write fun children's books and social
+									stories that boost self-regulation
+									development and teach new ways of managing
+									emotions.
+								</p>
+								<p>
+									<em>It Will Be Okay</em> is a great tool for
+									helping to support the emotional development
+									of children in a way that's relatable to
+									them.
+								</p>
 							</div>
 						</div>
 					</div>
