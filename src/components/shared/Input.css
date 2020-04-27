@@ -14,6 +14,7 @@
 }
 
 .input-group label {
+	cursor: text;
 	position: absolute;
 	font-size: 1.4rem;
 	color: var(--gray-dark);
