@@ -45,8 +45,6 @@
 .hero-section__cta-text {
 	margin-bottom: 8rem;
 	max-width: 50rem;
-	font-size: 1.8rem;
-	line-height: 2.8rem;
 	animation: floatUp .8s ease-out;
 	animation-delay: .3s;
 	animation-fill-mode: backwards;
@@ -230,7 +228,6 @@
 	}
 
 	.hero-section__cta-text {
-		font-size: 1.6rem;
 		max-width: 48rem;
 	}
 
