@@ -14,7 +14,6 @@
 	animation-delay: .2s;
 	animation-fill-mode: backwards;
 	letter-spacing: -.05rem;
-	margin-bottom: .8rem;
 }
 
 .hero-section__left h5 {
@@ -44,7 +43,7 @@
 }
 
 .hero-section__cta-text {
-	margin-bottom: 5.6rem;
+	margin-bottom: 8rem;
 	max-width: 58rem;
 	font-size: 1.8rem;
 	line-height: 2.8rem;
@@ -96,7 +95,7 @@
 }
 
 .benefits__right {
-	flex: 0 1 62rem;
+	flex: 0 1 50rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -179,12 +178,13 @@
 .about-section__header {
 	height: 4rem;
 	position: relative;
+	margin-bottom: 1.6rem;
 }
 
 .about-section__header .thumbnail {
 	position: absolute;
 	right: 0;
-	top: -4rem;
+	top: -2rem;
 }
 
 .about-section__header-icon {

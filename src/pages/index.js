@@ -134,16 +134,14 @@ const Home = ({ location }) => {
 								<p>
 									With my 10 years of experience as a child
 									and family therapist, I have learned how
-									write fun children's books and social
-									stories that boost self-regulation
-									development and teach new ways of managing
-									emotions.
+									write fun children's books that boost
+									self-regulation and teach new ways of
+									managing emotions.
 								</p>
 								<p>
 									<em>It Will Be Okay</em> is a great tool for
-									helping to support the emotional development
-									of children in a way that's relatable to
-									them.
+									helping to support the emotions of children
+									in a way that's meaningful to them.
 								</p>
 							</div>
 						</div>

@@ -4,9 +4,9 @@
 
 .carousel__banner {
 	background-color: var(--yellow);
-	height: 4.8rem;
+	height: 1.6rem;
 	display: flex;
-	padding: 0 1.6rem;
+	padding: 0 .8rem;
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 4.8rem;
@@ -14,13 +14,7 @@
 }
 
 .carousel__banner h3 {
-	margin: 0;
-}
-
-.carousel__banner-icon {
-	font-size: 3.2rem;
-	position: absolute;
-	right: 1.6rem;
+	margin: -2rem 0 0 0;
 }
 
 .carousel__content {
@@ -98,19 +92,3 @@
 	object-fit: cover;
 	max-height: 32rem;
 }
-
-/* 600px */
-/* @media only screen and (max-width: 37.5em) {
-	.carousel__larrow,
-	.carousel__rarrow {
-		height: 24rem;
-	}
-} */
-
-/* 400px */
-/* @media only screen and (max-width: 25em) {
-	.carousel__larrow,
-	.carousel__rarrow {
-		height: 28.8rem;
-	}
-} */

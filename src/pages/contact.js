@@ -21,7 +21,7 @@ const Contact = ({ location }) => {
 						<div className='contact__left'>
 							<div>
 								<div className='contact__item'>
-									<h2>Email</h2>
+									<h3>Email</h3>
 									<a
 										href='mailto:vladimirsainte@gmail.com'
 										className='link'>
@@ -29,7 +29,7 @@ const Contact = ({ location }) => {
 									</a>
 								</div>
 								<div className='contact__item'>
-									<h2>Facebook</h2>
+									<h3>Facebook</h3>
 									<a
 										href='https://www.facebook.com/justlikeahero'
 										className='link'>
@@ -37,7 +37,7 @@ const Contact = ({ location }) => {
 									</a>
 								</div>
 								<div className='contact__item'>
-									<h2>Instagram</h2>
+									<h3>Instagram</h3>
 									<a
 										href='https://www.instagram.com/Vla1899'
 										className='link'>
@@ -48,7 +48,7 @@ const Contact = ({ location }) => {
 						</div>
 						<div className='contact__right'>
 							<div className='contact__comments'>
-								<h2>Comments</h2>
+								<h3>Comments</h3>
 								<form
 									method='POST'
 									action='https://formspree.io/vladimirsainte@gmail.com'>
