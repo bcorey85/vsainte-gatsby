@@ -132,10 +132,10 @@ const Home = ({ location }) => {
 							</h2>
 							<div className='benefits__p3'>
 								<p>
-									With my 10 years of experience as a child
-									and family therapist, I have learned how
-									write fun children's books that boost
-									self-regulation and teach new ways of
+									In 10 years of experience as a child and
+									family therapist, I have learned how write
+									fun children's books that boost
+									self-regulation skills and teach new ways of
 									managing emotions.
 								</p>
 								<p>
