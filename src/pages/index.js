@@ -67,51 +67,72 @@ const Home = ({ location }) => {
 			<Divider angle />
 			<Section color='lightGray' paper angle='both' padding='1.5vw 0'>
 				<div className='details-section'>
-					<h2 className='details-section__heading'>Peek inside...</h2>
 					<div className='features'>
 						<div className='features__item'>
-							<Image
-								fluid={
-									indexData.iwboblackphoto.childImageSharp
-										.fluid
-								}
-								alt='Alma sad in corner'
-								boxShadow='default'
-								className='features__img'
-							/>
-							<div>
-								Alma is a young girl who struggles with many
-								anxieties and fears.
+							<div className='features__item-text'>
+								<h2>Meet Alma - The Hero</h2>
+
+								<p>
+									Alma is a young girl who struggles with many
+									anxieties and fears. She experiences
+									bullying at school and feels sad most of the
+									time.
+								</p>
+							</div>
+							<div className='features__item-image'>
+								<Image
+									fluid={
+										indexData.iwboblackphoto.childImageSharp
+											.fluid
+									}
+									alt='Alma sad in corner'
+									boxShadow='default'
+									className='features__img'
+								/>
+							</div>
+						</div>
+						<div className='features__item features__item--reverse'>
+							<div className='features__item-text'>
+								<h2>Limbo - Her Nemesis</h2>
+								<p>
+									Limbo is a mean, evil fear monster that
+									feeds on Alma's sadness and makes her feel
+									miserable. Can she find the strength and
+									courage to face her fear monster?
+								</p>
+							</div>
+							<div className='features__item-image'>
+								<Image
+									fluid={
+										indexData.iwboredphoto.childImageSharp
+											.fluid
+									}
+									alt='Limbo laughing'
+									boxShadow='default'
+									className='features__img'
+								/>
 							</div>
 						</div>
 						<div className='features__item'>
-							<Image
-								fluid={
-									indexData.iwboredphoto.childImageSharp.fluid
-								}
-								alt='Limbo laughing'
-								boxShadow='default'
-								className='features__img'
-							/>
-							<div>
-								A monster named Limbo controls Alma through her
-								fears and makes her feel miserable...
+							<div className='features__item-text'>
+								<h2>The HOPE Shield - Her Strength</h2>
+								<p>
+									Soon, with the help of some caring friends,
+									Alma discovers the Hope Shield! This gives
+									her the strength and confidence to beat
+									Limbo once and for all!
+								</p>
 							</div>
-						</div>
-						<div className='features__item'>
-							<Image
-								fluid={
-									indexData.iwbopurplephoto.childImageSharp
-										.fluid
-								}
-								alt='Alma hero'
-								boxShadow='default'
-								className='features__img'
-							/>
-							<div>
-								...but that all changes when Alma discovers the
-								Hope Shield and unlocks the superhero inside of
-								her!
+							<div className='features__item-image'>
+								<Image
+									fluid={
+										indexData.iwbopurplephoto
+											.childImageSharp.fluid
+									}
+									alt='Alma hero'
+									boxShadow='default'
+									className='features__img'
+								/>
 							</div>
 						</div>
 					</div>
@@ -130,7 +151,7 @@ const Home = ({ location }) => {
 							<h2 className='details-section__subheading'>
 								Help children manage big feelings
 							</h2>
-							<div className='benefits__p3'>
+							<div className='benefits__p'>
 								<p>
 									In 10 years of experience as a child and
 									family therapist, I have learned how write
@@ -148,7 +169,7 @@ const Home = ({ location }) => {
 					</div>
 					<div className='testimonials'>
 						<Carousel
-							title='Reviews'
+							title='What Others Think'
 							data={indexData.testimonials.nodes}
 							dataType='text'
 						/>

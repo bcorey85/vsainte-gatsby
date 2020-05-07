@@ -1,5 +1,7 @@
 .carousel {
 	width: 100%;
+	max-width: 80rem;
+	margin: auto;
 }
 
 .carousel__banner {
@@ -14,7 +16,7 @@
 }
 
 .carousel__banner h3 {
-	margin: -2.4rem 0 0 0;
+	margin-top: -.8rem;
 }
 
 .carousel__content {
@@ -91,4 +93,11 @@
 .carousel__photo img {
 	object-fit: cover;
 	max-height: 32rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.carousel__banner h3 {
+		margin: auto;
+		margin-top: -1.6rem;
+	}
 }
