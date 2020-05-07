@@ -103,6 +103,7 @@ h4 {
 h5 {
 	font-size: 1.6rem;
 	font-weight: 400;
+	text-transform: uppercase;
 	color: var(--gray-dark);
 }
 
