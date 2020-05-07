@@ -255,7 +255,6 @@
 	.hero-section__left {
 		flex: 1 1 auto;
 		margin-right: 0;
-		margin-top: -4.8rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
