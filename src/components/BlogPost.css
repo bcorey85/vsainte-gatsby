@@ -7,6 +7,10 @@
 	max-width: 53.6rem;
 }
 
+.blog-post h5 {
+	margin-top: -2.4rem;
+}
+
 .blog-post__img {
 	max-width: 53.6rem;
 	margin-top: .8rem;
@@ -22,4 +26,10 @@
 
 .blog-post:not(:last-of-type) {
 	margin-bottom: 6.4rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.blog-post h5 {
+		margin-top: 0;
+	}
 }
