@@ -128,6 +128,10 @@
 	justify-content: center;
 }
 
+.testimonials {
+	padding-top: .8rem;
+}
+
 .books-section {
 	display: flex;
 	justify-content: space-around;
@@ -426,6 +430,10 @@
 	.benefits__right {
 		min-width: 0;
 		max-width: 44.8rem;
+	}
+
+	.testimonials {
+		padding-top: 1.6rem;
 	}
 
 	.books-section {
