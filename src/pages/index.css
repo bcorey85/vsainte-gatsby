@@ -266,7 +266,7 @@
 	.hero-section__left h1 {
 		font-size: 4rem;
 		line-height: 4.8rem;
-		margin-bottom: .8rem;
+		margin-bottom: 1.6rem;
 	}
 
 	.hero-section__right {
@@ -451,12 +451,6 @@
 
 /* 400px */
 @media only screen and (max-width: 25em) {
-	.hero-section h1 {
-		font-size: 3.2rem;
-		line-height: 4rem;
-		margin-bottom: .8rem;
-	}
-
 	.hero-section__cta-text {
 		font-size: 1.6rem;
 		line-height: 2.4rem;
