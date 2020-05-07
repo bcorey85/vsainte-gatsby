@@ -5,7 +5,6 @@ import MainNav from './MainNav';
 import SocialIcons from './SocialIcons';
 // import Button from './shared/Button';
 // import Input from './shared/Input';
-import Divider from './shared/Divider';
 import logo from '../images/logo-gray-svg.svg';
 import bclogo from '../images/bc-logo-svg.svg';
 
@@ -15,7 +14,6 @@ const Footer = () => {
 	return (
 		<React.Fragment>
 			<div className='footer'>
-				<Divider />
 				<div className='footer-container'>
 					{/* <div className='sign-up'>
 						<div className='sign-up__container'>

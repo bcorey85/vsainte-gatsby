@@ -7,7 +7,9 @@ const MainNav = props => {
 	const { location, color, onClick, onKeyDown } = props;
 
 	return (
-		<nav className={`main-nav ${location}`} style={{ color: color }}>
+		<nav
+			className={`main-nav main-nav--${location}`}
+			style={{ color: color }}>
 			{props.children}
 			<ul>
 				<li>
