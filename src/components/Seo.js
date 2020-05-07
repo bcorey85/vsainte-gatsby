@@ -67,8 +67,12 @@ function SEO({ description, lang, meta, title }) {
 					name: `twitter:description`,
 					content: metaDescription
 				}
-			].concat(meta)}
-		/>
+			].concat(meta)}>
+			<link
+				href='fonts.googleapis.com/css?family=Aleo:700,700i|Poppins:400,400i,500&display=swap'
+				rel='stylesheet'
+			/>}
+		</Helmet>
 	);
 }
 

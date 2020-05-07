@@ -97,16 +97,16 @@ module.exports = {
 				icon: `src/images/icon.png` // This path is relative to the root of the site.
 			}
 		},
-		{
-			resolve: `gatsby-plugin-google-fonts`,
-			options: {
-				fonts: [
-					`poppins\:400,400i,500`,
-					`aleo\:700,700i` // you can also specify font weights and styles
-				],
-				display: 'swap'
-			}
-		},
+		// {
+		// 	resolve: `gatsby-plugin-google-fonts`,
+		// 	options: {
+		// 		fonts: [
+		// 			`poppins\:400,400i,500`,
+		// 			`aleo\:700,700i` // you can also specify font weights and styles
+		// 		],
+		// 		display: 'swap'
+		// 	}
+		// },
 		{
 			resolve: `gatsby-plugin-google-analytics`,
 			options: {
