@@ -41,6 +41,7 @@
 .input-group textarea:focus ~ label,
 .input-group textarea:not(:placeholder-shown) ~ label {
 	font-size: 1.2rem;
+	line-height: 1.2rem;
 	color: var(--gray-dark);
 	background-color: var(--white);
 	top: -1rem;

@@ -76,7 +76,7 @@ const Speaking = ({ location }) => {
 					</div>
 					<div className='event-photos'>
 						<Carousel
-							title='Check Out The Fun'
+							title='Check Out The Fun!'
 							data={eventPhotoArray}
 							dataType='photos'
 						/>
