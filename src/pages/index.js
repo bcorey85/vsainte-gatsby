@@ -44,9 +44,9 @@ const Home = ({ location }) => {
 						</div>
 
 						<p className='hero-section__cta-text'>
-							Explore the story of Alma, whose superhero journey
-							brings a message of hope in this children's book
-							about overcoming bullying, anxiety, and fear.
+							Explore the superhero journey of Alma, in this
+							children's book about overcoming bullying, anxiety,
+							and fear.
 						</p>
 						<Button
 							href='https://www.amazon.com/Will-Okay-Just-Like-Hero/dp/1942005520/ref=sr_1_1?crid=2SQ0E2D0Z20WN&keywords=it+will+be+okay+vladimir+sainte&qid=1570911125&sprefix=it+will+be+okay+vladimi%2Caps%2C153&sr=8-1'
@@ -70,12 +70,12 @@ const Home = ({ location }) => {
 					<div className='features'>
 						<div className='features__item'>
 							<div className='features__item-text'>
-								<h2>Meet Alma - The Hero</h2>
+								<h2>Meet Alma: The Hero</h2>
 
 								<p>
 									Alma is a young girl who struggles with many
-									anxieties and fears. She experiences
-									bullying at school and feels sad most of the
+									anxieties and fears. Other kids bully Alma
+									at school and make her feel sad most of the
 									time.
 								</p>
 							</div>
@@ -93,12 +93,11 @@ const Home = ({ location }) => {
 						</div>
 						<div className='features__item features__item--reverse'>
 							<div className='features__item-text'>
-								<h2>Limbo - Her Nemesis</h2>
+								<h2>Limbo: Her Nemesis</h2>
 								<p>
-									Limbo is a mean, evil fear monster that
-									feeds on Alma's sadness and makes her feel
-									miserable. Can she find the strength and
-									courage to face her fear monster?
+									Limbo is a mean fear monster that feeds on
+									Alma's sadness and makes her feel miserable.
+									Can she find the courage to face him?
 								</p>
 							</div>
 							<div className='features__item-image'>
@@ -115,12 +114,11 @@ const Home = ({ location }) => {
 						</div>
 						<div className='features__item'>
 							<div className='features__item-text'>
-								<h2>The HOPE Shield - Her Strength</h2>
+								<h2>The Hope Shield: Her Strength</h2>
 								<p>
-									Soon, with the help of some caring friends,
-									Alma discovers the Hope Shield! This gives
-									her the strength and confidence to beat
-									Limbo once and for all!
+									Soon, with some caring friends, Alma
+									discovers the Hope Shield! This gives her
+									the strength to beat Limbo once and for all!
 								</p>
 							</div>
 							<div className='features__item-image'>
@@ -148,9 +146,7 @@ const Home = ({ location }) => {
 							/>
 						</div>
 						<div className='benefits__right'>
-							<h2 className='details-section__subheading'>
-								Help children manage big feelings
-							</h2>
+							<h2>Help children manage big feelings</h2>
 							<div className='benefits__p'>
 								<p>
 									In 10 years of experience as a child and
@@ -203,11 +199,10 @@ const Home = ({ location }) => {
 					<div className='speaking-section__left'>
 						<h2>Speaking</h2>
 						<div className='speaking-section__content'>
-							I regularly give interactive presentations for
-							children of all ages. These events provide a chance
-							to learn and practice positive coping skills, while
-							also helping kids discover their own personal
-							superhero.
+							I regularly give presentations for children of all
+							ages. These events provide a chance to learn and
+							practice positive coping skills, while also helping
+							kids discover their own personal superhero.
 						</div>
 						<div className='speaking-section__btn'>
 							<Button to='/speaking' margin='none'>
@@ -241,10 +236,10 @@ const Home = ({ location }) => {
 
 						<div className='about-section__content'>
 							I've been working as a licensed clinical social
-							worker in the greater Kansas City area for the last
-							ten years. My mission is to create inclusive
-							literature to increase resiliency and a sense of
-							worth in children.
+							worker in the Kansas City area for the last ten
+							years. My mission is to create inclusive literature
+							to increase resiliency and a sense of worth in
+							children.
 						</div>
 						<div className='about-section__link'>
 							<Link to='/about' className='link-caps'>

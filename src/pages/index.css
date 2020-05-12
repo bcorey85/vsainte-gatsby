@@ -44,6 +44,8 @@
 
 .hero-section__cta-text {
 	margin-bottom: 8rem;
+	font-size: 2rem;
+	line-height: 3.2rem;
 	max-width: 50rem;
 	animation: floatUp .8s ease-out;
 	animation-delay: .3s;
@@ -52,15 +54,6 @@
 
 .details-section {
 	padding: 20rem 0 16rem 0;
-}
-
-.details-section__heading {
-	margin-top: -2.4rem;
-	margin-bottom: 2.4rem;
-}
-
-.details-section__subheading {
-	margin-bottom: 2.4rem;
 }
 
 .features {
@@ -85,8 +78,8 @@
 }
 
 .features__item-text p {
-	font-size: 1.8rem;
-	line-height: 2.8rem;
+	font-size: 2rem;
+	line-height: 3.2rem;
 }
 
 .features__item-image {
@@ -110,8 +103,8 @@
 }
 
 .benefits p {
-	font-size: 1.8rem;
-	line-height: 2.8rem;
+	font-size: 2rem;
+	line-height: 3.2rem;
 }
 
 .benefits__left {
@@ -386,6 +379,11 @@
 		max-width: 44.8rem;
 	}
 
+	.features__item p {
+		font-size: 2rem;
+		line-height: 3rem;
+	}
+
 	.features__item-image {
 		margin-right: 0rem;
 		margin-bottom: 2.4rem;
@@ -450,8 +448,18 @@
 /* 400px */
 @media only screen and (max-width: 25em) {
 	.hero-section__cta-text {
-		font-size: 1.6rem;
-		line-height: 2.4rem;
+		font-size: 1.8rem;
+		line-height: 2.8rem;
+	}
+
+	.features__item p {
+		font-size: 1.8rem;
+		line-height: 2.8rem;
+	}
+
+	.benefits__right p {
+		font-size: 1.8rem;
+		line-height: 2.8rem;
 	}
 }
 

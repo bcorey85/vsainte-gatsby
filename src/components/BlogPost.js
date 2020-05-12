@@ -38,8 +38,6 @@ const BlogPost = props => {
 		return (
 			<article className='blog-post'>
 				<div className='blog-post__content'>
-					<h5>{date}</h5>
-					<h4>{title}</h4>
 					<div className='blog-post__img'>
 						<iframe
 							title={title}
@@ -53,6 +51,8 @@ const BlogPost = props => {
 							alt={alt}
 						/>
 					</div>
+					<h5>{date}</h5>
+					<h4>{title}</h4>
 					<div dangerouslySetInnerHTML={{ __html: body }} />
 					{linkMarkup}
 				</div>
@@ -62,11 +62,11 @@ const BlogPost = props => {
 		return (
 			<article className='blog-post'>
 				<div className='blog-post__content'>
-					<h5>{date}</h5>
-					<h4>{title}</h4>
 					<div className='blog-post__img'>
 						<Image fluid={src} alt={alt} boxShadow='default' />
 					</div>
+					<h5>{date}</h5>
+					<h4>{title}</h4>
 					<div dangerouslySetInnerHTML={{ __html: body }} />
 					{linkMarkup}
 				</div>

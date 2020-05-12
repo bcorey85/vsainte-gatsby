@@ -44,8 +44,8 @@ html {
 }
 
 body {
-	font-size: 1.6rem;
-	line-height: 2.4rem;
+	font-size: 1.8rem;
+	line-height: 2.8rem;
 	font-family: 'Poppins', sans-serif;
 	color: var(--black-2);
 }
@@ -58,7 +58,7 @@ h1 {
 	font-family: Aleo, serif;
 	letter-spacing: .05rem;
 	color: var(--black);
-	margin-bottom: 2.4rem;
+	margin-bottom: 1.6rem;
 }
 
 h1.page-title {
@@ -74,7 +74,7 @@ h1.page-title {
 h2 {
 	font-size: 4.8rem;
 	line-height: 5.6rem;
-	margin-bottom: 2.4rem;
+	margin-bottom: 1.6rem;
 	font-weight: 600;
 	font-family: Aleo, serif;
 	letter-spacing: .05rem;
