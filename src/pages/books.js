@@ -122,9 +122,9 @@ const Books = ({ location }) => {
 							date='2019'
 							title='It Will Be Okay'
 							desc='<em>It Will Be Okay</em> is about a young girl
-								named Alma who is burdened by anxiety and fears.
+								named Alma who has many anxieties and fears.
 								In the story, she will learn steps to mastering
-								her anxieties and becoming her own hero.'
+								her emotions and becoming her own hero.'
 							href='https://www.amazon.com/Will-Okay-Just-Like-Hero/dp/1942005520/ref=sr_1_1?crid=2SQ0E2D0Z20WN&keywords=it+will+be+okay+vladimir+sainte&qid=1570911125&sprefix=it+will+be+okay+vladimi%2Caps%2C153&sr=8-1'
 						/>
 						<BookDetails
@@ -140,13 +140,12 @@ const Books = ({ location }) => {
 							mainImg={booksData.jlahCover.childImageSharp.fluid}
 							date='2018'
 							title='Just Like A Hero'
-							desc='<em>Just Like A Hero</em> teaches personal
+							desc='<em>Just Like A Hero</em> is a story
+								about Will, a child discovering his	self-worth through daily life struggles and his
+								journey to becoming the hero he is meant to be. This book teaches personal
 								values, challenges negative thoughts, and
 								provides activities to promote self-esteem and
-								effective coping mechanisms. This is a story
-								about Will, a child discovering his inner
-								self-worth through daily life struggles and his
-								journey to becoming the hero he is meant to be.'
+								effective coping mechanisms.'
 							href='https://www.amazon.com/Just-Like-Hero-Vladimir-Sainte/dp/194200544X/ref=sr_1_1?ie=UTF8&qid=1549147023&sr=8-1&keywords=just+like+a+hero'
 						/>
 					</div>
