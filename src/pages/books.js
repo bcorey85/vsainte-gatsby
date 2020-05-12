@@ -123,8 +123,8 @@ const Books = ({ location }) => {
 							title='It Will Be Okay'
 							desc='<em>It Will Be Okay</em> is about a young girl
 								named Alma who has many anxieties and fears.
-								In the story, she will learn steps to mastering
-								her emotions and becoming her own hero.'
+								In this story, she will learn steps to mastering
+								her emotions with the help of the mighty Hope Shield.'
 							href='https://www.amazon.com/Will-Okay-Just-Like-Hero/dp/1942005520/ref=sr_1_1?crid=2SQ0E2D0Z20WN&keywords=it+will+be+okay+vladimir+sainte&qid=1570911125&sprefix=it+will+be+okay+vladimi%2Caps%2C153&sr=8-1'
 						/>
 						<BookDetails
