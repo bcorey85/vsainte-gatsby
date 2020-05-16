@@ -79,7 +79,7 @@
 	content: '';
 	width: 8rem;
 	height: .8rem;
-	margin: 4rem auto;
+	margin: 4rem auto 0 auto;
 	background-color: var(--red);
 }
 
@@ -113,7 +113,7 @@
 	content: '';
 	width: 8rem;
 	height: .8rem;
-	margin: 4rem auto;
+	margin: 4rem auto 0 auto;
 	background-color: var(--red);
 }
 
