@@ -67,6 +67,8 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	font-size: 2rem;
+	line-height: 3.2rem;
 }
 
 .features__item-text p::after {
@@ -121,6 +123,8 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	font-size: 2rem;
+	line-height: 3.2rem;
 }
 
 .testimonials {
@@ -387,8 +391,6 @@
 		flex: 0 0 auto;
 		width: 100%;
 		max-width: 44.8rem;
-		font-size: 1.8rem;
-		line-height: 2.8rem;
 	}
 
 	.features__item-image {
@@ -430,8 +432,6 @@
 	.benefits__right {
 		min-width: 0;
 		max-width: 44.8rem;
-		font-size: 1.8rem;
-		line-height: 2.8rem;
 	}
 
 	.testimonials {
