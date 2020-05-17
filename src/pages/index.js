@@ -65,7 +65,7 @@ const Home = ({ location }) => {
 				</div>
 			</Section>
 			<Divider angle />
-			<Section color='lightGray' paper angle='both' padding='1.5vw 0'>
+			<Section color='lightGray' paper angle='top' padding='1.5vw 0'>
 				<div className='details-section'>
 					<div className='features'>
 						<div className='features__item'>
@@ -164,17 +164,24 @@ const Home = ({ location }) => {
 							</div>
 						</div>
 					</div>
-					<div className='testimonials'>
-						<Carousel
-							title='What Others Say'
-							data={indexData.testimonials.nodes}
-							dataType='text'
-						/>
-					</div>
+				</div>
+			</Section>
+			<Divider />
+			<Section angle='bottom'>
+				<div className='testimonials'>
+					<Carousel
+						title='What Others Are Saying'
+						data={indexData.testimonials.nodes}
+						dataType='text'
+					/>
 				</div>
 			</Section>
 			<Divider angle />
-			<Section color='teal' className='books-teal' angle='both'>
+			<Section
+				color='teal'
+				className='books-teal'
+				angle='both'
+				padding='1.5vw 0 0 0'>
 				<div className='books-section'>
 					<Card
 						href='https://www.amazon.com/Will-Okay-Just-Like-Hero/dp/1942005520/ref=sr_1_1?crid=2SQ0E2D0Z20WN&keywords=it+will+be+okay+vladimir+sainte&qid=1570911125&sprefix=it+will+be+okay+vladimi%2Caps%2C153&sr=8-1'
@@ -195,7 +202,8 @@ const Home = ({ location }) => {
 				</div>
 			</Section>
 			<Divider angle />
-			<Section color='lightGray' paper angle='top' padding='1.5vw 0 0 0'>
+
+			<Section color='lightGray' angle='top' paper>
 				<div className='speaking-section'>
 					<div className='speaking-section__left'>
 						<h2>Speaking</h2>

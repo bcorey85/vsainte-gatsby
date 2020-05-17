@@ -100,7 +100,6 @@
 .benefits {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 20rem;
 }
 
 .benefits p:last-of-type::after {
@@ -125,13 +124,14 @@
 }
 
 .testimonials {
-	padding-top: .8rem;
+	padding: 14.4rem 0 0 0;
 }
 
 .books-section {
 	display: flex;
 	justify-content: space-around;
 	padding: calc(11.2rem + 3vw) 0;
+	margin-top: -1.5vw;
 }
 
 .books-teal {
@@ -391,7 +391,7 @@
 
 	.features__item-image {
 		margin-right: 0rem;
-		margin-bottom: 2.4rem;
+		margin-bottom: 4rem;
 		flex: 0 0 auto;
 		width: 100%;
 		max-width: 44.8rem;
@@ -419,7 +419,7 @@
 
 	.benefits__left {
 		margin-right: 0rem;
-		margin-bottom: 2.4rem;
+		margin-bottom: 4rem;
 		flex: 0 0 auto;
 		width: 100%;
 		max-width: 44.8rem;
@@ -431,7 +431,7 @@
 	}
 
 	.testimonials {
-		padding-top: 1.6rem;
+		padding-top: 10.4rem;
 	}
 
 	.books-section {
