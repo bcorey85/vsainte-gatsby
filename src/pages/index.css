@@ -59,7 +59,7 @@
 .features__item {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 8rem;
+	margin-bottom: 10.4rem;
 }
 
 .features__item-text {
@@ -69,15 +69,10 @@
 	justify-content: center;
 }
 
-.features__item-text p {
-	font-size: 2rem;
-	line-height: 3.2rem;
-}
-
 .features__item-text p::after {
 	display: block;
 	content: '';
-	width: 8rem;
+	width: 5.6rem;
 	height: .8rem;
 	margin: 4rem auto 0 auto;
 	background-color: var(--red);
@@ -86,6 +81,11 @@
 .features__item-image {
 	flex: 0 1 48rem;
 	margin-left: 3.2rem;
+}
+
+.features__img {
+	width: 90%;
+	margin: auto;
 }
 
 .features__item--reverse {
@@ -103,15 +103,10 @@
 	margin-bottom: 20rem;
 }
 
-.benefits p {
-	font-size: 2rem;
-	line-height: 3.2rem;
-}
-
 .benefits p:last-of-type::after {
 	display: block;
 	content: '';
-	width: 8rem;
+	width: 5.6rem;
 	height: .8rem;
 	margin: 4rem auto 0 auto;
 	background-color: var(--red);

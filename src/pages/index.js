@@ -143,6 +143,7 @@ const Home = ({ location }) => {
 								}
 								alt='Alma crying'
 								boxShadow='default'
+								className='features__img'
 							/>
 						</div>
 						<div className='benefits__right'>
