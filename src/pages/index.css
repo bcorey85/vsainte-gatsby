@@ -362,6 +362,11 @@
 
 /* 600px */
 @media only screen and (max-width: 37.5em) {
+	.hero-section__cta-text {
+		font-size: 1.8rem;
+		line-height: 2.8rem;
+	}
+
 	.hero-section__right img {
 		margin-left: 0;
 	}
@@ -382,11 +387,8 @@
 		flex: 0 0 auto;
 		width: 100%;
 		max-width: 44.8rem;
-	}
-
-	.features__item p {
-		font-size: 2rem;
-		line-height: 3rem;
+		font-size: 1.8rem;
+		line-height: 2.8rem;
 	}
 
 	.features__item-image {
@@ -428,6 +430,8 @@
 	.benefits__right {
 		min-width: 0;
 		max-width: 44.8rem;
+		font-size: 1.8rem;
+		line-height: 2.8rem;
 	}
 
 	.testimonials {
