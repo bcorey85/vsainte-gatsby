@@ -147,7 +147,7 @@ const Home = ({ location }) => {
 							/>
 						</div>
 						<div className='benefits__right'>
-							<h2>Help children manage big feelings</h2>
+							<h2>Help Children Manage Big Feelings</h2>
 							<div className='benefits__p'>
 								<p>
 									In 10 years of experience as a child and
