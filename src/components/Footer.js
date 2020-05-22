@@ -2,9 +2,8 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import MainNav from './MainNav';
+import Divider from '../components/shared/Divider';
 import SocialIcons from './SocialIcons';
-// import Button from './shared/Button';
-// import Input from './shared/Input';
 import logo from '../images/logo-gray-svg.svg';
 import bclogo from '../images/bc-logo-svg.svg';
 
@@ -14,30 +13,8 @@ const Footer = () => {
 	return (
 		<React.Fragment>
 			<div className='footer'>
+				<Divider />
 				<div className='footer-container'>
-					{/* <div className='sign-up'>
-						<div className='sign-up__container'>
-							<div className='sign-up__text-group'>
-								<div>
-									Want to know when my next book is ready?
-								</div>
-								<Input
-									type='email'
-									placeholder='yourname@email.com'
-									invert
-								/>
-							</div>
-							<div className='sign-up__btn'>
-								<Button
-									to='/'
-									width='small'
-									padding='tight'
-									margin='left'>
-									Sign Up
-								</Button>
-							</div>
-						</div>
-					</div> */}
 					<div className='footer__logo-container'>
 						<Link to='/'>
 							<img

@@ -59,7 +59,10 @@
 .features__item {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 10.4rem;
+}
+
+.features__item:not(:last-of-type) {
+	margin-bottom: 12rem;
 }
 
 .features__item-text {
@@ -71,13 +74,9 @@
 	line-height: 3.2rem;
 }
 
-.features__item-text p::after {
-	display: block;
-	content: '';
-	width: 5.6rem;
-	height: .8rem;
-	margin: 4rem auto 0 auto;
-	background-color: var(--red);
+.features__item-text h2 {
+	border-bottom: .4rem solid var(--red);
+	padding-bottom: .4rem;
 }
 
 .features__item-image {
@@ -86,7 +85,6 @@
 }
 
 .features__img {
-	width: 90%;
 	margin: auto;
 }
 
@@ -97,34 +95,6 @@
 .features__item--reverse > .features__item-image {
 	margin-left: 0;
 	margin-right: 3.2rem;
-}
-
-.benefits {
-	display: flex;
-	justify-content: space-between;
-}
-
-.benefits p:last-of-type::after {
-	display: block;
-	content: '';
-	width: 5.6rem;
-	height: .8rem;
-	margin: 4rem auto 0 auto;
-	background-color: var(--red);
-}
-
-.benefits__left {
-	flex: 0 1 48rem;
-	margin-right: 3.2rem;
-}
-
-.benefits__right {
-	flex: 0 1 48rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	font-size: 2rem;
-	line-height: 3.2rem;
 }
 
 .testimonials {
@@ -291,16 +261,6 @@
 		margin-bottom: 7.2rem;
 	}
 
-	.benefits {
-		margin-bottom: 7.2rem;
-	}
-
-	.benefits__right {
-		max-width: 49.6rem;
-		min-width: 34rem;
-		flex: 1 1 auto;
-	}
-
 	.books-section {
 		background-size: cover;
 	}
@@ -394,10 +354,10 @@
 	}
 
 	.features__item-image {
+		width: 100%;
 		margin-right: 0rem;
 		margin-bottom: 4rem;
 		flex: 0 0 auto;
-		width: 100%;
 		max-width: 44.8rem;
 		margin-left: 0;
 	}
@@ -414,24 +374,6 @@
 
 	.details-section__subheading {
 		margin-top: 1.6rem;
-	}
-
-	.benefits {
-		flex-direction: column;
-		align-items: center;
-	}
-
-	.benefits__left {
-		margin-right: 0rem;
-		margin-bottom: 4rem;
-		flex: 0 0 auto;
-		width: 100%;
-		max-width: 44.8rem;
-	}
-
-	.benefits__right {
-		min-width: 0;
-		max-width: 44.8rem;
 	}
 
 	.testimonials {
@@ -462,11 +404,6 @@
 	}
 
 	.features__item p {
-		font-size: 1.8rem;
-		line-height: 2.8rem;
-	}
-
-	.benefits__right p {
 		font-size: 1.8rem;
 		line-height: 2.8rem;
 	}

@@ -133,22 +133,10 @@ const Home = ({ location }) => {
 								/>
 							</div>
 						</div>
-					</div>
-					<div className='benefits'>
-						<div className='benefits__left'>
-							<Image
-								fluid={
-									indexData.iwbobluephoto.childImageSharp
-										.fluid
-								}
-								alt='Alma crying'
-								boxShadow='default'
-								className='features__img'
-							/>
-						</div>
-						<div className='benefits__right'>
-							<h2>Help Children Manage Big Feelings</h2>
-							<div className='benefits__p'>
+						<div className='features__item features__item--reverse'>
+							<div className='features__item-text'>
+								<h2>Help Children Manage Big Feelings</h2>
+
 								<p>
 									In 10 years of experience as a child and
 									family therapist, I have learned how write
@@ -161,6 +149,17 @@ const Home = ({ location }) => {
 									helping to support the emotions of children
 									in a way that's meaningful to them.
 								</p>
+							</div>
+							<div className='features__item-image'>
+								<Image
+									fluid={
+										indexData.iwbobluephoto.childImageSharp
+											.fluid
+									}
+									alt='Alma crying'
+									boxShadow='default'
+									className='features__img'
+								/>
 							</div>
 						</div>
 					</div>

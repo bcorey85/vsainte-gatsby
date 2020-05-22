@@ -2,7 +2,6 @@
 	background-color: var(--gray-dark);
 	background-image: url('../images/dark-gray-paper-bg.jpg');
 	color: var(--gray-light);
-	border-top: .1rem solid var(--gray-dark-2);
 }
 
 .footer-container {

@@ -1,7 +1,6 @@
 .header {
 	background-color: var(--primary-light);
 	background-image: url('../images/teal-paper-bg.jpg');
-	border-bottom: .1rem solid var(--gray-dark-2);
 }
 
 .header__container {

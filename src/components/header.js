@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
+
 import { Link } from 'gatsby';
 
 import MainNav from './MainNav';
 import MobileMenu from './MobileMenu';
+import Divider from '../components/shared/Divider';
 
 import './Header.css';
 import logo from '../images/logo-svg.svg';
@@ -41,6 +42,7 @@ const Header = () => {
 					/>
 				</div>
 			</div>
+			<Divider />
 		</header>
 	);
 };
