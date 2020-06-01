@@ -6,7 +6,7 @@
 
 .carousel__banner {
 	background-color: var(--yellow);
-	height: 1.6rem;
+	height: 1.2rem;
 	display: flex;
 	padding: 0 .8rem;
 	justify-content: space-between;
@@ -16,7 +16,7 @@
 }
 
 .carousel__banner h3 {
-	margin-top: -.8rem;
+	margin-top: -1.2rem;
 }
 
 .carousel__content {

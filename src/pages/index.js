@@ -65,19 +65,20 @@ const Home = ({ location }) => {
 				</div>
 			</Section>
 			<Divider angle />
-			<Section color='lightGray' paper angle='top' padding='1.5vw 0'>
+			<Section color='lightGray' paper angle='top' padding='1.5vw 0' wide>
 				<div className='details-section'>
 					<div className='features'>
 						<div className='features__item'>
 							<div className='features__item-text'>
-								<h2>Meet Alma</h2>
-
-								<p>
-									Alma is a young girl who struggles with many
-									anxieties and fears. Other kids bully Alma
-									at school and make her feel sad most of the
-									time.
-								</p>
+								<div>
+									<h2>Meet Alma</h2>
+									<p>
+										Alma is a young girl who struggles with
+										many anxieties and fears. Other kids
+										bully Alma at school and make her feel
+										sad most of the time.
+									</p>
+								</div>
 							</div>
 							<div className='features__item-image'>
 								<Image
@@ -93,12 +94,15 @@ const Home = ({ location }) => {
 						</div>
 						<div className='features__item features__item--reverse'>
 							<div className='features__item-text'>
-								<h2>Her Nemesis</h2>
-								<p>
-									Limbo is a mean fear monster that feeds on
-									Alma's sadness and makes her feel miserable.
-									Can she find the courage to face him?
-								</p>
+								<div>
+									<h2>Her Nemesis</h2>
+									<p>
+										Limbo is a mean fear monster that feeds
+										on Alma's sadness and makes her feel
+										miserable. Can she find the courage to
+										face him?
+									</p>
+								</div>
 							</div>
 							<div className='features__item-image'>
 								<Image
@@ -114,12 +118,15 @@ const Home = ({ location }) => {
 						</div>
 						<div className='features__item'>
 							<div className='features__item-text'>
-								<h2>The Hope Shield</h2>
-								<p>
-									Soon, with some caring friends, Alma
-									discovers the Hope Shield! This gives her
-									the strength to beat Limbo once and for all!
-								</p>
+								<div>
+									<h2>The Hope Shield</h2>
+									<p>
+										Soon, with some caring friends, Alma
+										discovers the Hope Shield! This gives
+										her the strength to beat Limbo once and
+										for all!
+									</p>
+								</div>
 							</div>
 							<div className='features__item-image'>
 								<Image
@@ -135,20 +142,23 @@ const Home = ({ location }) => {
 						</div>
 						<div className='features__item features__item--reverse'>
 							<div className='features__item-text'>
-								<h2>Help Children Manage Big Feelings</h2>
+								<div>
+									<h2>Help Children Manage Big Feelings</h2>
 
-								<p>
-									In 10 years of experience as a child and
-									family therapist, I have learned how write
-									fun children's books that boost
-									self-regulation skills and teach new ways of
-									managing emotions.
-								</p>
-								<p>
-									<em>It Will Be Okay</em> is a great tool for
-									helping to support the emotions of children
-									in a way that's meaningful to them.
-								</p>
+									<p>
+										In 10 years of experience as a child and
+										family therapist, I have learned how
+										write fun children's books that boost
+										self-regulation skills and teach new
+										ways of managing emotions.
+									</p>
+									<p>
+										<em>It Will Be Okay</em> is a great tool
+										for helping to support the emotions of
+										children in a way that's meaningful to
+										them.
+									</p>
+								</div>
 							</div>
 							<div className='features__item-image'>
 								<Image

@@ -8,7 +8,7 @@
 	max-width: 122.4rem;
 	min-height: 40rem;
 	margin: auto;
-	padding: 8rem 1.6rem;
+	padding: 8rem 0;
 	display: flex;
 	justify-content: space-between;
 }
@@ -73,7 +73,13 @@
 	margin-top: 4.8rem;
 }
 
-@media only screen and (max-width: 64rem) {
+@media only screen and (max-width: 90em) {
+	.footer-container {
+		padding: 8rem 2.4rem;
+	}
+}
+
+@media only screen and (max-width: 64em) {
 	.footer__nav {
 		align-items: center;
 	}
