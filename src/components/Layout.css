@@ -53,30 +53,32 @@ body {
 h1 {
 	font-size: 6.8rem;
 	line-height: 6.8rem;
-	font-weight: 600;
+	font-weight: 500;
 	font-style: italic;
-	font-family: Aleo, serif;
-	letter-spacing: .05rem;
+	font-family: 'Solway', serif;
+	letter-spacing: -.1rem;
 	color: var(--black);
-	margin-bottom: .8rem;
+	margin-bottom: 1.6rem;
 }
 
 h1.page-title {
 	font-weight: 400;
 	font-size: 1.6rem;
+	line-height: 1.2rem;
 	font-style: normal;
-	margin: 6rem 0;
+	margin: 8rem 0;
 	text-align: right;
 	font-family: Poppins, sans-serif;
-	color: var(--black);
+	letter-spacing: 0;
 }
 
 h2 {
 	font-size: 4.8rem;
 	line-height: 4.8rem;
-	margin-bottom: .8rem;
-	font-weight: 600;
-	font-family: Aleo, serif;
+	margin-bottom: 1.6rem;
+	font-weight: 500;
+	font-family: 'Solway', serif;
+	letter-spacing: -.1rem;
 	color: var(--black);
 }
 
@@ -84,17 +86,19 @@ h3 {
 	font-size: 3.6rem;
 	line-height: 3.6rem;
 	margin-bottom: .8rem;
-	font-weight: 600;
-	font-family: Aleo, serif;
+	font-weight: 500;
+	font-family: 'Solway', serif;
+	letter-spacing: -.1rem;
 	color: var(--black);
 }
 
 h4 {
 	font-size: 2.8rem;
-	line-height: 2.8rem;
+	line-height: 3.2rem;
 	margin-bottom: .8rem;
-	font-family: Aleo, serif;
-	font-weight: 600;
+	font-family: 'Solway', serif;
+	letter-spacing: -.1rem;
+	font-weight: 500;
 	color: var(--black);
 }
 
@@ -172,7 +176,7 @@ ul li::before {
 
 @media only screen and (max-width: 90rem) {
 	h1 {
-		font-size: 5.2rem;
+		font-size: 5.6rem;
 		line-height: 5.6rem;
 	}
 }
@@ -180,7 +184,7 @@ ul li::before {
 @media only screen and (max-width: 64rem) {
 	h1 {
 		font-size: 4.8rem;
-		line-height: 5.6rem;
+		line-height: 4.8rem;
 	}
 }
 
@@ -191,18 +195,18 @@ ul li::before {
 
 	h2 {
 		font-size: 3.2rem;
-		line-height: 3.6rem;
+		line-height: 3.2rem;
 		margin-bottom: .8rem;
 	}
 
 	h3 {
 		font-size: 2.8rem;
-		line-height: 3.2rem;
+		line-height: 2.8rem;
 	}
 }
 
 @media only screen and (max-width: 37.5em) {
 	h1.page-title {
-		margin: 2.4rem 0;
+		margin: 4rem 0;
 	}
 }

@@ -10,9 +10,9 @@
 	line-height: 6.4rem;
 	position: absolute;
 	top: -.8rem;
-	left: -2.8rem;
+	left: -4rem;
 	color: var(--primary-dark);
-	font-family: Aleo, serif;
+	font-family: 'Solway', serif;
 }
 
 .testimonial__meta {

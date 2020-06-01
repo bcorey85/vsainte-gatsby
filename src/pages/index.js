@@ -179,7 +179,7 @@ const Home = ({ location }) => {
 			<Section angle='bottom'>
 				<div className='testimonials'>
 					<Carousel
-						title='What Others Are Saying'
+						title='What Others Say'
 						data={indexData.testimonials.nodes}
 						dataType='text'
 					/>

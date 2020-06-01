@@ -14,15 +14,15 @@
 }
 
 .main-nav__link {
-	font-size: 1.4rem;
-	letter-spacing: .05rem;
+	font-size: 1.6rem;
 	text-transform: uppercase;
 	text-decoration: none;
 	color: inherit;
 	position: relative;
-	font-family: Aleo, serif;
-	font-weight: 600;
+	font-family: 'Solway', serif;
+	font-weight: 500;
 	cursor: pointer;
+	letter-spacing: -.02rem;
 }
 
 .main-nav__link::after {
@@ -58,4 +58,8 @@
 
 .main-nav--footer {
 	background: transparent;
+}
+
+.main-nav--footer a:hover {
+	color: var(--white);
 }

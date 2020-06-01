@@ -5,15 +5,10 @@
 	padding: 12rem 0;
 }
 
-.hero-section__left {
-	margin-top: -3.8rem;
-}
-
 .hero-section__left h1 {
 	animation: floatUp .8s ease-out;
 	animation-delay: .2s;
 	animation-fill-mode: backwards;
-	letter-spacing: -.05rem;
 }
 
 .hero-section__left h5 {
@@ -79,8 +74,8 @@
 }
 
 .features__item-text > div {
-	border-left: .8rem solid var(--primary-dark);
-	padding-left: 1.6rem;
+	border-left: .6rem solid var(--primary-dark);
+	padding-left: 2.4rem;
 }
 
 .features__item-image {
@@ -126,12 +121,12 @@
 }
 
 .speaking-section__left {
-	flex: 0 1 40%;
+	flex: 0 1 46.4rem;
 	margin-right: 3.2rem;
 }
 
 .speaking-section__right {
-	flex: 0 1 60%;
+	flex: 1 1 auto;
 	display: flex;
 	justify-content: flex-end;
 }
@@ -238,9 +233,9 @@
 	}
 
 	.hero-section__left h1 {
-		font-size: 4rem;
+		font-size: 4.8rem;
 		line-height: 4.8rem;
-		margin-bottom: 1.6rem;
+		margin-bottom: .8rem;
 	}
 
 	.hero-section__right {
@@ -302,6 +297,7 @@
 	}
 
 	.speaking-section__left {
+		flex: 1 1 auto;
 		max-width: 49.6rem;
 		margin-right: 0;
 	}
@@ -419,6 +415,11 @@
 	.hero-section__cta-text {
 		font-size: 1.8rem;
 		line-height: 2.8rem;
+	}
+
+	.hero-section__left h1 {
+		font-size: 4.0rem;
+		line-height: 4rem;
 	}
 
 	.features__item p {
