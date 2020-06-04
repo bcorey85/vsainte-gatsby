@@ -70,11 +70,11 @@
 /* 900px */
 @media only screen and (max-width: 56.24em) {
 	.header__container {
-		height: 6.4rem;
+		height: 5.6rem;
 	}
 
 	.header__logo {
-		width: 20rem;
+		width: 18rem;
 	}
 
 	.mobile-nav {
