@@ -16,7 +16,7 @@
 }
 
 .carousel__banner h3 {
-	margin-top: -1.2rem;
+	margin-top: -2rem;
 }
 
 .carousel__content {
@@ -95,9 +95,15 @@
 	max-height: 32rem;
 }
 
+@media only screen and (max-width: 56.25em) {
+	.carousel__banner h3 {
+		margin-top: -1.2rem;
+	}
+}
+
 @media only screen and (max-width: 37.5em) {
 	.carousel__banner h3 {
 		margin: auto;
-		margin-top: -1.8rem;
+		margin-top: -1.2rem;
 	}
 }
