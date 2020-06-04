@@ -9,6 +9,7 @@
 	animation: floatUp .8s ease-out;
 	animation-delay: .2s;
 	animation-fill-mode: backwards;
+	font-style: italic;
 }
 
 .hero-section__left h5 {
@@ -38,8 +39,8 @@
 }
 
 .hero-section__cta-text {
-	margin-bottom: 5.6rem;
-	font-size: 2rem;
+	margin-bottom: 6.4rem;
+	font-size: 2.2rem;
 	line-height: 3.2rem;
 	max-width: 50rem;
 	animation: floatUp .8s ease-out;
@@ -48,7 +49,7 @@
 }
 
 .details-section {
-	padding: 20rem 0 16rem 0;
+	padding: 18.4rem 0 16rem 0;
 }
 
 .features__item {
@@ -57,29 +58,39 @@
 }
 
 .features__item:not(:last-of-type) {
-	margin-bottom: 14.4rem;
+	margin-bottom: 10.4rem;
 }
 
 .features__item-text {
-	flex: 0 0 49.6rem;
+	flex: 0 0 52.2rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	font-size: 2rem;
+	font-size: 2.2rem;
 	line-height: 3.2rem;
+}
+
+.features__item-text h2 {
+	position: relative;
+}
+
+.features__item-text h2:after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 1.2rem;
+	background-color: var(--yellow);
+	bottom: .4rem;
+	z-index: -1;
 }
 
 .features__item-text p:last-of-type {
 	margin-bottom: 0;
 }
 
-.features__item-text > div {
-	border-left: .6rem solid var(--primary-dark);
-	padding-left: 2.4rem;
-}
-
 .features__item-image {
-	flex: 0 1 48rem;
+	flex: 0 1 44rem;
 	margin-left: 8rem;
 }
 
@@ -94,6 +105,11 @@
 .features__item--reverse > .features__item-image {
 	margin-left: 0;
 	margin-right: 8rem;
+}
+
+.features__item--reverse > .features__item-text {
+	border-left: none;
+	padding-left: none;
 }
 
 .testimonials {
@@ -117,7 +133,7 @@
 .speaking-section {
 	display: flex;
 	justify-content: space-between;
-	padding: 20rem 0;
+	padding: 20rem 0 16rem 0;
 }
 
 .speaking-section__left {
@@ -145,7 +161,7 @@
 }
 
 .about-section {
-	padding: 20rem 0 16rem 0;
+	padding: 18.4rem 0 16rem 0;
 	display: flex;
 	justify-content: space-between;
 }
@@ -250,6 +266,7 @@
 
 	.hero-section__cta-text {
 		margin-bottom: 4.8rem;
+		font-size: 2rem;
 	}
 
 	.details-section {
@@ -262,11 +279,11 @@
 
 	.features__item-text {
 		flex: 0 1 49.6rem;
+		font-size: 2rem;
 	}
 
-	.features__item-text h2 {
-		border-bottom: .4rem solid var(--primary-dark);
-		padding-bottom: .8rem;
+	.features__item-text h2::after {
+		bottom: -.2rem;
 	}
 
 	.features__item-text > div {

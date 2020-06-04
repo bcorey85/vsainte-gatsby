@@ -143,7 +143,9 @@ const Home = ({ location }) => {
 						<div className='features__item features__item--reverse'>
 							<div className='features__item-text'>
 								<div>
-									<h2>Help Children Manage Big Feelings</h2>
+									<h2>
+										Help Children <br /> Manage Big Feelings
+									</h2>
 
 									<p>
 										In 10 years of experience as a child and
