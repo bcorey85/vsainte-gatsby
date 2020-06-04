@@ -262,9 +262,11 @@
 
 	.hero-section__img {
 		margin: 0;
+		width: 75%;
 	}
 
 	.hero-section__cta-text {
+		margin-top: -1.6rem;
 		margin-bottom: 4.8rem;
 		font-size: 2rem;
 	}
