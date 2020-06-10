@@ -90,7 +90,7 @@
 }
 
 .features__item-image {
-	flex: 0 1 44rem;
+	flex: 0 1 40rem;
 	margin-left: 8rem;
 }
 
@@ -258,12 +258,12 @@
 	.hero-section__right {
 		z-index: 0;
 		flex: 1 1 auto;
-		margin-top: -7.2rem;
+		margin-top: -2.4rem;
 	}
 
 	.hero-section__img {
 		margin: 0;
-		width: 75%;
+		width: 90%;
 	}
 
 	.hero-section__cta-text {
@@ -362,11 +362,16 @@
 	.hero-section__cta-text {
 		font-size: 1.8rem;
 		line-height: 2.8rem;
+		margin-bottom: 3.6rem;
 	}
 
 	.hero-section__left h1 {
 		font-size: 4rem;
 		line-height: 4rem;
+	}
+
+	.hero-section__right {
+		margin-top: -6.4rem;
 	}
 
 	.hero-section__right img {

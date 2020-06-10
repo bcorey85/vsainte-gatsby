@@ -35,7 +35,7 @@ const Home = ({ location }) => {
 	return (
 		<React.Fragment>
 			<SEO title='Home' />
-			<Section color='white' margin='0 0 2vw 0' wide className='fullvh'>
+			<Section color='white' margin='0 0 2vw 0' className='fullvh'>
 				<div className='hero-section'>
 					<div className='hero-section__left'>
 						<div>
