@@ -13,7 +13,7 @@
 }
 
 .section-inner--wide {
-	max-width: 122.4rem;
+	max-width: 116rem;
 }
 
 @supports (clip-path: polygon(0 3vw, 100% 0, 100% 100%, 0% 100%)) {
