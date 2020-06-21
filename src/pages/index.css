@@ -26,12 +26,11 @@
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	max-width: 56rem;
+	max-width: 64rem;
 }
 
 .hero-section__img {
 	width: 100%;
-	max-width: 56rem;
 	height: auto;
 	animation: floatUp .8s ease-out;
 	animation-delay: .5s;
@@ -209,7 +208,7 @@
 		justify-content: space-around;
 	}
 
-	.hero-section__img {
+	.hero-section__right {
 		max-width: 48rem;
 	}
 
