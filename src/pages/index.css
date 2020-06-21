@@ -202,6 +202,12 @@
 	justify-content: flex-end;
 }
 
+@media only screen and (max-height: 67.5em) {
+	.hero-section__right {
+		max-width: 54rem;
+	}
+}
+
 /* 1440px */
 @media only screen and (max-width: 90em) {
 	.hero-section {
