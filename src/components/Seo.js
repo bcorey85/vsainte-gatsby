@@ -68,10 +68,11 @@ function SEO({ description, lang, meta, title }) {
 					content: metaDescription
 				}
 			].concat(meta)}>
-			{/* <link
-				href='https://fonts.googleapis.com/css?family='Solway':700,700i|Poppins:400,400i,500&display=swap'
-				rel='stylesheet'
-			/> */}
+			<link
+				rel='preconnect'
+				href='https://fonts.gstatic.com/'
+				crossorigin
+			/>
 			<link
 				href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400&family=Solway:wght@500&display=swap'
 				rel='stylesheet'
