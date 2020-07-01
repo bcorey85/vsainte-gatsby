@@ -80,7 +80,7 @@ const Contact = ({ location }) => {
 									</div>
 									<div className='contact__comments-submit'>
 										<Button margin='none' type='submit'>
-											Submit
+											Send Comment
 										</Button>
 									</div>
 								</form>

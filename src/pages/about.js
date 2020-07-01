@@ -10,14 +10,7 @@ import './about.css';
 
 const imageQuery = graphql`
 	query AboutImgs {
-		teamCVS: file(relativePath: { eq: "vladimir-sainte-teamcvs.jpg" }) {
-			childImageSharp {
-				fluid {
-					...GatsbyImageSharpFluid_withWebp
-				}
-			}
-		}
-		young: file(relativePath: { eq: "vladimir-sainte-young.jpg" }) {
+		vsainte: file(relativePath: { eq: "vladimir-sainte.jpg" }) {
 			childImageSharp {
 				fluid {
 					...GatsbyImageSharpFluid_withWebp
@@ -39,12 +32,7 @@ const About = ({ location }) => {
 					<div className='about__content'>
 						<div className='about__left'>
 							<Image
-								fluid={booksData.teamCVS.childImageSharp.fluid}
-								boxShadow='default'
-								className='about__img'
-							/>
-							<Image
-								fluid={booksData.young.childImageSharp.fluid}
+								fluid={booksData.vsainte.childImageSharp.fluid}
 								boxShadow='default'
 								className='about__img'
 							/>
@@ -58,6 +46,26 @@ const About = ({ location }) => {
 								</div>
 							</div>
 							<div className='about__p'>
+								<h2>Professional Bio</h2>
+								<div>
+									With more than 10 years’ experience as a
+									therapist, Vladimir Sainte, LCSW has made an
+									invaluable impact on the Kansas City
+									community through his work as a social
+									worker, crisis clinician, and children’s
+									book author. As a committed equality
+									advocate, Sainte is a member of the BIPOC
+									community—while also providing counseling
+									support to not only children, but to their
+									families and the broader community through a
+									holistic partnership. Sainte graduated with
+									a Bachelor of Arts in Sociology and a Master
+									of Social Work from the University of
+									Missouri-Kansas City. He currently works at
+									Truman Behavioral Health as a Team Leader.
+								</div>
+							</div>
+							<div className='about__p'>
 								<h2>Background</h2>
 								<div>
 									What is there to be said about me? Well,
@@ -67,12 +75,12 @@ const About = ({ location }) => {
 									have ever met. I was born and partly raised
 									in Queens, New York. I have spent most of my
 									career working with children and young
-									adults, ranging from ages 2-23. One of the
-									best things that I have learned throughout
-									my career is the importance of connection.
-									Forming therapeutic relationships with my
-									clients and their providers has been very
-									rewarding.
+									adults, ranging from ages 2&ndash;23. One of
+									the best things that I have learned
+									throughout my career is the importance of
+									connection. Forming therapeutic
+									relationships with my clients and their
+									providers has been very rewarding.
 								</div>
 							</div>
 							<div className='about__p'>
@@ -86,24 +94,6 @@ const About = ({ location }) => {
 									by focusing on beauty surrounds me. I’m
 									driven by the need to create stories that
 									are relatable and informative to the reader.
-								</div>
-							</div>
-							<div className='about__p'>
-								<h2>Professional Bio</h2>
-								<div>
-									With more than ten years' experience as a
-									therapist, Vladimir Sainte, LCSW has made an
-									invaluable impact on the Kansas City
-									community through his work as a counselor
-									and crisis clinician. Sainte is committed to
-									providing supportive counseling, not just
-									with children, but through a partnership
-									with their families and the broader
-									community members for a holistic impact on
-									the child's development. Sainte graduated
-									with a Bachelor of Arts in Sociology and a
-									Master of Social Work from the University of
-									Missouri-Kansas City.
 								</div>
 							</div>
 						</div>
