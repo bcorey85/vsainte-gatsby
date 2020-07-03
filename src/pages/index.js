@@ -46,7 +46,7 @@ const Home = ({ location }) => {
 						<p className='hero-section__cta-text'>
 							Explore the superhero journey of Alma, in this
 							children's book about overcoming bullying, anxiety,
-							and fear.
+							and&nbsp;fear.
 						</p>
 						<Button
 							href='https://www.amazon.com/Will-Okay-Just-Like-Hero/dp/1942005520/ref=sr_1_1?crid=2SQ0E2D0Z20WN&keywords=it+will+be+okay+vladimir+sainte&qid=1570911125&sprefix=it+will+be+okay+vladimi%2Caps%2C153&sr=8-1'
@@ -144,7 +144,8 @@ const Home = ({ location }) => {
 							<div className='features__item-text'>
 								<div>
 									<h2>
-										Help Children <br /> Manage Big Feelings
+										Help Your Child<br /> Manage Big
+										Feelings
 									</h2>
 
 									<p>
