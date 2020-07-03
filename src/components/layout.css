@@ -1,14 +1,14 @@
 :root {
 	--primary-light: hsl(175, 50%, 80%);
 	--primary-dark: hsl(175, 73%, 30%);
-	--red: hsl(0, 70%, 50%);
-	--yellow: hsl(48, 85%, 70%);
+	--red: hsl(0, 65%, 55%);
+	--yellow: hsl(48, 85%, 80%);
 	--gray-light: hsl(175, 5%, 95%);
 	--gray-medium: hsl(175, 5%, 80%);
 	--gray-dark: hsl(175, 5%, 45%);
-	--gray-dark-2: hsl(175, 5%, 55%);
-	--black: hsl(175, 5%, 25%);
-	--black-2: hsl(175, 5%, 35%);
+	--gray-dark-2: hsl(175, 5%, 60%);
+	--black: hsl(175, 5%, 30%);
+	--black-2: hsl(175, 5%, 40%);
 	--white: hsl(0, 0%, 100%);
 }
 
@@ -102,11 +102,11 @@ h4 {
 }
 
 h5 {
-	font-size: 1.6rem;
+	font-size: 1.4rem;
 	font-weight: 400;
 	text-transform: uppercase;
-	color: var(--gray-dark);
-	letter-spacing: .05rem;
+	color: var(--gray-dark-2);
+	letter-spacing: .1rem;
 }
 
 p {
