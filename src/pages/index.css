@@ -135,15 +135,16 @@
 	padding: 16rem 0 12rem 0;
 }
 
-.book-preview header {
+.book-preview__text {
 	width: 100%;
 	height: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: flex-end;
 }
 
-.book-preview header div {
+.book-preview__text div {
 	width: 100%;
 	max-width: 40rem;
 }
@@ -152,7 +153,7 @@
 	position: relative;
 }
 
-.book-preview header h1:after {
+.book-preview__text h1:after {
 	content: '';
 	display: block;
 	position: absolute;
@@ -167,19 +168,19 @@
 	text-align: right;
 }
 
-.book-preview header h5 {
+.book-preview__text h5 {
 	font-family: Poppins;
 	color: var(--gray-dark);
 }
 
-.book-preview header h1 {
+.book-preview__text h1 {
 	font-style: italic;
 }
 
 .book-preview figure {
 	width: 100%;
 	max-width: 56rem;
-	margin-left: 8rem;
+	margin-right: 8rem;
 }
 .speaking-section {
 	display: flex;
@@ -501,11 +502,13 @@
 	}
 
 	.book-preview__text {
-		margin-bottom: 4rem;
+		margin-top: 4rem;
+		justify-content: flex-start;
+		align-items: flex-start;
 	}
 
 	.book-preview figure {
-		margin-left: 0;
+		margin-right: 0;
 	}
 }
 

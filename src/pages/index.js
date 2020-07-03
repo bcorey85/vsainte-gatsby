@@ -215,6 +215,14 @@ const Home = ({ location }) => {
 			<Divider angle />
 			<Section color='var(--white)' angle='top'>
 				<div className='book-preview'>
+					<figure>
+						<Image
+							fluid={indexData.mMCover.childImageSharp.fluid}
+							alt='Alma crying'
+							boxShadow='default'
+							className='features__img'
+						/>
+					</figure>
 					<header className='book-preview__text'>
 						<div>
 							<h5>Coming Soon!</h5>
@@ -224,15 +232,6 @@ const Home = ({ location }) => {
 							<h4>2020</h4>
 						</div>
 					</header>
-
-					<figure>
-						<Image
-							fluid={indexData.mMCover.childImageSharp.fluid}
-							alt='Alma crying'
-							boxShadow='default'
-							className='features__img'
-						/>
-					</figure>
 				</div>
 			</Section>
 
