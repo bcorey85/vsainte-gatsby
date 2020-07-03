@@ -219,17 +219,15 @@ const Home = ({ location }) => {
 						<Image
 							fluid={indexData.mMCover.childImageSharp.fluid}
 							alt='Alma crying'
-							boxShadow='default'
 							className='features__img'
 						/>
 					</figure>
 					<header className='book-preview__text'>
 						<div>
-							<h5>Coming Soon!</h5>
+							<h5>Coming Soon - 2020</h5>
 							<h1>
-								Making<br />&nbsp;Mistakes
+								Making<br />&nbsp;&nbsp;&nbsp;Mistakes
 							</h1>
-							<h4>2020</h4>
 						</div>
 					</header>
 				</div>

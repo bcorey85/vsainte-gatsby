@@ -26,7 +26,7 @@
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	max-width: 60rem;
+	max-width: 56rem;
 }
 
 .hero-section__img {
@@ -159,7 +159,7 @@
 	position: absolute;
 	width: 100%;
 	height: 1.2rem;
-	background-color: var(--primary-light);
+	background-color: var(--yellow);
 	bottom: .4rem;
 	z-index: -1;
 }
@@ -179,7 +179,7 @@
 
 .book-preview figure {
 	width: 100%;
-	max-width: 56rem;
+	max-width: 48rem;
 	margin-right: 8rem;
 }
 .speaking-section {
@@ -321,7 +321,6 @@
 
 	.hero-section__img {
 		margin: 0;
-		width: 90%;
 	}
 
 	.hero-section__cta-text {
@@ -509,6 +508,10 @@
 
 	.book-preview figure {
 		margin-right: 0;
+	}
+
+	.book-preview__text h1:after {
+		bottom: 0;
 	}
 }
 
