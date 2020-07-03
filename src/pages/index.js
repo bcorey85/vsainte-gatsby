@@ -149,7 +149,7 @@ const Home = ({ location }) => {
 
 									<p>
 										In 10 years of experience as a child and
-										family therapist, I have learned how
+										family therapist, I have learned how to
 										write fun children's books that boost
 										self-regulation skills and teach new
 										ways of managing emotions.
