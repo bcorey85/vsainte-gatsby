@@ -35,13 +35,14 @@
 	animation: floatUp .8s ease-out;
 	animation-delay: .5s;
 	animation-fill-mode: backwards;
+	margin-top: -4rem;
 }
 
 .hero-section__cta-text {
-	margin-bottom: 6.4rem;
+	margin-bottom: 4rem;
 	font-size: 2rem;
-	line-height: 3.2rem;
-	max-width: 50rem;
+	line-height: 3.6rem;
+	max-width: 56rem;
 	animation: floatUp .8s ease-out;
 	animation-delay: .3s;
 	animation-fill-mode: backwards;
