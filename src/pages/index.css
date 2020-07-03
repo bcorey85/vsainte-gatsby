@@ -129,6 +129,58 @@
 	background-position: center;
 }
 
+.book-preview {
+	display: flex;
+	justify-content: space-between;
+	padding: 16rem 0 12rem 0;
+}
+
+.book-preview header {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.book-preview header div {
+	width: 100%;
+	max-width: 40rem;
+}
+
+.book-preview h1 {
+	position: relative;
+}
+
+.book-preview header h1:after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 1.2rem;
+	background-color: var(--primary-light);
+	bottom: .4rem;
+	z-index: -1;
+}
+
+.book-preview h4 {
+	text-align: right;
+}
+
+.book-preview header h5 {
+	font-family: Poppins;
+	color: var(--gray-dark);
+}
+
+.book-preview header h1 {
+	font-style: italic;
+}
+
+.book-preview figure {
+	width: 100%;
+	max-width: 56rem;
+	margin-left: 8rem;
+}
 .speaking-section {
 	display: flex;
 	justify-content: space-between;
@@ -441,6 +493,19 @@
 
 	.books-teal {
 		background-image: url('../images/willandalmabg-vertical.jpg');
+	}
+
+	.book-preview {
+		flex-direction: column;
+		padding: 9.6rem 0;
+	}
+
+	.book-preview__text {
+		margin-bottom: 4rem;
+	}
+
+	.book-preview figure {
+		margin-left: 0;
 	}
 }
 

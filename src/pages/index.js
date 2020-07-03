@@ -213,8 +213,31 @@ const Home = ({ location }) => {
 				</div>
 			</Section>
 			<Divider angle />
+			<Section color='var(--white)' angle='top'>
+				<div className='book-preview'>
+					<header className='book-preview__text'>
+						<div>
+							<h5>Coming Soon!</h5>
+							<h1>
+								Making<br />&nbsp;Mistakes
+							</h1>
+							<h4>2020</h4>
+						</div>
+					</header>
 
-			<Section color='lightGray' angle='top' paper>
+					<figure>
+						<Image
+							fluid={indexData.mMCover.childImageSharp.fluid}
+							alt='Alma crying'
+							boxShadow='default'
+							className='features__img'
+						/>
+					</figure>
+				</div>
+			</Section>
+
+			<Divider />
+			<Section color='lightGray' paper>
 				<div className='speaking-section'>
 					<div className='speaking-section__left'>
 						<h2>Speaking</h2>
@@ -316,6 +339,13 @@ const indexQuery = graphql`
 		jlahCover: file(
 			relativePath: { eq: "just-like-a-hero-book-cover.jpg" }
 		) {
+			childImageSharp {
+				fluid {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
+		mMCover: file(relativePath: { eq: "making-mistakes-book-cover.jpg" }) {
 			childImageSharp {
 				fluid {
 					...GatsbyImageSharpFluid_withWebp
