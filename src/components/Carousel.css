@@ -30,7 +30,7 @@
 .carousel__larrow,
 .carousel__rarrow {
 	display: flex;
-	width: 3.2rem;
+	width: 2.4rem;
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;

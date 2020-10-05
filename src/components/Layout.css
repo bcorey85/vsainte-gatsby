@@ -181,7 +181,7 @@ ul li::before {
 	}
 
 	h5 {
-		font-size: 1.4rem;
+		font-size: 1.2rem;
 	}
 }
 
@@ -210,7 +210,18 @@ ul li::before {
 }
 
 @media only screen and (max-width: 37.5em) {
+	body {
+		font-size: 1.6rem;
+		line-height: 2.8rem;
+	}
+
 	h1.page-title {
 		margin: 4rem 0;
+	}
+
+	h4 {
+		font-size: 2.2rem;
+		line-height: 2.8rem;
+		margin-bottom: .8rem;
 	}
 }
