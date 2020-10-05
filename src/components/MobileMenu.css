@@ -7,7 +7,6 @@
 
 .mobile-menu__links {
 	background-color: var(--primary-light);
-	background-image: url('../images/teal-paper-bg.jpg');
 	display: flex;
 	flex-direction: column;
 	align-items: center;
