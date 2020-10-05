@@ -41,7 +41,7 @@
 .hero-section__cta-text {
 	margin-bottom: 4rem;
 	font-size: 2rem;
-	line-height: 3.6rem;
+	line-height: 3.2rem;
 	max-width: 56rem;
 	animation: floatUp .8s ease-out;
 	animation-delay: .3s;
@@ -49,7 +49,7 @@
 }
 
 .details-section {
-	padding: 18rem 0 16rem 0;
+	padding: 16rem 0 12rem 0;
 }
 
 .features__item {
@@ -58,7 +58,7 @@
 }
 
 .features__item:not(:last-of-type) {
-	margin-bottom: 10.4rem;
+	margin-bottom: 8rem;
 }
 
 .features__item-text {
@@ -113,7 +113,7 @@
 }
 
 .testimonials {
-	padding: 14.4rem 0 0 0;
+	padding-top: 12rem;
 }
 
 .books-section {
@@ -186,7 +186,7 @@
 .speaking-section {
 	display: flex;
 	justify-content: space-between;
-	padding: 14rem 0 14rem 0;
+	padding: 12rem 0;
 }
 
 .speaking-section__left {
@@ -214,7 +214,7 @@
 }
 
 .about-section {
-	padding: 18rem 0 14rem 0;
+	padding: 12rem 0 10.4rem 0;
 	display: flex;
 	justify-content: space-between;
 }
@@ -330,11 +330,7 @@
 	}
 
 	.details-section {
-		padding: 12rem 0 4.8rem 0;
-	}
-
-	.features {
-		margin-bottom: 7.2rem;
+		padding: 10.4rem 0 8rem 0;
 	}
 
 	.features__item-text {
@@ -360,7 +356,7 @@
 	}
 
 	.speaking-section {
-		padding: 12rem 0;
+		padding: 8rem 0;
 		flex-direction: column-reverse;
 		align-items: center;
 		justify-content: center;
@@ -395,7 +391,7 @@
 	}
 
 	.about-section {
-		padding: 12rem 0;
+		padding: 8rem 0;
 		flex-direction: column;
 		align-items: center;
 	}

@@ -1,6 +1,5 @@
 .header {
 	background-color: var(--primary-light);
-	background-image: url('../images/teal-paper-bg.jpg');
 }
 
 .header__container {

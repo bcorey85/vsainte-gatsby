@@ -1,14 +1,14 @@
 :root {
-	--primary-light: hsl(175, 50%, 80%);
+	--primary-light: hsl(175, 45%, 75%);
 	--primary-dark: hsl(175, 73%, 30%);
 	--red: hsl(0, 65%, 55%);
 	--yellow: hsl(48, 85%, 80%);
 	--gray-light: hsl(175, 5%, 95%);
-	--gray-medium: hsl(175, 5%, 80%);
-	--gray-dark: hsl(175, 5%, 45%);
-	--gray-dark-2: hsl(175, 5%, 60%);
-	--black: hsl(175, 5%, 30%);
-	--black-2: hsl(175, 5%, 40%);
+	--gray-medium: hsl(175, 5%, 75%);
+	--gray-dark: hsl(175, 5%, 35%);
+	--gray-dark-2: hsl(175, 5%, 45%);
+	--black: hsl(175, 5%, 25%);
+	--black-2: hsl(175, 5%, 30%);
 	--white: hsl(0, 0%, 100%);
 }
 
@@ -134,6 +134,7 @@ a,
 	transition: all .2s;
 }
 .link-caps {
+	font-size: 1.6rem;
 	font-weight: 500;
 	text-transform: uppercase;
 	letter-spacing: .02rem;
