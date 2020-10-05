@@ -6,7 +6,8 @@ module.exports = {
 	},
 	plugins: [
 		`gatsby-plugin-netlify-cms`,
-		`gatsby-plugin-netlify,``gatsby-transformer-sharp`,
+		`gatsby-plugin-netlify`,
+		`gatsby-transformer-sharp`,
 		{
 			resolve: `gatsby-transformer-remark`,
 			options: {
