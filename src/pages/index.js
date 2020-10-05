@@ -15,6 +15,8 @@ import Thumbnail from '../components/Thumbnail';
 import SEO from '../components/Seo';
 import Divider from '../components/shared/Divider';
 
+import heroImage from '../images/it-will-be-okay-book-cta-section.jpg';
+
 import './index.css';
 
 const Home = ({ location }) => {
@@ -56,8 +58,8 @@ const Home = ({ location }) => {
 						</Button>
 					</div>
 					<div className='hero-section__right'>
-						<Image
-							fluid={indexData.cta.childImageSharp.fluid}
+						<img
+							src={heroImage}
 							alt='It Will Be Okay book cover'
 							className='hero-section__img'
 						/>
