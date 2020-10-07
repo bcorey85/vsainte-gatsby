@@ -102,7 +102,7 @@ module.exports = {
 			resolve: `gatsby-plugin-google-fonts`,
 			options: {
 				fonts: [
-					`poppins\:400,400i,500`,
+					`poppins\:400,400i,500, 500i`,
 					`solway\:500` // you can also specify font weights and styles
 				],
 				display: 'swap'
@@ -114,21 +114,6 @@ module.exports = {
 			options: {
 				// replace "UA-XXXXXXXXX-X" with your own Tracking ID
 				trackingId: 'UA-138324334-1'
-			}
-		},
-		{
-			resolve: 'gatsby-plugin-google-tagmanager',
-			options: {
-				id: 'GTM-KMLZ9ZD',
-
-				// Include GTM in development.
-				// Defaults to false meaning GTM will only be loaded in production.
-				includeInDevelopment: false,
-
-				// datalayer to be set before GTM is loaded
-				// should be an object or a function that is executed in the browser
-				// Defaults to null
-				defaultDataLayer: { platform: 'gatsby' }
 			}
 		}
 	]
