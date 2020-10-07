@@ -35,7 +35,7 @@ const Footer = () => {
 
 						<div className='footer__bc'>
 							<a
-								href='mailto:bcorey85@gmail.com'
+								href='https://www.bcdev.co/'
 								className='footer__link'>
 								<img
 									className='footer__bc-svg'
