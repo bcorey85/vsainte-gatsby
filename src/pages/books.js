@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 
 import useScrollToTop from '../hooks/useScrollToTop';
@@ -10,15 +9,13 @@ import Section from '../components/shared/Section';
 
 import './books.css';
 
-const Books = ({ location }) => {
+const Books = () => {
 	useScrollToTop();
 	const booksData = useStaticQuery(imageQuery);
-	console.log(booksData);
 
 	return (
 		<React.Fragment>
 			<SEO title='Books' />
-
 			<Section>
 				<div className='books'>
 					<h1 className='page-title'>Books by Vladimir Sainte</h1>

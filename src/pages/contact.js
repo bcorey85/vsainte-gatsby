@@ -8,7 +8,7 @@ import SEO from '../components/Layout/Seo';
 
 import './contact.css';
 
-const Contact = ({ location }) => {
+const Contact = () => {
 	useScrollToTop();
 	return (
 		<React.Fragment>

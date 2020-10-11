@@ -2,11 +2,11 @@
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	margin-left: -3.2rem;
+	margin-left: 0rem;
 }
 
 .main-nav li {
-	margin-left: 3.2rem;
+	margin-left: 2.4rem;
 }
 
 .main-nav ul li::before {

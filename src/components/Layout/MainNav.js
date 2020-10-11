@@ -34,6 +34,16 @@ const MainNav = props => {
 				</li>
 				<li>
 					<Link
+						to='/merch'
+						className='main-nav__link'
+						activeClassName={`${location}Active`}
+						onClick={onClick}
+						onKeyDown={onKeyDown}>
+						Merch
+					</Link>
+				</li>
+				<li>
+					<Link
 						to='/speaking'
 						className='main-nav__link'
 						activeClassName={`${location}Active`}

@@ -9,7 +9,7 @@ import EventListing from '../components/Events/EventListing';
 
 import './speaking.css';
 
-const Speaking = ({ location }) => {
+const Speaking = () => {
 	useScrollToTop();
 	const eventsData = useStaticQuery(eventsQuery);
 	const eventsArray = eventsData.events.edges;
