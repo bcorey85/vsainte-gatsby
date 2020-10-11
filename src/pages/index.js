@@ -46,10 +46,9 @@ const Home = () => {
 						</div>
 
 						<p className='hero-section__cta-text'>
-							Join Zaid on his superhero adventure as he learns to
-							calm his body, focus his attention powers, and
-							overcome his mistakes in this superhero book for
-							children of all ages.
+							Join Zaid as he learns to calm his body, focus his
+							attention powers, and overcome his mistakes in this
+							superhero adventure book for children of all ages.
 						</p>
 						<Button
 							href='https://www.amazon.com/Making-Mistakes-Just-Like-Hero/dp/1942005571/ref=sr_1_1?dchild=1&keywords=making+mistakes+vladimir+sainte&qid=1602393034&sr=8-1'
