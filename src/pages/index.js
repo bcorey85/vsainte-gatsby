@@ -49,7 +49,7 @@ const Home = () => {
 							Join Zaid on his superhero adventure as he learns to
 							calm his body, focus his attention powers, and
 							overcome his mistakes in this superhero book for
-							kids.
+							children of all ages.
 						</p>
 						<Button
 							href='https://www.amazon.com/Making-Mistakes-Just-Like-Hero/dp/1942005571/ref=sr_1_1?dchild=1&keywords=making+mistakes+vladimir+sainte&qid=1602393034&sr=8-1'
@@ -100,10 +100,10 @@ const Home = () => {
 								<div>
 									<h2>His Speed</h2>
 									<p>
-										Zaid has a hard time slowing down, and
-										often forgets to follow the rules at
-										school. Can he actually learn from his
-										mistakes?
+										Zaid's speed makes it hard for him to
+										focus and he often forgets to follow the
+										rules at school. Can he actually learn
+										from his mistakes?
 									</p>
 								</div>
 							</div>
