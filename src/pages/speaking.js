@@ -3,9 +3,9 @@ import { Link, graphql, useStaticQuery } from 'gatsby';
 import useScrollToTop from '../hooks/useScrollToTop';
 
 import Section from '../components/shared/Section';
-import Carousel from '../components/Carousel';
-import SEO from '../components/Seo';
-import EventListing from '../components/EventListing';
+import Carousel from '../components/shared/Carousel';
+import SEO from '../components/Layout/Seo';
+import EventListing from '../components/Events/EventListing';
 
 import './speaking.css';
 

@@ -4,7 +4,7 @@ import useScrollToTop from '../hooks/useScrollToTop';
 import Section from '../components/shared/Section';
 import Input from '../components/shared/Input';
 import Button from '../components/shared/Button';
-import SEO from '../components/Seo';
+import SEO from '../components/Layout/Seo';
 
 import './contact.css';
 

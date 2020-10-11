@@ -20,6 +20,11 @@
 	animation: floatUp .8s ease-out;
 	animation-delay: .4s;
 	animation-fill-mode: backwards;
+	float: right;
+}
+
+.hero-section__left {
+	z-index: 2;
 }
 
 .hero-section__right {
@@ -42,7 +47,7 @@
 	margin-bottom: 4rem;
 	font-size: 2rem;
 	line-height: 3.2rem;
-	max-width: 56rem;
+	max-width: 52rem;
 	animation: floatUp .8s ease-out;
 	animation-delay: .3s;
 	animation-fill-mode: backwards;
@@ -277,10 +282,6 @@
 		max-width: 48rem;
 	}
 
-	.hero-section__cta-text {
-		max-width: 48rem;
-	}
-
 	.hero-section__left h1 {
 		font-size: 5.6rem;
 		margin-bottom: 1.6rem;
@@ -290,8 +291,37 @@
 
 /* 1024px */
 @media only screen and (max-width: 64em) {
+	.hero-section__left {
+		margin-right: 2.4rem;
+	}
+
+	.hero-section__left h1 {
+		font-size: 4.8rem;
+		margin-bottom: 1.6rem;
+		white-space: nowrap;
+	}
+
+	.hero-section__cta-text {
+		font-size: 1.8rem;
+		max-width: 44rem;
+	}
+
 	.hero-section__hero-container {
 		right: 10%;
+	}
+
+	.features__item-text {
+		font-size: 1.8rem;
+		flex: 0 0 44rem;
+	}
+
+	.features__item-text h2 {
+		font-size: 3.6rem;
+		line-height: 3.6rem;
+	}
+
+	.books-section .card:not(:last-of-type) {
+		margin-right: 2.4rem;
 	}
 }
 
@@ -331,7 +361,6 @@
 
 	.hero-section__cta-text {
 		margin-bottom: 4.8rem;
-		font-size: 2rem;
 	}
 
 	.details-section {
@@ -340,7 +369,6 @@
 
 	.features__item-text {
 		flex: 0 1 49.6rem;
-		font-size: 2rem;
 	}
 
 	.features__item-text h2::after {
@@ -354,10 +382,6 @@
 
 	.books-section {
 		background-size: cover;
-	}
-
-	.books-section .card:not(:last-of-type) {
-		margin-right: 3.2rem;
 	}
 
 	.speaking-section {
@@ -452,6 +476,7 @@
 		flex: 0 0 auto;
 		width: 100%;
 		max-width: 44.8rem;
+		font-size: 1.6rem;
 	}
 
 	.features__item-image {
@@ -470,7 +495,7 @@
 
 	.features__item:not(:last-of-type) {
 		margin-right: 0;
-		margin-bottom: 4.8rem;
+		margin-bottom: 8rem;
 	}
 
 	.details-section__subheading {

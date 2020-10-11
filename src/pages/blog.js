@@ -1,13 +1,12 @@
 import React, { useContext } from 'react';
 
-import useScrollToTop from '../hooks/useScrollToTop';
-
 import Section from '../components/shared/Section';
-import BlogPostList from '../components/BlogPostList';
-import BlogNavigation from '../components/BlogNavigation';
-import SEO from '../components/Seo';
-import { BlogContext } from '../contexts/BlogContext';
+import BlogPostList from '../components/Blog/BlogPostList';
+import BlogNavigation from '../components/Blog/BlogNavigation';
+import SEO from '../components/Layout/Seo';
 
+import useScrollToTop from '../hooks/useScrollToTop';
+import { BlogContext } from '../contexts/BlogContext';
 import './blog.css';
 
 const Blog = () => {

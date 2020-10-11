@@ -2,9 +2,9 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import Section from '../components/shared/Section';
-import BlogPostList from '../components/BlogPostList';
-import BlogNavigation from '../components/BlogNavigation';
-import SEO from '../components/Seo';
+import BlogPostList from '../components/Blog/BlogPostList';
+import BlogNavigation from '../components/Blog/BlogNavigation';
+import SEO from '../components/Layout/Seo';
 
 import '../pages/blog.css';
 

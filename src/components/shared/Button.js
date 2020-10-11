@@ -27,8 +27,8 @@ const Button = props => {
 	};
 
 	const paddings = {
-		default: '1.2rem 4.8rem',
-		tight: '.8rem 1.6rem'
+		default: '0 4.8rem',
+		tight: '0 1.6rem'
 	};
 
 	const margins = {

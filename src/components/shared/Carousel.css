@@ -1,0 +1,109 @@
+.carousel {
+	width: 100%;
+	max-width: 80rem;
+	margin: auto;
+}
+
+.carousel__banner {
+	background-color: var(--yellow);
+	height: 1.2rem;
+	display: flex;
+	padding: 0 .8rem;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 4.8rem;
+	position: relative;
+}
+
+.carousel__banner h3 {
+	margin-top: -.8rem;
+}
+
+.carousel__content {
+	display: flex;
+	justify-content: space-between;
+	min-height: 32rem;
+	max-width: 80rem;
+	margin: 0 auto;
+}
+
+.carousel__larrow,
+.carousel__rarrow {
+	display: flex;
+	width: 2.4rem;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+.carousel__larrow {
+	margin-right: .8rem;
+}
+
+.carousel__rarrow {
+	margin-left: .8rem;
+}
+.carousel__icon {
+	height: 3.2rem;
+	width: 3.2rem;
+	background-color: transparent;
+	border: none;
+	font-size: 2.4rem;
+	outline: none;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.carousel__icon:hover {
+	color: var(--primary-dark);
+}
+
+.carousel__larrow .carousel__icon {
+	text-align: left;
+}
+
+.carousel__rarrow .carousel__icon {
+	text-align: right;
+}
+
+.carousel__body-text {
+	width: 100%;
+	max-width: 60rem;
+	display: flex;
+}
+
+.carousel__body-photos {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.carousel__body-text::selection,
+.carousel__body-photos::selection {
+	background-color: transparent;
+}
+
+.carousel__photo {
+	width: 100%;
+	max-width: 48rem;
+	height: 32rem;
+}
+
+.carousel__photo img {
+	object-fit: cover;
+	max-height: 32rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+	.carousel__banner h3 {
+		margin-top: -1.2rem;
+	}
+}
+
+@media only screen and (max-width: 37.5em) {
+	.carousel__banner h3 {
+		margin: auto;
+		margin-top: -1.8rem;
+	}
+}

@@ -4,7 +4,7 @@ import useScrollToTop from '../hooks/useScrollToTop';
 
 import Image from '../components/shared/Image';
 import Section from '../components/shared/Section';
-import SEO from '../components/Seo';
+import SEO from '../components/Layout/Seo';
 
 import './about.css';
 
