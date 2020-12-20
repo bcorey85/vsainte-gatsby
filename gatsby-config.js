@@ -25,6 +25,13 @@ module.exports = {
 							// base for generating different widths of each image.
 							maxWidth: 536
 						}
+					},
+					{
+						resolve: 'gatsby-remark-instagram-embed',
+						options: {
+							width: 320,
+							height: 320
+						}
 					}
 				]
 			}
@@ -108,7 +115,6 @@ module.exports = {
 				display: 'swap'
 			}
 		},
-
 		{
 			resolve: `gatsby-plugin-google-analytics`,
 			options: {

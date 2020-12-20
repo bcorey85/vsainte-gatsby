@@ -89,6 +89,15 @@ const Books = () => {
 						<Link to='/contact' className='link'>
 							comment
 						</Link>!
+						<div className='igvideo-wrapper'>
+							<iframe
+								src='https://www.instagram.com/p/CIjJ9j2gwDT/embed'
+								frameBorder='0'
+								allowFullScreen
+								scrolling='no'
+								allowtransparency='true'
+							/>
+						</div>
 					</div>
 				</div>
 			</Section>

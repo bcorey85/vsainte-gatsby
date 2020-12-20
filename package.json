@@ -21,6 +21,7 @@
 		"gatsby-plugin-react-helmet": "^3.3.13",
 		"gatsby-plugin-sharp": "^2.6.39",
 		"gatsby-remark-images": "^3.3.33",
+		"gatsby-remark-instagram-embed": "^1.0.0",
 		"gatsby-remark-relative-images": "^0.2.3",
 		"gatsby-source-filesystem": "^2.3.33",
 		"gatsby-transformer-remark": "^2.8.38",
