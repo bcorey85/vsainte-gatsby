@@ -10,4 +10,4 @@ I was fortunate and blessed on having the opportunity to present with my dear fr
 
 If you are looking for a free training on Race and Resilience, than you have come to the right place. 
 
-Just click on the link address below and enter the following access passcode **\[6W.TY6cU]**
+Just click on the Race and Resilience title below and enter the following access passcode **\[6W.TY6cU]**
