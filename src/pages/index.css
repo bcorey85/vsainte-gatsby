@@ -6,20 +6,20 @@
 }
 
 .hero-section__left h1 {
-	animation: floatUp .8s ease-out;
+	/* animation: floatUp .8s ease-out;
 	animation-delay: .2s;
-	animation-fill-mode: backwards;
+	animation-fill-mode: backwards; */
 	font-style: italic;
 }
 
 .hero-section__left h5 {
-	animation: floatUp .8s ease-out;
+	/* animation: floatUp .8s ease-out; */
 }
 
 .hero-section__left a {
-	animation: floatUp .8s ease-out;
+	/* animation: floatUp .8s ease-out;
 	animation-delay: .4s;
-	animation-fill-mode: backwards;
+	animation-fill-mode: backwards; */
 	float: right;
 }
 
@@ -37,9 +37,9 @@
 .hero-section__img {
 	width: 100%;
 	height: auto;
-	animation: floatUp .8s ease-out;
+	/* animation: floatUp .8s ease-out;
 	animation-delay: .5s;
-	animation-fill-mode: backwards;
+	animation-fill-mode: backwards; */
 	margin-top: -4rem;
 }
 
@@ -48,9 +48,9 @@
 	font-size: 2rem;
 	line-height: 3.2rem;
 	max-width: 52rem;
-	animation: floatUp .8s ease-out;
+	/* animation: floatUp .8s ease-out;
 	animation-delay: .3s;
-	animation-fill-mode: backwards;
+	animation-fill-mode: backwards; */
 }
 
 .details-section {
