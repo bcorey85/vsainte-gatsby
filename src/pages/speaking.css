@@ -2,20 +2,6 @@
 	padding-bottom: 12rem;
 }
 
-.speaking__content {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-
-	grid-gap: 7.2rem;
-}
-
-.speaking__content iframe {
-	height: 30.4rem;
-	width: 100%;
-	border-radius: .4rem;
-	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
-}
-
 .event-photos {
 	margin: 16rem 0;
 }

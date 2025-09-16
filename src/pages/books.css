@@ -6,26 +6,3 @@
 	margin-top: 12rem;
 	text-align: center;
 }
-
-.igvideo-wrapper {
-	overflow: hidden;
-	margin-top: 4rem;
-}
-
-.igvideo-wrapper iframe {
-	height: 50rem;
-	width: 100%;
-	max-width: 52rem;
-}
-
-@media only screen and (max-width: 30em) {
-	.igvideo-wrapper iframe {
-		height: 45rem;
-	}
-}
-
-@media only screen and (max-width: 25em) {
-	.igvideo-wrapper iframe {
-		height: 40rem;
-	}
-}

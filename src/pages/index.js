@@ -1,8 +1,5 @@
 import React from 'react';
-import { Link, useStaticQuery, graphql } from 'gatsby';
-import { faPencilAlt } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import ReactHtmlParser from 'react-html-parser';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import useScrollToTop from '../hooks/useScrollToTop';
 
@@ -11,11 +8,8 @@ import Image from '../components/shared/Image';
 import Section from '../components/shared/Section';
 import Carousel from '../components/shared/Carousel';
 import Card from '../components/Landing/Card';
-import Thumbnail from '../components/Landing/Thumbnail';
 import SEO from '../components/Layout/Seo';
 import Divider from '../components/shared/Divider';
-
-import heroImage from '../images/mm-cta.jpg';
 
 import './index.css';
 
@@ -23,172 +17,55 @@ const Home = () => {
 	useScrollToTop();
 	const indexData = useStaticQuery(indexQuery);
 
-	const renderBlogTitles = () => {
-		const titles = indexData.blogPostTitles.nodes.map((post, i) => (
-			<li key={post.id}>
-				<Link to={post.fields.path} className='link'>
-					{ReactHtmlParser(post.frontmatter.title)}
-				</Link>
-			</li>
-		));
-		return titles;
-	};
-
 	return (
 		<React.Fragment>
 			<SEO title='Home' />
 			<Section color='white' margin='0 0 2vw 0' className='fullvh' wide>
 				<div className='hero-section'>
 					<div className='hero-section__left'>
-						<div>
-							<h5>new release</h5>
-							<h1>Making Mistakes</h1>
-						</div>
-
+						<h1 className='hero-section__title'>About Vladimir</h1>
 						<p className='hero-section__cta-text'>
-							Join Zaid as he learns to calm his body, focus his
-							attention powers, and overcome his mistakes in this
-							superhero adventure book for children of all ages.
+							I've been working as a licensed clinical social worker in the Kansas City area for over 15+ years. In 2022, I won Best Local Author by The Pitch magazine for his ongoing work to educate young children about emotional literacy. My mission is to create inclusive literature to increase resiliency and a sense of worth in children.
 						</p>
-						<Button
-							href='https://www.amazon.com/Making-Mistakes-Just-Like-Hero/dp/1942005571/ref=sr_1_1?dchild=1&keywords=making+mistakes+vladimir+sainte&qid=1602393034&sr=8-1'
-							color='cta'
-							margin='none'>
-							Buy Now
-						</Button>
+						<div className='hero-section__btn'>
+							<Button to='/about' margin='none'>
+								Learn More
+							</Button>
+						</div>
 					</div>
 					<div className='hero-section__right'>
-						<img
-							src={heroImage}
-							alt='It Will Be Okay book cover'
+						<Image
+							fluid={indexData.headshot.childImageSharp.fluid}
+							boxShadow='default'
 							className='hero-section__img'
+							alt='Vladimir Sainte'
 						/>
 					</div>
 				</div>
 			</Section>
 			<Divider angle />
-			<Section color='lightGray' paper angle='top' padding='1.5vw 0' wide>
-				<div className='details-section'>
-					<div className='features'>
-						<div className='features__item'>
-							<div className='features__item-text'>
-								<div>
-									<h2>Meet Zaid</h2>
-									<p>
-										Zaid is a young boy who struggles with
-										slowing down and makes many mistakes in
-										the process. Other kids bully Zaid at
-										school because he is different.
-									</p>
-								</div>
-							</div>
-							<div className='features__item-image'>
-								<Image
-									fluid={
-										indexData.mmzaidspeed.childImageSharp
-											.fluid
-									}
-									alt='Image of Zaid running fast from Making Mistakes book'
-									boxShadow='default'
-									className='features__img'
-								/>
-							</div>
-						</div>
-						<div className='features__item features__item--reverse'>
-							<div className='features__item-text'>
-								<div>
-									<h2>His Speed</h2>
-									<p>
-										Zaid's speed makes it hard for him to
-										focus and he often forgets to follow the
-										rules at school. Can he actually learn
-										from his mistakes?
-									</p>
-								</div>
-							</div>
-							<div className='features__item-image'>
-								<Image
-									fluid={
-										indexData.mmzaidrules.childImageSharp
-											.fluid
-									}
-									alt='Image of Zaid getting bullied and running away from Making Mistakes book'
-									boxShadow='default'
-									className='features__img'
-								/>
-							</div>
-						</div>
-						<div className='features__item'>
-							<div className='features__item-text'>
-								<div>
-									<h2>The Inner Strength Organizer</h2>
-									<p>
-										After receiving help from Dr. Grey, Zaid
-										is given the Inner Strength organizer!
-										With the help of the ISO watch, Zaid is
-										able to master his power, and feel
-										confident in the process!
-									</p>
-								</div>
-							</div>
-							<div className='features__item-image'>
-								<Image
-									fluid={
-										indexData.mminnerstrength
-											.childImageSharp.fluid
-									}
-									alt='Image of the Inner Strength organizer from Making Mistakes book'
-									boxShadow='default'
-									className='features__img'
-								/>
-							</div>
-						</div>
-						<div className='features__item features__item--reverse'>
-							<div className='features__item-text'>
-								<div>
-									<h2>
-										Help Your Child<br /> Manage Big
-										Feelings
-									</h2>
-
-									<p>
-										In 12 years of experience as a child and
-										family therapist, I have learned how to
-										write fun children's books that boost
-										self-regulation skills and teach new
-										ways of managing emotions.
-									</p>
-									<p>
-										<em>Making Mistakes</em> is a great tool
-										for helping to support the emotions of
-										children in a way that's meaningful to
-										them.
-									</p>
-								</div>
-							</div>
-							<div className='features__item-image'>
-								<Image
-									fluid={
-										indexData.mmzaidsad.childImageSharp
-											.fluid
-									}
-									alt='Image of Zaid getting in trouble at school from Making Mistakes book'
-									boxShadow='default'
-									className='features__img'
-								/>
-							</div>
-						</div>
-					</div>
-				</div>
-			</Section>
-			<Divider />
-			<Section angle='bottom'>
+			<Section color='lightGray' paper angle='top' padding='1.5vw 0' wide>		
 				<div className='testimonials'>
 					<Carousel
 						title='What Others Say'
 						data={indexData.testimonials.nodes}
 						dataType='text'
 					/>
+				</div>
+			</Section>
+			<Divider />
+			<Section angle='bottom'>
+				<div className='details-section'>
+					<div className='igvideo-wrapper'>
+						<iframe
+							src='https://www.instagram.com/p/CIjJ9j2gwDT/embed'
+							frameBorder='0'
+							allowFullScreen
+							scrolling='no'
+							allowtransparency='true'
+							title='Instagram video'
+						/>
+					</div>
 				</div>
 			</Section>
 			<Divider angle />
@@ -201,8 +78,16 @@ const Home = () => {
 					<Card
 						href='https://www.amazon.com/Making-Mistakes-Just-Like-Hero/dp/1942005571/ref=sr_1_1?dchild=1&keywords=making+mistakes+vladimir+sainte&qid=1602393034&sr=8-1'
 						imgSrcFluid={indexData.mmCover.childImageSharp.fluid}
+						imgAlt={'Waves of Hurt'}
+						btnColor={'default'}
+						btnText={'Buy Now'}
+						boxShadow={'default'}
+					/>
+					<Card
+						href='https://www.amazon.com/Making-Mistakes-Just-Like-Hero/dp/1942005571/ref=sr_1_1?dchild=1&keywords=making+mistakes+vladimir+sainte&qid=1602393034&sr=8-1'
+						imgSrcFluid={indexData.mmCover.childImageSharp.fluid}
 						imgAlt={'Making Mistakes'}
-						btnColor={'cta'}
+						btnColor={'default'}
 						btnText={'Buy Now'}
 						boxShadow={'default'}
 					/>
@@ -225,7 +110,6 @@ const Home = () => {
 				</div>
 			</Section>
 			<Divider angle />
-
 			<Section color='lightGray' paper angle='top'>
 				<div className='speaking-section'>
 					<div className='speaking-section__left'>
@@ -246,56 +130,11 @@ const Home = () => {
 						<iframe
 							title='Vladimir Sainte KCPT Kids'
 							className='speaking-section__video lazyload'
-							src='https://www.youtube-nocookie.com/embed/FW5XFBPEh9Q'
+							src='https://www.youtube.com/embed/FW5XFBPEh9Q?si=TXsuZK2szjd800i3'
 							frameBorder='0'
 							allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
 							allowFullScreen
 						/>
-					</div>
-				</div>
-			</Section>
-			<Divider />
-			<Section color='var(--white)'>
-				<div className='about-section'>
-					<div className='about-section__left'>
-						<div className='about-section__header'>
-							<h3>About Vladimir</h3>
-							<Thumbnail
-								fluid={indexData.headshot.childImageSharp.fluid}
-								alt='Vladimir Sainte'
-							/>
-						</div>
-
-						<div className='about-section__content'>
-							I've been working as a licensed clinical social
-							worker in the Kansas City area for the last ten
-							years. My mission is to create inclusive literature
-							to increase resiliency and a sense of worth in
-							children.
-						</div>
-						<div className='about-section__link'>
-							<Link to='/about' className='link-caps'>
-								View About
-							</Link>
-						</div>
-					</div>
-					<div className='about-section__right'>
-						<div className='about-section__header'>
-							<h3>Recent Blog Posts</h3>
-							<FontAwesomeIcon
-								icon={faPencilAlt}
-								className='about-section__header-icon'
-							/>
-						</div>
-
-						<ul className='about-section__content'>
-							{renderBlogTitles()}
-						</ul>
-						<div className='about-section__link'>
-							<Link to='/blog' className='link-caps'>
-								Read Blog
-							</Link>
-						</div>
 					</div>
 				</div>
 			</Section>
@@ -369,7 +208,7 @@ const indexQuery = graphql`
 				}
 			}
 		}
-		headshot: file(relativePath: { eq: "vladimir-sainte-headshot.jpg" }) {
+		headshot: file(relativePath: { eq: "vladimir-sainte.jpg" }) {
 			childImageSharp {
 				fluid {
 					...GatsbyImageSharpFluid_withWebp
@@ -387,21 +226,6 @@ const indexQuery = graphql`
 				}
 				html
 				id
-			}
-		}
-		blogPostTitles: allMarkdownRemark(
-			filter: { frontmatter: { type: { eq: "blog-post" } } }
-			limit: 4
-			sort: { fields: frontmatter___date, order: DESC }
-		) {
-			nodes {
-				frontmatter {
-					title
-				}
-				id
-				fields {
-					path
-				}
 			}
 		}
 	}
