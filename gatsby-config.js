@@ -1,12 +1,17 @@
+const adapter = require("gatsby-adapter-netlify").default
+
 module.exports = {
 	siteMetadata: {
 		title: `Vladimir Sainte, LCSW| Author of the Just Like a Hero series`,
 		description: `Website of Vladimir Sainte, LCSW. Author and illustrator of children's books about finding inner strength and becoming a superhero.`,
 		author: `Vladimir Sainte`
 	},
+	adapter: adapter({
+		excludeDatastoreFromEngineFunction: false,
+		imageCDN: false,
+	}),
 	plugins: [
 		`gatsby-plugin-image`,
-		`gatsby-plugin-netlify`,
 		`gatsby-transformer-sharp`,
 		{
 			resolve: `gatsby-transformer-remark`,
