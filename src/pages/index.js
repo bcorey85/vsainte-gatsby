@@ -4,12 +4,12 @@ import { useStaticQuery, graphql } from 'gatsby';
 import useScrollToTop from '../hooks/useScrollToTop';
 
 import Button from '../components/shared/Button';
+import Card from '../components/Landing/Card';
+import Carousel from '../components/shared/Carousel';
+import Divider from '../components/shared/Divider';
 import Image from '../components/shared/Image';
 import Section from '../components/shared/Section';
-import Carousel from '../components/shared/Carousel';
-import Card from '../components/Landing/Card';
-import SEO from '../components/Layout/Seo';
-import Divider from '../components/shared/Divider';
+import Seo from '../components/Layout/Seo';
 
 import './index.css';
 
@@ -19,7 +19,7 @@ const Home = () => {
 
 	return (
 		<React.Fragment>
-			<SEO title='Home' />
+			<Seo title='Home' />
 			<Section color='white' margin='0 0 2vw 0' className='fullvh' wide>
 				<div className='hero-section'>
 					<div className='hero-section__left'>
@@ -35,7 +35,7 @@ const Home = () => {
 					</div>
 					<div className='hero-section__right'>
 						<Image
-							fluid={indexData.headshot.childImageSharp.fluid}
+							image={indexData.headshot.childImageSharp.gatsbyImageData}
 							boxShadow='default'
 							className='hero-section__img'
 							alt='Vladimir Sainte'
@@ -77,7 +77,7 @@ const Home = () => {
 				<div className='books-section'>
 					<Card
 						href='https://www.amazon.com/Waves-Hurt-Vladimir-Sainte/dp/B0BY3RJJK1/?_encoding=UTF8&pd_rd_w=Kc5KC&content-id=amzn1.sym.a7785aa2-ac28-4769-b3eb-cff7b9738627&pf_rd_p=a7785aa2-ac28-4769-b3eb-cff7b9738627&pf_rd_r=139-4296644-6411434&pd_rd_wg=bXwvx&pd_rd_r=d9d97eb5-fcb4-461b-a73a-2a8caa1f0994&ref_=aufs_ap_sc_dsk'
-						imgSrcFluid={indexData.wohCover.childImageSharp.fluid}
+						imgSrc={indexData.wohCover.childImageSharp.gatsbyImageData}
 						imgAlt={'Waves of Hurt'}
 						btnColor={'default'}
 						btnText={'Buy Now'}
@@ -85,7 +85,7 @@ const Home = () => {
 					/>
 					<Card
 						href='https://www.amazon.com/Making-Mistakes-Just-Like-Hero/dp/1942005571/ref=sr_1_1?dchild=1&keywords=making+mistakes+vladimir+sainte&qid=1602393034&sr=8-1'
-						imgSrcFluid={indexData.mmCover.childImageSharp.fluid}
+						imgSrc={indexData.mmCover.childImageSharp.gatsbyImageData}
 						imgAlt={'Making Mistakes'}
 						btnColor={'default'}
 						btnText={'Buy Now'}
@@ -93,7 +93,7 @@ const Home = () => {
 					/>
 					<Card
 						href='https://www.amazon.com/Will-Okay-Just-Like-Hero/dp/1942005520/ref=sr_1_1?crid=2SQ0E2D0Z20WN&keywords=it+will+be+okay+vladimir+sainte&qid=1570911125&sprefix=it+will+be+okay+vladimi%2Caps%2C153&sr=8-1'
-						imgSrcFluid={indexData.iwboCover.childImageSharp.fluid}
+						imgSrc={indexData.iwboCover.childImageSharp.gatsbyImageData}
 						imgAlt={'It Will Be Okay'}
 						btnColor={'default'}
 						btnText={'Buy Now'}
@@ -101,7 +101,7 @@ const Home = () => {
 					/>
 					<Card
 						href='https://www.amazon.com/Just-Like-Hero-Vladimir-Sainte/dp/194200544X/ref=sr_1_1?ie=UTF8&qid=1549147023&sr=8-1&keywords=just+like+a+hero'
-						imgSrcFluid={indexData.jlahCover.childImageSharp.fluid}
+						imgSrc={indexData.jlahCover.childImageSharp.gatsbyImageData}
 						imgAlt={'Just Like A Hero'}
 						btnColor={'default'}
 						btnText={'Buy Now'}
@@ -150,41 +150,51 @@ const indexQuery = graphql`
 			relativePath: { eq: "2025/waves-of-hurt.jpg" }
 		) {
 			childImageSharp {
-				fluid {
-					...GatsbyImageSharpFluid_withWebp
-				}
+				gatsbyImageData(
+					placeholder: BLURRED
+					formats: [AUTO, WEBP, AVIF]
+					quality: 90
+				)
 			}
 		}
 		iwboCover: file(
 			relativePath: { eq: "2025/it-will-be-okay.jpg" }
 		) {
 			childImageSharp {
-				fluid {
-					...GatsbyImageSharpFluid_withWebp
-				}
+				gatsbyImageData(
+					placeholder: BLURRED
+					formats: [AUTO, WEBP, AVIF]
+					quality: 90
+				)
 			}
 		}
 		jlahCover: file(
 			relativePath: { eq: "2025/just-like-a-hero.jpg" }
 		) {
 			childImageSharp {
-				fluid {
-					...GatsbyImageSharpFluid_withWebp
-				}
+				gatsbyImageData(
+					placeholder: BLURRED
+					formats: [AUTO, WEBP, AVIF]
+					quality: 90
+				)
 			}
 		}
 		mmCover: file(relativePath: { eq: "2025/making-mistakes.jpg" }) {
 			childImageSharp {
-				fluid {
-					...GatsbyImageSharpFluid_withWebp
-				}
+				gatsbyImageData(
+					placeholder: BLURRED
+					formats: [AUTO, WEBP, AVIF]
+					quality: 90
+				)
 			}
 		}
 		headshot: file(relativePath: { eq: "vladimir-sainte.jpg" }) {
 			childImageSharp {
-				fluid {
-					...GatsbyImageSharpFluid_withWebp
-				}
+				gatsbyImageData(
+					placeholder: BLURRED
+					formats: [AUTO, WEBP, AVIF]
+					quality: 90
+				)
 			}
 		}
 		testimonials: allMarkdownRemark(

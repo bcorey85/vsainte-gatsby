@@ -2,9 +2,9 @@ import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import useScrollToTop from '../hooks/useScrollToTop';
 
-import Section from '../components/shared/Section';
 import Carousel from '../components/shared/Carousel';
-import SEO from '../components/Layout/Seo';
+import Section from '../components/shared/Section';
+import Seo from '../components/Layout/Seo';
 
 import './speaking.css';
 
@@ -15,7 +15,7 @@ const Speaking = () => {
 
 	return (
 		<React.Fragment>
-			<SEO title='Speaking' />
+			<Seo title='Speaking' />
 			<Section>
 				<div className='speaking'>
 					<h1 className='page-title'>Speaking</h1>
@@ -78,9 +78,12 @@ const eventsQuery = graphql`
 						image_desc
 						image {
 							childImageSharp {
-								fluid(maxWidth: 630) {
-									...GatsbyImageSharpFluid
-								}
+								gatsbyImageData(
+									width: 630
+									placeholder: BLURRED
+									formats: [AUTO, WEBP, AVIF]
+									quality: 90
+								)
 							}
 						}
 					}

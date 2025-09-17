@@ -4,7 +4,7 @@ import useScrollToTop from '../hooks/useScrollToTop';
 
 import Image from '../components/shared/Image';
 import Section from '../components/shared/Section';
-import SEO from '../components/Layout/Seo';
+import Seo from '../components/Layout/Seo';
 
 import './about.css';
 
@@ -12,9 +12,11 @@ const imageQuery = graphql`
 	query AboutImgs {
 		vsainte: file(relativePath: { eq: "vladimir-sainte.jpg" }) {
 			childImageSharp {
-				fluid {
-					...GatsbyImageSharpFluid_withWebp
-				}
+				gatsbyImageData(
+					placeholder: BLURRED
+					formats: [AUTO, WEBP, AVIF]
+					quality: 90
+				)
 			}
 		}
 	}
@@ -25,16 +27,17 @@ const About = ({ location }) => {
 	const booksData = useStaticQuery(imageQuery);
 	return (
 		<React.Fragment>
-			<SEO title='About' />
+			<Seo title='About' />
 			<Section>
 				<div className='about'>
 					<h1 className='page-title'>About</h1>
 					<div className='about__content'>
 						<div className='about__left'>
 							<Image
-								fluid={booksData.vsainte.childImageSharp.fluid}
+								image={booksData.vsainte.childImageSharp.gatsbyImageData}
 								boxShadow='default'
 								className='about__img'
+								alt='Vladimir Sainte'
 							/>
 						</div>
 						<div className='about__right'>

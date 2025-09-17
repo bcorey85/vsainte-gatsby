@@ -4,7 +4,6 @@ import {
 	faChevronRight
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import Testimonial from '../Landing/Testimonial';
 import Image from './Image';
@@ -52,9 +51,9 @@ const Carousel = props => {
 				<React.Fragment>
 					<div className='carousel__photo'>
 						<Image
-							fluid={
+							image={
 								currentItem.node.frontmatter.image
-									.childImageSharp.fluid
+									.childImageSharp.gatsbyImageData
 							}
 							alt={currentItem.node.frontmatter.image_desc}
 							boxShadow='default'

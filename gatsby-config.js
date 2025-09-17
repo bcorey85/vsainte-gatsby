@@ -5,7 +5,7 @@ module.exports = {
 		author: `Vladimir Sainte`
 	},
 	plugins: [
-		`gatsby-plugin-netlify-cms`,
+		`gatsby-plugin-image`,
 		`gatsby-plugin-netlify`,
 		`gatsby-transformer-sharp`,
 		{
@@ -24,13 +24,6 @@ module.exports = {
 							// the content container as this plugin uses this as the
 							// base for generating different widths of each image.
 							maxWidth: 536
-						}
-					},
-					{
-						resolve: 'gatsby-remark-instagram-embed',
-						options: {
-							width: 320,
-							height: 320
 						}
 					}
 				]
@@ -58,20 +51,6 @@ module.exports = {
 			options: {
 				path: `${__dirname}/src/images`,
 				name: `images`
-			}
-		},
-		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
-				path: `${__dirname}/blog`,
-				name: `blog`
-			}
-		},
-		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
-				path: `${__dirname}/event`,
-				name: `event`
 			}
 		},
 		{

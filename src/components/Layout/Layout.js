@@ -3,16 +3,15 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import PageContainer from './PageContainer';
-import Transition from './Transition';
 
 import './Layout.css';
 
-const Layout = ({ children, location }) => {
+const Layout = ({ children }) => {
 	return (
 		<div className='site'>
 			<Header />
 			<PageContainer>
-				<Transition location={location}>{children}</Transition>
+				{children}
 			</PageContainer>
 			<Footer />
 		</div>

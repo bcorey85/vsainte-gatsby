@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Image from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image'; 
 import 'lazysizes';
 
 import './ImageGrid.css';
@@ -38,7 +38,7 @@ const ImageGrid = props => {
 					onMouseLeave={() => swapImgHover(mainImg)}
 					onClick={() => swapImgClick(subImg1)}
 					onKeyDown={() => swapImgClick(subImg1)}>
-					<Image fluid={subImg1} alt='' className='image-grid__img' />
+					<GatsbyImage image={subImg1} alt='' className='image-grid__img' />
 				</div>
 				<div
 					role='button'
@@ -47,7 +47,7 @@ const ImageGrid = props => {
 					onMouseLeave={() => swapImgHover(mainImg)}
 					onClick={() => swapImgClick(subImg2)}
 					onKeyDown={() => swapImgClick(subImg2)}>
-					<Image fluid={subImg2} alt='' className='image-grid__img' />
+					<GatsbyImage image={subImg2} alt='' className='image-grid__img' />
 				</div>
 				<div
 					role='button'
@@ -56,11 +56,11 @@ const ImageGrid = props => {
 					onMouseLeave={() => swapImgHover(mainImg)}
 					onClick={() => swapImgClick(subImg3)}
 					onKeyDown={() => swapImgClick(subImg3)}>
-					<Image fluid={subImg3} alt='' className='image-grid__img' />
+					<GatsbyImage image={subImg3} alt='' className='image-grid__img' />
 				</div>
 			</div>
 			<div className='image-grid__main-image'>
-				<Image fluid={focusedImg} alt='' className='image-grid__img' />
+				<GatsbyImage image={focusedImg} alt='' className='image-grid__img' />
 			</div>
 		</div>
 	);
