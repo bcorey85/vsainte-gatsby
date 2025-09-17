@@ -22,6 +22,22 @@ const Books = () => {
 					<div className='books__content'>
 						<BookDetails
 							subImg1={
+								booksData.woh3.childImageSharp.fluid
+							}
+							subImg2={
+								booksData.woh2.childImageSharp.fluid
+							}
+							subImg3={
+								booksData.woh1.childImageSharp.fluid
+							}
+							mainImg={booksData.wohCover.childImageSharp.fluid}
+							date='2023'
+							title='The Waves of Hurt'
+							desc='<em>The Waves of Hurt</em> examines the complexities of grief. It emphasizes looking beyond problematic actions to understand the underlying pain.'
+							href='https://www.amazon.com/Waves-Hurt-Vladimir-Sainte/dp/B0BY3RJJK1/?_encoding=UTF8&pd_rd_w=Kc5KC&content-id=amzn1.sym.a7785aa2-ac28-4769-b3eb-cff7b9738627&pf_rd_p=a7785aa2-ac28-4769-b3eb-cff7b9738627&pf_rd_r=139-4296644-6411434&pd_rd_wg=bXwvx&pd_rd_r=d9d97eb5-fcb4-461b-a73a-2a8caa1f0994&ref_=aufs_ap_sc_dsk'
+						/>
+						<BookDetails
+							subImg1={
 								booksData.mmzaidspeed.childImageSharp.fluid
 							}
 							subImg2={
@@ -98,8 +114,44 @@ const Books = () => {
 
 const imageQuery = graphql`
 	query BooksImgs {
+		wohCover: file(
+			relativePath: { eq: "2025/waves-of-hurt.jpg" }
+		) {
+			childImageSharp {
+				fluid {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
+		woh1: file(
+			relativePath: { eq: "2025/woh1.jpg" }
+		) {
+			childImageSharp {
+				fluid {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
+		woh2: file(
+			relativePath: { eq: "2025/woh2.jpg" }
+		) {
+			childImageSharp {
+				fluid {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
+		woh3: file(
+			relativePath: { eq: "2025/woh3.jpg" }
+		) {
+			childImageSharp {
+				fluid {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
 		iwboCover: file(
-			relativePath: { eq: "it-will-be-okay-book-cover.jpg" }
+			relativePath: { eq: "2025/it-will-be-okay.jpg" }
 		) {
 			childImageSharp {
 				fluid {
@@ -108,7 +160,7 @@ const imageQuery = graphql`
 			}
 		}
 		jlahCover: file(
-			relativePath: { eq: "just-like-a-hero-book-cover.jpg" }
+			relativePath: { eq: "2025/just-like-a-hero.jpg" }
 		) {
 			childImageSharp {
 				fluid {
@@ -179,7 +231,7 @@ const imageQuery = graphql`
 				}
 			}
 		}
-		mmCover: file(relativePath: { eq: "mm-cover.jpg" }) {
+		mmCover: file(relativePath: { eq: "2025/making-mistakes.jpg" }) {
 			childImageSharp {
 				fluid {
 					...GatsbyImageSharpFluid_withWebp

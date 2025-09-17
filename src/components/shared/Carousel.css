@@ -22,7 +22,7 @@
 .carousel__content {
 	display: flex;
 	justify-content: space-between;
-	min-height: 32rem;
+	min-height: 34rem;
 	max-width: 80rem;
 	margin: 0 auto;
 }

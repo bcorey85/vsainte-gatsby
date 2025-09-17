@@ -44,18 +44,8 @@ const Home = () => {
 				</div>
 			</Section>
 			<Divider angle />
-			<Section color='lightGray' paper angle='top' padding='1.5vw 0' wide>		
-				<div className='testimonials'>
-					<Carousel
-						title='What Others Say'
-						data={indexData.testimonials.nodes}
-						dataType='text'
-					/>
-				</div>
-			</Section>
-			<Divider />
-			<Section angle='bottom'>
-				<div className='details-section'>
+			<Section color='lightGray' paper angle='top' padding='1.5vw 0' wide>	
+				<div className='details-section'>	
 					<div className='igvideo-wrapper'>
 						<iframe
 							src='https://www.instagram.com/p/CIjJ9j2gwDT/embed'
@@ -68,6 +58,16 @@ const Home = () => {
 					</div>
 				</div>
 			</Section>
+			<Divider />
+			<Section angle='bottom'>
+				<div className='testimonials'>
+					<Carousel
+						title='What Others Say'
+						data={indexData.testimonials.nodes}
+						dataType='text'
+					/>
+				</div>
+			</Section>
 			<Divider angle />
 			<Section
 				color='teal'
@@ -76,8 +76,8 @@ const Home = () => {
 				padding='1.5vw 0 0 0'>
 				<div className='books-section'>
 					<Card
-						href='https://www.amazon.com/Making-Mistakes-Just-Like-Hero/dp/1942005571/ref=sr_1_1?dchild=1&keywords=making+mistakes+vladimir+sainte&qid=1602393034&sr=8-1'
-						imgSrcFluid={indexData.mmCover.childImageSharp.fluid}
+						href='https://www.amazon.com/Waves-Hurt-Vladimir-Sainte/dp/B0BY3RJJK1/?_encoding=UTF8&pd_rd_w=Kc5KC&content-id=amzn1.sym.a7785aa2-ac28-4769-b3eb-cff7b9738627&pf_rd_p=a7785aa2-ac28-4769-b3eb-cff7b9738627&pf_rd_r=139-4296644-6411434&pd_rd_wg=bXwvx&pd_rd_r=d9d97eb5-fcb4-461b-a73a-2a8caa1f0994&ref_=aufs_ap_sc_dsk'
+						imgSrcFluid={indexData.wohCover.childImageSharp.fluid}
 						imgAlt={'Waves of Hurt'}
 						btnColor={'default'}
 						btnText={'Buy Now'}
@@ -146,8 +146,17 @@ export default Home;
 
 const indexQuery = graphql`
 	query IndexData {
+		wohCover: file(
+			relativePath: { eq: "2025/waves-of-hurt.jpg" }
+		) {
+			childImageSharp {
+				fluid {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
 		iwboCover: file(
-			relativePath: { eq: "it-will-be-okay-book-cover.jpg" }
+			relativePath: { eq: "2025/it-will-be-okay.jpg" }
 		) {
 			childImageSharp {
 				fluid {
@@ -156,7 +165,7 @@ const indexQuery = graphql`
 			}
 		}
 		jlahCover: file(
-			relativePath: { eq: "just-like-a-hero-book-cover.jpg" }
+			relativePath: { eq: "2025/just-like-a-hero.jpg" }
 		) {
 			childImageSharp {
 				fluid {
@@ -164,44 +173,7 @@ const indexQuery = graphql`
 				}
 			}
 		}
-		mmHero: file(relativePath: { eq: "mm-cta.jpg" }) {
-			childImageSharp {
-				fluid {
-					...GatsbyImageSharpFluid_withWebp
-				}
-			}
-		}
-		mmCover: file(relativePath: { eq: "mm-cover.jpg" }) {
-			childImageSharp {
-				fluid {
-					...GatsbyImageSharpFluid_withWebp
-				}
-			}
-		}
-		mminnerstrength: file(
-			relativePath: { eq: "mm-inner-strength-organizer.jpg" }
-		) {
-			childImageSharp {
-				fluid {
-					...GatsbyImageSharpFluid_withWebp
-				}
-			}
-		}
-		mmzaidrules: file(relativePath: { eq: "mm-zaid-rules.jpg" }) {
-			childImageSharp {
-				fluid {
-					...GatsbyImageSharpFluid_withWebp
-				}
-			}
-		}
-		mmzaidspeed: file(relativePath: { eq: "mm-zaid-speed.jpg" }) {
-			childImageSharp {
-				fluid {
-					...GatsbyImageSharpFluid_withWebp
-				}
-			}
-		}
-		mmzaidsad: file(relativePath: { eq: "mm-zaid-sad.jpg" }) {
+		mmCover: file(relativePath: { eq: "2025/making-mistakes.jpg" }) {
 			childImageSharp {
 				fluid {
 					...GatsbyImageSharpFluid_withWebp
