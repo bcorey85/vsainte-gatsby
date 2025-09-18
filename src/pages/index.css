@@ -34,6 +34,9 @@
 	display: flex;
 	justify-content: center;
 	width: 100%;
+	height: 34rem;
+	overflow: hidden;
+	padding-bottom: 4rem;
 }
 
 .igvideo-wrapper iframe {
@@ -42,18 +45,30 @@
 	max-width: 52rem;
 }
 
+@media only screen and (max-width: 34em) {
+	.igvideo-wrapper {
+		height: 30rem;
+	}
+}
+
 @media only screen and (max-width: 30em) {
-	.igvideo-wrapper iframe {
-		height: 45rem;
-		width: 100%;
+	.igvideo-wrapper {
+		height: 26rem;
 	}
 }
 
 @media only screen and (max-width: 25em) {
-	.igvideo-wrapper iframe {
-		height: 40rem;
+	.igvideo-wrapper {
+		height: 22rem;
 	}
 }
+
+@media only screen and (max-width: 20em) {
+	.igvideo-wrapper {
+		height: 18rem;
+	}
+}
+
 
 .details-section {
 	padding: 8.5rem 0 5rem 0;
