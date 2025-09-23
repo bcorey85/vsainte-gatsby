@@ -33,7 +33,7 @@ const Books = () => {
 							mainImg={booksData.wohCover.childImageSharp.gatsbyImageData}
 							date='2023'
 							title='The Waves of Hurt'
-							desc='The Waves of Hurt examines the complexities of grief. It emphasizes looking beyond problematic actions to understand the underlying pain.'
+							desc='<em>The Waves of Hurt</em> examines the complexities of grief. It emphasizes looking beyond problematic actions to understand the underlying pain.'
 							href='https://www.amazon.com/Waves-Hurt-Vladimir-Sainte/dp/B0BY3RJJK1/?_encoding=UTF8&pd_rd_w=Kc5KC&content-id=amzn1.sym.a7785aa2-ac28-4769-b3eb-cff7b9738627&pf_rd_p=a7785aa2-ac28-4769-b3eb-cff7b9738627&pf_rd_r=139-4296644-6411434&pd_rd_wg=bXwvx&pd_rd_r=d9d97eb5-fcb4-461b-a73a-2a8caa1f0994&ref_=aufs_ap_sc_dsk'
 						/>
 						<BookDetails
@@ -49,7 +49,7 @@ const Books = () => {
 							mainImg={booksData.mmCover.childImageSharp.gatsbyImageData}
 							date='2020'
 							title='Making Mistakes'
-							desc='Making Mistakes is about a young boy
+							desc='<em>Making Mistakes</em> is about a young boy
 								named Zaid who has trouble slowing down.
 								In this story, Zaid learns to control his impulses with the help of the Inner Strength Organizer.'
 							href='https://www.amazon.com/Making-Mistakes-Just-Like-Hero/dp/1942005571/ref=sr_1_1?dchild=1&keywords=making+mistakes+vladimir+sainte&qid=1602393034&sr=8-1'
@@ -67,7 +67,7 @@ const Books = () => {
 							mainImg={booksData.iwboCover.childImageSharp.gatsbyImageData}
 							date='2019'
 							title='It Will Be Okay'
-							desc='It Will Be Okay is about a young girl
+							desc='<em>It Will Be Okay</em> is about a young girl
 								named Alma who has many anxieties and fears.
 								In this story, she will learn steps to mastering
 								her emotions with the help of the mighty Hope Shield.'
@@ -86,7 +86,7 @@ const Books = () => {
 							mainImg={booksData.jlahCover.childImageSharp.gatsbyImageData}
 							date='2018'
 							title='Just Like A Hero'
-							desc='Just Like A Hero is a story
+							desc='<em>Just Like A Hero</em> is a story
 								about Will, a child discovering his	self-worth through daily life struggles and his
 								journey to becoming the hero he is meant to be. This book teaches personal
 								values, challenges negative thoughts, and

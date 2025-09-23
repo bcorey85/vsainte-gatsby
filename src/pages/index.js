@@ -25,7 +25,7 @@ const Home = () => {
 					<div className='hero-section__left'>
 						<h1 className='hero-section__title'>About Vladimir</h1>
 						<p className='hero-section__cta-text'>
-							I've been working as a licensed clinical social worker in the Kansas City area for over 15+ years. In 2022, I won Best Local Author by The Pitch magazine for my ongoing work to educate young children about emotional literacy. My mission is to create inclusive literature to increase resiliency and a sense of worth in children.
+							I've been working as a licensed clinical social worker in the Kansas City area for over 15 years. In 2022, I won Best Local Author by <em>The Pitch</em> for my ongoing work to educate young children about emotional literacy. My mission is to create inclusive literature to increase resiliency and a sense of worth in children.
 						</p>
 						<div className='hero-section__btn'>
 							<Button to='/about' margin='none'>

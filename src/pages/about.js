@@ -10,7 +10,7 @@ import './about.css';
 
 const imageQuery = graphql`
 	query AboutImgs {
-		vsainte: file(relativePath: { eq: "vladimir-sainte.jpg" }) {
+		vsainte: file(relativePath: { eq: "2025/book-signing.jpg" }) {
 			childImageSharp {
 				gatsbyImageData(
 					placeholder: BLURRED
@@ -51,7 +51,7 @@ const About = ({ location }) => {
 							<div className='about__p'>
 								<h2>Professional Bio</h2>
 								<div>
-									Vladimir Sainte, LCSW has 15+ years of experience as a licensed clinical social worker and has made significant contributions to the Kansas City community through his work as a children's book author and former child therapist. He currently serves as a Senior Project Manager at University Health Behavioral Health, leveraging his expertise to guide organizational change and strive for employee wellness. In 2022, he won Best Local Author by The Pitch for his ongoing work to educate young children about their emotional literacy. Sainte holds a Bachelor of Arts in Sociology from the University of Missouri-Kansas City, where he also obtained a Master of Social Work. Throughout his years in the field, Sainte has made an invaluable impact with children and families. He is inspired by his two children, the constant heroes in his life.
+									Vladimir Sainte, LCSW has 15 years of experience as a licensed clinical social worker and has made significant contributions to the Kansas City community through his work as a children's book author and former child therapist. He currently serves as a Senior Project Manager at University Health Behavioral Health, leveraging his expertise to guide organizational change and strive for employee wellness. In 2022, he won Best Local Author by <em>The Pitch</em> for his ongoing work to educate young children about their emotional literacy. Sainte holds a Bachelor of Arts in Sociology from the University of Missouri-Kansas City, where he also obtained a Master of Social Work. Throughout his years in the field, Sainte has made an invaluable impact with children and families. He is inspired by his two children, the constant heroes in his life.
 								</div>
 							</div>
 							<div className='about__p'>

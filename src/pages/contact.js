@@ -29,11 +29,11 @@ const Contact = () => {
 									</a>
 								</div>
 								<div className='contact__item'>
-									<h3>Facebook</h3>
+									<h3>LinkedIn</h3>
 									<a
-										href='https://www.facebook.com/justlikeahero'
+										href='https://www.linkedin.com/in/vladimir-sainte-lcsw-43510231/'
 										className='link'>
-										Just Like a Hero
+                    Vladimir Sainte, LCSW
 									</a>
 								</div>
 								<div className='contact__item'>

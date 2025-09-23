@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-	faFacebookSquare,
+	faLinkedin,
 	faInstagram
 } from '@fortawesome/free-brands-svg-icons';
 
@@ -21,10 +21,10 @@ const SocialIcon = props => {
 				</div>
 			</Link>
 			<a
-				href='https://www.facebook.com/justlikeahero'
-				aria-label='facebook'>
+				href='https://www.linkedin.com/in/vladimir-sainte-lcsw-43510231/'
+				aria-label='linkedin'>
 				<div className='social-icon'>
-					<FontAwesomeIcon icon={faFacebookSquare} />
+					<FontAwesomeIcon icon={faLinkedin} />
 				</div>
 			</a>
 			<a href='https://www.instagram.com/Vla1899/' aria-label='instagram'>
