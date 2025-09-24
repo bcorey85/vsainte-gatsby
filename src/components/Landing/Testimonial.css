@@ -2,7 +2,9 @@
 	width: 100%;
 	max-width: 60rem;
 	position: relative;
-	margin-bottom: 14.4rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .testimonial__quote {
@@ -25,10 +27,4 @@
 .testimonial__author {
 	font-weight: 600;
 	color: var(--black);
-}
-
-@media only screen and (max-width: 37.5em) {
-	.testimonial {
-		margin-bottom: 10.4rem;
-	}
 }

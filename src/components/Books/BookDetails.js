@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactHtmlParser from 'react-html-parser';
+import parse from 'html-react-parser';
 
 import Button from '../shared/Button';
 import ImageGrid from './ImageGrid';
@@ -32,7 +32,7 @@ const BookDetails = props => {
 				<div>
 					<h5>{date}</h5>
 					<h2>{title}</h2>
-					{ReactHtmlParser(desc)}
+					{parse(desc)}
 					<div className='book-details__buy'>
 						<Button href={href}>Buy Now</Button>
 					</div>

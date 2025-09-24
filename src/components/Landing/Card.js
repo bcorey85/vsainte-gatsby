@@ -10,8 +10,6 @@ const Card = props => {
 		href,
 		to,
 		imgSrc,
-		imgSrcFluid,
-		imgSrcFixed,
 		imgAlt,
 		btnText,
 		btnColor,
@@ -26,13 +24,7 @@ const Card = props => {
 
 	return (
 		<div className='card' style={{ boxShadow: shadows[boxShadow] }}>
-			{imgSrcFluid && (
-				<Image fluid={imgSrcFluid} alt={imgAlt} borderRadius='0' />
-			)}
-			{imgSrcFixed && (
-				<Image fixed={imgSrcFixed} alt={imgAlt} borderRadius='0' />
-			)}
-			{imgSrc && <Image src={imgSrc} alt={imgAlt} borderRadius='0' />}
+			{imgSrc && <Image image={imgSrc} alt={imgAlt} borderRadius='0' />}
 			<Button
 				href={href}
 				to={to}

@@ -1,12 +1,17 @@
+const adapter = require("gatsby-adapter-netlify").default
+
 module.exports = {
 	siteMetadata: {
 		title: `Vladimir Sainte, LCSW| Author of the Just Like a Hero series`,
 		description: `Website of Vladimir Sainte, LCSW. Author and illustrator of children's books about finding inner strength and becoming a superhero.`,
 		author: `Vladimir Sainte`
 	},
+	adapter: adapter({
+		excludeDatastoreFromEngineFunction: false,
+		imageCDN: false,
+	}),
 	plugins: [
-		`gatsby-plugin-netlify-cms`,
-		`gatsby-plugin-netlify`,
+		`gatsby-plugin-image`,
 		`gatsby-transformer-sharp`,
 		{
 			resolve: `gatsby-transformer-remark`,
@@ -24,13 +29,6 @@ module.exports = {
 							// the content container as this plugin uses this as the
 							// base for generating different widths of each image.
 							maxWidth: 536
-						}
-					},
-					{
-						resolve: 'gatsby-remark-instagram-embed',
-						options: {
-							width: 320,
-							height: 320
 						}
 					}
 				]
@@ -58,20 +56,6 @@ module.exports = {
 			options: {
 				path: `${__dirname}/src/images`,
 				name: `images`
-			}
-		},
-		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
-				path: `${__dirname}/blog`,
-				name: `blog`
-			}
-		},
-		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
-				path: `${__dirname}/event`,
-				name: `event`
 			}
 		},
 		{

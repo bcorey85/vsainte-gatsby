@@ -3,22 +3,18 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import PageContainer from './PageContainer';
-import Transition from './Transition';
-import { BlogContextProvider } from '../../contexts/BlogContext';
 
 import './Layout.css';
 
-const Layout = ({ children, location }) => {
+const Layout = ({ children }) => {
 	return (
-		<BlogContextProvider>
-			<div className='site'>
-				<Header />
-				<PageContainer>
-					<Transition location={location}>{children}</Transition>
-				</PageContainer>
-				<Footer />
-			</div>
-		</BlogContextProvider>
+		<div className='site'>
+			<Header />
+			<PageContainer>
+				{children}
+			</PageContainer>
+			<Footer />
+		</div>
 	);
 };
 

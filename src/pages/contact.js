@@ -1,10 +1,10 @@
 import React from 'react';
 import useScrollToTop from '../hooks/useScrollToTop';
 
-import Section from '../components/shared/Section';
-import Input from '../components/shared/Input';
 import Button from '../components/shared/Button';
-import SEO from '../components/Layout/Seo';
+import Input from '../components/shared/Input';
+import Section from '../components/shared/Section';
+import Seo from '../components/Layout/Seo';
 
 import './contact.css';
 
@@ -12,7 +12,7 @@ const Contact = () => {
 	useScrollToTop();
 	return (
 		<React.Fragment>
-			<SEO title='Contact' />
+			<Seo title='Contact' />
 
 			<Section>
 				<div className='contact'>
@@ -29,11 +29,11 @@ const Contact = () => {
 									</a>
 								</div>
 								<div className='contact__item'>
-									<h3>Facebook</h3>
+									<h3>LinkedIn</h3>
 									<a
-										href='https://www.facebook.com/justlikeahero'
+										href='https://www.linkedin.com/in/vladimir-sainte-lcsw-43510231/'
 										className='link'>
-										Just Like a Hero
+                    Vladimir Sainte, LCSW
 									</a>
 								</div>
 								<div className='contact__item'>
