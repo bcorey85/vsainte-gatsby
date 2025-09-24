@@ -127,14 +127,15 @@ const Home = () => {
 						</div>
 					</div>
 					<div className='speaking-section__right'>
-						<iframe
+            <iframe 
 							title='Vladimir Sainte KCPT Kids'
 							className='speaking-section__video lazyload'
-							src='https://www.youtube.com/embed/FW5XFBPEh9Q?si=TXsuZK2szjd800i3'
-							frameBorder='0'
-							allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-							allowFullScreen
-						/>
+              src="https://www.youtube.com/embed/FW5XFBPEh9Q?si=quBCP24YXW13dey1" 
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen
+            />
 					</div>
 				</div>
 			</Section>
